@@ -68,6 +68,9 @@
       <div class="top-bar-section">
         <ul class="navigation right">
           <li>
+            <a href="/blog.html">Blog</a>
+          </li>
+          <li>
             <a href="/news.html">News</a>
           </li>
           <li>
@@ -132,37 +135,663 @@
   <h1 id="solr-news">Solr<sup>™</sup> News<a class="headerlink" href="#solr-news" title="Permanent link">¶</a></h1>
   <p>You may also read these news as an <a href="/feeds/solr/news.atom.xml">ATOM feed</a>.</p>
 
-  <h2 id="apache-solr-affected-by-apache-log4j-cve-2021-44228">12 December 2021, Apache Solr affected by Apache Log4J CVE-2021-44228
+  <h2 id="apache-solrtm-961-available">29 May 2024, Apache Solr™ 9.6.1 available
+    <a class="headerlink" href="#apache-solrtm-961-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.6.1.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.6.1 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-961-release-highlights">Solr 9.6.1 Release Highlights:</h3>
+<ul>
+<li>Core loading at startup is no longer capped at 60 seconds</li>
+<li>Replicas are ensured to be marked as down when a Solr node is started</li>
+<li>'Illegal character in query' exception in the new HttpJdkSolrClient has been fixed</li>
+<li>Performance regression for aliases in SolrJ has been fixed via partially reverting a recent change</li>
+<li>Fixed debugging of Rerank Queries when reRankScale is used</li>
+<li>System file separator is now used in CachingDirectoryFactory, instead of '/', fixing a regression on Windows</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/9_6_1/changes/Changes.html">https://solr.apache.org/9_6_1/changes/Changes.html</a></p>
+<p>Thanks to all contributors!</p>
+<p>hossman, Houston Putman, Jan Høydahl, Andy Webb, Christine Poerschke, Aparna Suresh, David Smiley, Vincent Primault</p>
+  <h2 id="apache-solrtm-960-available">27 April 2024, Apache Solr™ 9.6.0 available
+    <a class="headerlink" href="#apache-solrtm-960-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.6.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.6.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-960-release-highlights">Solr 9.6.0 Release Highlights:</h3>
+<ul>
+<li>Solrj now offers a lightweight client based on java.net.http.HttpClient: HttpJdkSolrClient</li>
+<li>SolrJ now offers an improved async request API</li>
+<li>Inactive shards (from splits) can now be cleaned up periodically</li>
+<li>Distributed (sharded) IDF can be disabled via request parameter</li>
+<li>Query timeouts (limits) may now be based on either CPU time as well as wall clock</li>
+<li>Upgraded Lucene to 9.10.0 </li>
+<li>bin/solr post now supports --dry-run mode.</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_6_0/changes/Changes.html">https://solr.apache.org/9_6_0/changes/Changes.html</a></p>
+<p>Thanks to all contributors! </p>
+<p>hossman, David Smiley, Michael Gibney, Paul McArthur, Jan Høydahl, James Dyer, Eric Pugh, Andrey Bozhko, Andrzej Bialecki, Rahul Goswami, Bruno Roustant, Jason Gerlowski, Sanjay Dutt, Vincent Primault, Christine Poerschke, Gus Heck, Shawn Heisey, Vincenzo D'Amore, Yohann Callea, Julien Pilourdault, Wei Wang, Mikhail Khludnev, Antoine Bursaux, Rishi Sankar, Pierre Salagnac, Aparna Suresh, Alessandro Benedetti, Mathieu Marie, Przemyslaw Ciezkowski</p>
+  <h2 id="cve-2024-31391-solr-operator-liveness-and-readiness-probes-may-leak-basic-auth-credentials">12 April 2024, CVE-2024-31391: Solr-Operator liveness and readiness probes may leak basic auth credentials
+    <a class="headerlink" href="#cve-2024-31391-solr-operator-liveness-and-readiness-probes-may-leak-basic-auth-credentials" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Moderate</p>
+<p><strong>Versions Affected:</strong><br>
+Solr Operator 0.3.0 to 0.8.0</p>
+<p><strong>Description:</strong>
+Insertion of Sensitive Information into Log File vulnerability in the Apache Solr Operator.</p>
+<p>The Solr sked to bootstrap Solr security, the operator will enable basic authentication and create several accounts for accessing Solr: including the "solr" and "admin" accounts for use by end-users, and a "k8s-oper" account which the operator uses for its own requests to Solr.
+One common source of these operator requests is healthchecks: liveness, readiness, and startup probes are all used to determine Solr's health and ability to receive traffic.
+By default, the operator configures the Solr APIs used for these probes to be exempt from authentication, but users may specifically request that authentication be required on probe endpoints as well.
+Whenever one of these probes would fail, if authentication was in use, the Solr Operator would create a Kubernetes "event" containing the username and password of the "k8s-oper" account.</p>
+<p>Within the affected version range, this vulnerability affects any solrcloud resource which (1) bootstrapped security through use of the <code>.solrOptions.security.authenticationType=basic</code> option, and (2) required authentication be used on probes by setting <code>.solrOptions.security.probesRequireAuth=true</code>.</p>
+<p><strong>Mitigation:</strong>
+Users are recommended to upgrade to Solr Operator version 0.8.1, which fixes this issue by ensuring that probes no longer print the credentials used for Solr requests.  Users may also mitigate the vulnerability by disabling authentication on their healthcheck probes using the setting <code>.solrOptions.security.probesRequireAuth=false</code>.</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-17216">SOLR-17216</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31391">CVE-2024-31391</a></p>
+  <h2 id="apache-solrtm-950-available">12 February 2024, Apache Solr™ 9.5.0 available
+    <a class="headerlink" href="#apache-solrtm-950-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.5.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.5.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-950-release-highlights">Solr 9.5.0 Release Highlights:</h3>
+<ul>
+<li>Solr now supports "node-level" Memory and CPU circuit breakers, that serve as a default inherited by all cores on that node.</li>
+<li>Collection and Replica Properties may now be used as property substitution variables in configuration files (e.g. solrconfig.xml).</li>
+<li>Solr now auto-reloads updated keystore and truststore files when TLS is enabled.</li>
+<li>Tracing support has received a number of quality-of-life improvements, including improved tracking of distributed collection commands and increased coverage for internal requests made with the Apache and Jetty HTTP clients.</li>
+<li>Solr now offers the <code>&lt;clusterSingleton&gt;</code>  solr.xml tag as a means of configuring node-level plugins in an "immutable infrastructure"-friendly way.  This offers an alternative to using the <code>/cluster/plugins</code>  API for managing plugins in "live" clusters.</li>
+<li>Starting with 9.5.0, Solr releases now produce an OpenAPI specification covering many of their v2 APIs. Consumers may use this spec with an array of OpenAPI-compatible tooling to generate documentation, clients in various programming languages, etc.  See https://www.openapis.org/what-is-openapi for more details.</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_5/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_5/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_5_0/changes/Changes.html">https://solr.apache.org/9_5_0/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-8113-available">8 February 2024, Apache Solr™ 8.11.3 available
+    <a class="headerlink" href="#apache-solrtm-8113-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.3.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 8.11.3 is available for immediate download at:</p>
+<p><a href="https://lucene.apache.org/solr/downloads.html">https://lucene.apache.org/solr/downloads.html</a></p>
+<h3 id="solr-8113-release-highlights">Solr 8.11.3 Release Highlights:</h3>
+<h4 id="security">Security</h4>
+<ul>
+<li>Converted enableRemoteStreaming and enableStreamBody solrconfig options into system properties and env vars.</li>
+<li>Restrict certain file types from being uploaded to or downloaded from Config Sets</li>
+<li>ZK Credentials and ACLs are no longer sent to all ZK Servers when using Streaming Expressions. They will only be used when sent to the default ZK Host.</li>
+<li>Schema Designer now correctly manages trust of the ConfigSets it is managing.</li>
+<li>More sysProps are redacted in the UI by default.</li>
+<li>Upgrades of various client libraries, including Jetty, Tika, Netty and Calcite.</li>
+</ul>
+<h4 id="bugfixes">Bugfixes</h4>
+<ul>
+<li>TLOGs on TLOG replicas no longer grow continuously.</li>
+<li>Various fixes for clusters using PRS.</li>
+<li>Collection RENAME api no longer creates broken alias.</li>
+<li>Using Schema/Config API no longer breaks the File-Upload of Config Set File.</li>
+<li>Fixed NPE in FieldLengthFeature with non-stored/missing fields.</li>
+<li>HEAD request for managed resource no longer returns 500 Server Error.</li>
+</ul>
+<h4 id="features">Features</h4>
+<ul>
+<li>AWS STS support has been added for the s3-repository module.</li>
+<li>Node roles and dedicated query coordinator nodes have been added.</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html">https://solr.apache.org/guide/8_11/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/docs/8_11_3/changes/Changes.html">https://solr.apache.org/docs/8_11_3/changes/Changes.html</a></p>
+<p>Solr 8.11.3 also includes bugfixes in the corresponding Apache Lucene release:</p>
+<p><a href="https://lucene.apache.org/core/8_11_3/changes/Changes.html">https://lucene.apache.org/core/8_11_3/changes/Changes.html</a></p>
+  <h2 id="cve-2023-50291-apache-solr-can-leak-certain-passwords-due-to-system-property-redaction-logic-inconsistencies">8 February 2024, CVE-2023-50291: Apache Solr can leak certain passwords due to System Property redaction logic inconsistencies
+    <a class="headerlink" href="#cve-2023-50291-apache-solr-can-leak-certain-passwords-due-to-system-property-redaction-logic-inconsistencies" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Moderate</p>
+<p><strong>Versions Affected:</strong></p>
+<ul>
+<li>Apache Solr 6.0.0 through 8.11.2</li>
+<li>Apache Solr 9.0.0 before 9.3.0</li>
+</ul>
+<p><strong>Description:</strong><br>
+Insufficiently Protected Credentials vulnerability in Apache Solr.</p>
+<p>This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.3.0.
+One of the two endpoints that publishes the Solr process' Java system properties, /admin/info/properties, was only setup to hide system properties that had "password" contained in the name.
+There are a number of sensitive system properties, such as "basicauth" and "aws.secretKey" do not contain "password", thus their values were published via the "/admin/info/properties" endpoint.
+This endpoint populates the list of System Properties on the home screen of the Solr Admin page, making the exposed credentials visible in the UI.</p>
+<p>This /admin/info/properties endpoint is protected under the "config-read" permission.
+Therefore, Solr Clouds with Authorization enabled will only be vulnerable through logged-in users that have the "config-read" permission.
+Users are recommended to upgrade to version 9.3.0 or 8.11.3, which fixes the issue.
+A single option now controls hiding Java system property for all endpoints, "-Dsolr.hiddenSysProps".
+By default all known sensitive properties are hidden (including "-Dbasicauth"), as well as any property with a name containing "secret" or "password".</p>
+<p>Users who cannot upgrade can also use the following Java system property to fix the issue:<br>
+<code>-Dsolr.redaction.system.pattern=".*(password|secret|basicauth).*"</code></p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 8.11.3, 9.3.0 or later, which has consistent systemProperty redaction logic.</p>
+<p><strong>Credit:</strong>
+Michael Taggart (reporter)</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-16809">SOLR-16809</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50291">CVE-2023-50291</a></p>
+  <h2 id="cve-2023-50292-apache-solr-schema-designer-blindly-trusts-all-configsets-possibly-leading-to-rce-by-unauthenticated-users">8 February 2024, CVE-2023-50292: Apache Solr Schema Designer blindly "trusts" all configsets, possibly leading to RCE by unauthenticated users
+    <a class="headerlink" href="#cve-2023-50292-apache-solr-schema-designer-blindly-trusts-all-configsets-possibly-leading-to-rce-by-unauthenticated-users" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Moderate</p>
+<p><strong>Versions Affected:</strong></p>
+<ul>
+<li>Apache Solr 6.0.0 through 8.11.2</li>
+<li>Apache Solr 9.0.0 before 9.3.0</li>
+</ul>
+<p><strong>Description:</strong><br>
+Incorrect Permission Assignment for Critical Resource, Improper Control of Dynamically-Managed Code Resources vulnerability in Apache Solr.</p>
+<p>This issue affects Apache Solr: from 8.10.0 through 8.11.2, from 9.0.0 before 9.3.0.</p>
+<p>The Schema Designer was introduced to allow users to more easily configure and test new Schemas and configSets.
+However, when the feature was created, the "trust" (authentication) of these configSets was not considered.
+External library loading is only available to configSets that are "trusted" (created by authenticated users), thus non-authenticated users are unable to perform Remote Code Execution.
+Since the Schema Designer loaded configSets without taking their "trust" into account, configSets that were created by unauthenticated users were allowed to load external libraries when used in the Schema Designer.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 8.11.3, 9.3.0 or later.</p>
+<p><strong>Credit:</strong>
+Skay (reporter)</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-16777">SOLR-16777</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50292">CVE-2023-50292</a></p>
+  <h2 id="cve-2023-50298-apache-solr-can-expose-zookeeper-credentials-via-streaming-expressions">8 February 2024, CVE-2023-50298: Apache Solr can expose ZooKeeper credentials via Streaming Expressions
+    <a class="headerlink" href="#cve-2023-50298-apache-solr-can-expose-zookeeper-credentials-via-streaming-expressions" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Low</p>
+<p><strong>Versions Affected:</strong></p>
+<ul>
+<li>Apache Solr 6.0.0 through 8.11.2</li>
+<li>Apache Solr 9.0.0 before 9.4.1</li>
+</ul>
+<p><strong>Description:</strong><br>
+Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Solr.This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.4.1.</p>
+<p>Solr Streaming Expressions allows users to extract data from other Solr Clouds, using a "zkHost" parameter.
+When original SolrCloud is setup to use ZooKeeper credentials and ACLs, they will be sent to whatever "zkHost" the user provides.
+An attacker could setup a server to mock ZooKeeper, that accepts ZooKeeper requests with credentials and ACLs and extracts the sensitive information,
+then send a streaming expression using the mock server's address in "zkHost".
+Streaming Expressions are exposed via the "/streaming" handler, with "read" permissions.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 8.11.3 or 9.4.1, which fix the issue.
+From these versions on, only zkHost values that have the same server address (regardless of chroot), will use the given ZooKeeper credentials and ACLs when connecting.</p>
+<p><strong>Credit:</strong>
+Qing Xu (reporter)</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-17098">SOLR-17098</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50298">CVE-2023-50298</a></p>
+  <h2 id="cve-2023-50386-apache-solr-backuprestore-apis-allow-for-deployment-of-executables-in-malicious-configsets">8 February 2024, CVE-2023-50386: Apache Solr: Backup/Restore APIs allow for deployment of executables in malicious ConfigSets
+    <a class="headerlink" href="#cve-2023-50386-apache-solr-backuprestore-apis-allow-for-deployment-of-executables-in-malicious-configsets" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Moderate</p>
+<p><strong>Versions Affected:</strong></p>
+<ul>
+<li>Apache Solr 6.0.0 through 8.11.2</li>
+<li>Apache Solr 9.0.0 before 9.4.1</li>
+</ul>
+<p><strong>Description:</strong><br>
+Improper Control of Dynamically-Managed Code Resources, Unrestricted Upload of File with Dangerous Type, Inclusion of Functionality from Untrusted Control Sphere vulnerability in Apache Solr.This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.4.1.</p>
+<p>In the affected versions, Solr ConfigSets accepted Java jar and class files to be uploaded through the ConfigSets API.
+When backing up Solr Collections, these configSet files would be saved to disk when using the LocalFileSystemRepository (the default for backups).
+If the backup was saved to a directory that Solr uses in its ClassPath/ClassLoaders, then the jar and class files would be available to use with any ConfigSet, trusted or untrusted.</p>
+<p>When Solr is run in a secure way (Authorization enabled), as is strongly suggested, this vulnerability is limited to extending the Backup permissions with the ability to add libraries.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 8.11.3 or 9.4.1, which fix the issue.
+In these versions, the following protections have been added:</p>
+<ul>
+<li>Users are no longer able to upload files to a configSet that could be executed via a Java ClassLoader.</li>
+<li>The Backup API restricts saving backups to directories that are used in the ClassLoader.</li>
+</ul>
+<p><strong>Credit:</strong>
+L3yx (reporter)</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-16949">SOLR-16949</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50386">CVE-2023-50386</a></p>
+  <h2 id="apache-solrtm-941-available">18 January 2024, Apache Solr™ 9.4.1 available
+    <a class="headerlink" href="#apache-solrtm-941-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.4.1.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.4.1 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-941-release-highlights">Solr 9.4.1 Release Highlights:</h3>
+<p>A big regression to the JSON Query API in 9.4 is primarily what prompted this release.  Additionally, some security oriented improvements/fixes have been added, and many transitive dependencies have been upgraded.</p>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/9_4_1/changes/Changes.html">https://solr.apache.org/9_4_1/changes/Changes.html</a></p>
+  <h2 id="cve-2023-50290-apache-solr-allows-read-access-to-host-environment-variables">12 January 2024, CVE-2023-50290: Apache Solr allows read access to host environment variables
+    <a class="headerlink" href="#cve-2023-50290-apache-solr-allows-read-access-to-host-environment-variables" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Important</p>
+<p><strong>Versions Affected:</strong><br>
+Solr 9.0 to 9.2.1</p>
+<p><strong>Description:</strong><br>
+Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Solr.
+The Solr Metrics API publishes all unprotected environment variables available to each Apache Solr instance.
+Users are able to specify which environment variables to hide, however, the default list is designed to work for known secret Java system properties.
+Environment variables cannot be strictly defined in Solr, like Java system properties can be, and may be set for the entire host, unlike Java system properties which are set per-Java-process.</p>
+<p>The Solr Metrics API is protected by the "metrics-read" permission.
+Therefore, Solr Clouds with Authorization setup will only be vulnerable via users with the "metrics-read" permission.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 9.3.0 or later, in which environment variables are not published via the Metrics API.</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-16808">SOLR-15233</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50290">CVE-2023-50290</a></p>
+  <h2 id="apache-solrtm-940-available">15 October 2023, Apache Solr™ 9.4.0 available
+    <a class="headerlink" href="#apache-solrtm-940-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.4.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.4.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-940-release-highlights">Solr 9.4.0 Release Highlights:</h3>
+<ul>
+<li>The Lucene version used by Solr has been upgraded to 9.8 – see its release notes.</li>
+<li>The Jetty version has been updated to 10.0.17 to address CVE-2023-44487</li>
+<li>Added support for node-level caches</li>
+<li>Circuit Breakers available for Update Requests</li>
+<li>A new Circuit breaker for percentage of CPU utilization is added. The former "CPU" circuit breaker is now more correctly named LoadAverageCircuitBreaker as it trips on system load average which is not a percentage.</li>
+<li>Solr now includes an always-on trace id generator. This will inject trace id headers for every Solr request, propagating the client supplied value or generating a new id as needed and replaces the existing <code>rid</code> mechanism.</li>
+<li>Solr now limits the number of concurrent expensive core operations (such as "backup", "restore", and "split") that are submitted asynchronously by running them in a dedicated thread pool.</li>
+<li>Added support of OAuth 2.0/OIDC 'code with PKCE' flow</li>
+<li>Multiple bug fixes for TLS and mTLS</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_4_0/changes/Changes.html">https://solr.apache.org/9_4_0/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-930-available">21 July 2023, Apache Solr™ 9.3.0 available
+    <a class="headerlink" href="#apache-solrtm-930-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.3.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.3.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-930-release-highlights">Solr 9.3.0 Release Highlights:</h3>
+<ul>
+<li>The Lucene version used by Solr has been upgraded to 9.7.</li>
+<li>Solr releases now have a slim variant, both for the binary release and the docker image.<ul>
+<li>The Slim variant is the same as the normal variant, except that it does not include Solr modules or the Prometheus exporter.</li>
+</ul>
+</li>
+<li>Vector Search<ul>
+<li>Added support for byte vector encoding in DenseVectorField and KnnQParser</li>
+<li>High dimensional vectors are now supported in Solr</li>
+<li>Solr can now take advantage of SIMD optimizations for Vector calculations, when run with Java 20 or 21.</li>
+<li>A new "vectorSimilarity" function query has been added to calculate similarity scores for DenseVectorFields</li>
+</ul>
+</li>
+<li>Solr now provides an <a href="https://solr.apache.org/guide/solr/9_3/deployment-guide/shard-management.html#installsharddata">"Install Shard" API</a> to allow users who have built (per-shard) indices offline to import them into SolrCloud shards.</li>
+<li>Solr’s experimental "v2" API has seen a number of improvements in the 9.3 release.<ul>
+<li>It is now approaching parity with the functionality offered by Solr’s v1 API.</li>
+<li>The v2 API as a whole is being redesigned to be more REST-ful and intuitive<br/>
+  See the Changelog and upgrade notes for information on which v2 APIs have backward-incompatible changes.</li>
+</ul>
+</li>
+<li>New APIs for MigrateReplicas and BalanceReplicas. These work out-of-the-box with the built-in PlacementPlugins.<ul>
+<li>The AffinityPlacementPlugin now supports co-location of shards between collections, using the "withCollectionShards" parameter.</li>
+</ul>
+</li>
+<li>Join Queries may handle equally sharded collections on both sides.<ul>
+<li>Collections shards should be collocated via AffinityPlacementPlugin.withCollectionShards</li>
+<li>This operation doesn't support SplitShard</li>
+</ul>
+</li>
+<li>Unknown cores are no longer deleted by default when Solr starts. Use "solr.deleteUnknownCores=true" to use the previous behavior.</li>
+<li>Warning: Solr cannot be used with Java 20 on MacOS with the Java Security Manager.<br/>
+  Please use the environment variable SOLR_SECURITY_MANAGER_ENABLED=false when running with Java 20 on MacOS.</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_3/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_3/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_3_0/changes/Changes.html">https://solr.apache.org/9_3_0/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-921-available">1 May 2023, Apache Solr™ 9.2.1 available
+    <a class="headerlink" href="#apache-solrtm-921-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.2.1.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.2.1 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-921-release-highlights">Solr 9.2.1 Release Highlights:</h3>
+<ul>
+<li>Fix Classloading Exception for inter-node requests when using SSL and HTTP2</li>
+<li>Use the right cluster property for displaying if TLS is enabled</li>
+<li>Fix NPE in SystemInfoHandler for inter-node requests that would cause the Nodes page not to load</li>
+<li>Fixing bin/solr's '-noprompt' option to work for examples</li>
+<li>Allow custom configuration of Jetty's SecureRequestCustomizer</li>
+<li>Fix KerberosPlugin module classloading when using the hadoop-auth module</li>
+<li>Fixing SOLR_DATA_HOME to be honored outside of verbose mode</li>
+<li>Use the correct instance of ReponseParser for Http2SolrClient.processErrorsAndResponse</li>
+<li>Fix Java version detection when <code>_JAVA_OPTIONS</code> is set`</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/9_2_1/changes/Changes.html">https://solr.apache.org/9_2_1/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-920-available">24 March 2023, Apache Solr™ 9.2.0 available
+    <a class="headerlink" href="#apache-solrtm-920-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.2.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.2.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-920-release-highlights">Solr 9.2.0 Release Highlights:</h3>
+<ul>
+<li>Solr has upgraded to use Jetty 10 instead of Jetty 9.</li>
+<li>Solr now includes an opentracing module, with support for OTEL tracing in OTLP  format using gRPC.<ul>
+<li>This module is meant to replace the jaegertracer-configurator module, which has been deprecated. </li>
+</ul>
+</li>
+<li>The base operating system of the Solr Docker image has been upgraded to Ubuntu 22 (Jammy).</li>
+<li>Streaming Expressions have been moved out of Solrj core into its own module called solrj-streaming.</li>
+<li>SolrJ Solr clients now use a builder/setter pattern to enable easier setup.</li>
+<li>Solr ConfigSet management has been optimized to improve the startup time of nodes with multiple replicas.</li>
+<li>SolrJ can again be used with the default Java truststore.</li>
+<li>The "Films" example has been updated to demonstrate Dense Vector search.</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_2_0/changes/Changes.html">https://solr.apache.org/9_2_0/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-911-available">25 January 2023, Apache Solr™ 9.1.1 available
+    <a class="headerlink" href="#apache-solrtm-911-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.1.1.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.1.1 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-911-release-highlights">Solr 9.1.1 Release Highlights:</h3>
+<p>Bugfixes</p>
+<ul>
+<li>SOLR-16589: Fixed issue where large fields with large=true could be truncated when using unicode values</li>
+<li>SOLR-16585: Fixed NPE when paginating MatchAllDocs with non-zero start offset, like <code>q=*:*&amp;start=10</code></li>
+<li>SOLR-16165: Fixed rare deadlock in SlotAcc static initialization</li>
+<li>SOLR-16622: Fixed issue where replicas could fail to register as active after node restart</li>
+</ul>
+<p>Other</p>
+<ul>
+<li>SOLR-16443: Upgrade Jackson bom to 2.13.4.20221013</li>
+<li>SOLR-16568: Upgrade woodstox-core to 6.4.0</li>
+<li>SOLR-16598: Upgrade Protobuf to 3.21.12</li>
+<li>SOLR-16567: Fixed problem with filtering and KNN search, especially when using post-filters</li>
+<li>SOLR-16588: Fixed problem with default knn algorithm</li>
+<li>SOLR-16480: ConfigSets now have an overridable allow-list for filetypes</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/9_1_1/changes/Changes.html">https://solr.apache.org/9_1_1/changes/Changes.html</a></p>
+  <h2 id="apache-solr-is-vulnerable-to-cve-2022-39135-via-sql-handler">20 November 2022, Apache Solr is vulnerable to CVE-2022-39135 via /sql handler
+    <a class="headerlink" href="#apache-solr-is-vulnerable-to-cve-2022-39135-via-sql-handler" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Versions Affected:</strong><br>
+Solr 6.5 to 8.11.2
+Solr 9.0</p>
+<p><strong>Description:</strong><br>
+Apache Calcite has a vulnerability, CVE-2022-39135, that is exploitable in Apache Solr in SolrCloud mode.  If an untrusted user can supply SQL queries to Solr’s “/sql” handler (even indirectly via proxies / other apps), then the user could perform an XML External Entity (XXE) attack.  This might have been exposed by some deployers of Solr in order for internal analysts to use JDBC based tooling, but would have unlikely been granted to wider audiences.</p>
+<p><strong>Impact:</strong><br>
+An XXE attack may lead to the disclosure of confidential data, denial of service, server side request forgery (SSRF), port scanning from the Solr node, and other system impacts.</p>
+<p><strong>Mitigation:</strong><br>
+Most Solr installations don’t make use of the SQL functionality.  For such users, the standard Solr security advice of using a firewall should be adequate.  Nonetheless, the functionality can be disabled.  As of Solr 9, it has been modularized and thus became opt-in, so nothing is needed for Solr 9 users that don’t use it.  Users <em>not</em> using SolrCloud can’t use the functionality at all.  For other users that wish to disable it, you must register a request handler that masks the underlying functionality in solrconfig.xml like so:</p>
+<div class="codehilite"><pre><span></span><code>  &lt;requestHandler name=&quot;/sql&quot; class=&quot;solr.NotFoundRequestHandler&quot;/&gt;
+</code></pre></div>
+
+<p>Users needing this SQL functionality are forced to upgrade to Solr 9.1.  If Solr 8.11.3 is released, then it will be an option as well.  Simply replacing Calcite and other JAR files may mostly work but could fail depending on the particulars of the query.  Users interested in this or in patching their own versions of Solr should examine SOLR-16421 for a source patch.</p>
+<p><strong>Credit:</strong><br>
+Andreas Hubold at CoreMedia GmbH</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-16421">SOLR-16421</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39135">CVE-2022-39135</a></p>
+  <h2 id="apache-solrtm-910-available">17 November 2022, Apache Solr™ 9.1.0 available
+    <a class="headerlink" href="#apache-solrtm-910-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.1.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.1.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-910-release-highlights">Solr 9.1.0 Release Highlights:</h3>
+<ul>
+<li>Dedicated query coordinator nodes in a Solr cluster</li>
+<li>Improvements to admin UI: managing paramsets in queries, managing field
+   types, replica types while collection creation, etc.</li>
+<li>Support for rolling up core level metrics to be node level metrics</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_1_0/changes/Changes.html">https://solr.apache.org/9_1_0/changes/Changes.html</a></p>
+  <h2 id="java-17-bug-affecting-solr">21 October 2022, Java 17 bug affecting Solr
+    <a class="headerlink" href="#java-17-bug-affecting-solr" title="Permanent link">¶</a>
+  </h2>
+  <p>Several users running Solr in production on OpenJDK 17 have experienced JVM crashes due to a known bug in the JDK. Read more about the bug in <a href="https://issues.apache.org/jira/browse/SOLR-16463">SOLR-16463</a>.</p>
+<p>Known mitigations are to either downgrade to JDK 11 or to start Solr with a Java startup flag that avoids the failure condition. Here is how to manually apply the flag:</p>
+<p>Edit your <code>solr.in.sh</code> or <code>solr.in.cmd</code> file to set the <code>SOLR_OPTS</code> environment variable as follows:</p>
+<p><em>Linux:</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">SOLR_OPTS</span><span class="o">=</span>-XX:CompileCommand<span class="o">=</span>exclude,com.github.benmanes.caffeine.cache.BoundedLocalCache::put
+</code></pre></div>
+
+<p><em>Windows:</em></p>
+<div class="codehilite"><pre><span></span><code>SET<span class="w"> </span><span class="nv">SOLR_OPTS</span><span class="o">=</span>-XX:CompileCommand<span class="o">=</span>exclude,com.github.benmanes.caffeine.cache.BoundedLocalCache::put
+</code></pre></div>
+
+<p>Alternatively, you can inject the same flag with the <code>-a</code> argument, e.g:</p>
+<div class="codehilite"><pre><span></span><code>bin/solr<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;-XX:CompileCommand=exclude,com.github.benmanes.caffeine.cache.BoundedLocalCache::put&quot;</span>
+</code></pre></div>
+
+<p>If you run Solr 9 with the official Docker image, we have already pushed an updated Docker image to Docker Hub that will inject the flag for you.
+Just pull the image again to get it.
+The Docker image uses the <code>-a</code> option to set this java flag when running Solr, so if you are using the 
+<code>-a</code> option you will need to provide the JVM flag mentioned above in addition to the other flags you are setting.</p>
+  <h2 id="solr-8-docker-image-changes-to-eclipse-temurin-jdk">20 October 2022, Solr 8 Docker image changes to Eclipse Temurin JDK
+    <a class="headerlink" href="#solr-8-docker-image-changes-to-eclipse-temurin-jdk" title="Permanent link">¶</a>
+  </h2>
+  <p>The official docker image for Solr 8.11 has been running on <a href="https://hub.docker.com/_/openjdk">Oracle OpenJDK 11 JRE</a>. However, due to Oracle's new release policies, they now no longer provide support for JDK11. Since Solr 8.11 is still being supported by the Apache Solr project, we needed to switch to another OpenJDK vendor with JDK11 support. We chose <a href="https://hub.docker.com/_/eclipse-temurin">Eclipse Temurin</a> from the Adoptium project. This is the same vendor as we use for our Solr 9 image, and their <a href="https://adoptium.net/support/">JDK11 support lasts until October 2024</a>. </p>
+<p>Users should be aware that on your next <code>docker pull solr:8.11.2</code> you will be upgraded. For most users there will be no issues, as it is mainly a new distribution of the same upstream OpenJDK version. However, if you use our image as base image and rely on specific tools to be present, you may need to adapt. While <code>openjdk:11-jre</code> uses <code>Debian GNU/Linux 11 (bullseye)</code>, the <code>eclipse-temurin:11-jre-focal</code> image uses <code>Ubuntu 20.04.5 LTS (Focal Fossa)</code>.</p>
+<p>Furthermore, there is now no difference between the <code>solr:11-jre</code> and <code>solr:11-jre-slim</code> images, because our new vendor only offers one variant which is fairly slim already.</p>
+  <h2 id="solr-docker-images-now-pin-the-linux-release">20 October 2022, Solr Docker images now pin the Linux release
+    <a class="headerlink" href="#solr-docker-images-now-pin-the-linux-release" title="Permanent link">¶</a>
+  </h2>
+  <p>Solr 9 was released on May 12th, using the <code>eclipse-temurin:17-jre</code> base image. Thus, we are pinned to Java 17 and Solr's
+Docker image will thus always use an updated Java 17 version. If you pull the docker image from time to time that is.</p>
+<p>However, the base image tag <code>17-jre</code> did not give us pinning to a specific Ubuntu Linux major release. 
+At the time of <a href="http://localhost:8000/news.html#apache-solrtm-900-available">Solr 9 release</a> on May 12th
+it would pull Ubuntu 20.04 (Focal Fossa), but at the end of May, it was <a href="https://github.com/docker-library/official-images/commit/6d689db4846a3eb4c2ebd0e5d06139c650ef3bbb">auto upgraded</a> to the brand new Ubuntu
+22.04 (Jammy Jellyfish). This was not our desire, and we have learnt that due to this, our image is no longer compatible
+with Docker client versions before 20.10.16. Having a "floating" linux release like this can also break the image in 
+other subtle ways, as well as breaking downstream images using us as a base image.</p>
+<p>We therefore decided to start pinning not only Java release, but also Linux release in our official Docker images.
+This means that Solr 9.0 is once again based on Ubuntu 20.04 Focal, i.e. a downgrade.</p>
+<p>Note that our images will still receive important Linux bug fixes from time to time, but you won't get them unless you
+re-pull the image. When we upgrade to Ubuntu 22.04 in the future, it will be a deliberate decision and not by accident.</p>
+  <h2 id="apache-solrtm-8112-available">17 June 2022, Apache Solr™ 8.11.2 available
+    <a class="headerlink" href="#apache-solrtm-8112-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.2.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 8.11.2 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-8112-release-highlights">Solr 8.11.2 Release Highlights:</h3>
+<p>Security</p>
+<ul>
+<li>SOLR-15871: Update Log4J to 2.17.1</li>
+<li>SOLR-15961: Fix bug in PKIAuthenticationPlugin that can cause a request to fail with 401 Unauthorized instead of re-fetching expired remote keys from other nodes.</li>
+<li>SOLR-14569: Configuring a shardHandlerFactory on the /select requestHandler results in HTTP 401 when searching on alias in secured Solr.</li>
+<li>SOLR-16022: Enforce special character requirements on passwords with length less than 15</li>
+<li>SOLR-16075: ShowFileHandler path parameter is now validated to be relative to instance conf dir in standalone mode</li>
+</ul>
+<p>Bugfixes</p>
+<ul>
+<li>SOLR-15849: Fix the connection reset problem caused by the incorrect use of 4LW with \n when monitoring zooKeeper status</li>
+<li>SOLR-16199: Improve query syntax construction for SQL LIKE clause with phrases and wildcards</li>
+<li>SOLR-16143: SolrConfig can miss updates from ZooKeeper when deleting and recreating file items</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html">https://solr.apache.org/guide/8_11/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/docs/8_11_2/changes/Changes.html">https://solr.apache.org/docs/8_11_2/changes/Changes.html</a></p>
+<p>Solr 8.11.2 also includes bugfixes in the corresponding Apache Lucene release:</p>
+<p><a href="https://lucene.apache.org/core/8_11_2/changes/Changes.html">https://lucene.apache.org/core/8_11_2/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-900-available">12 May 2022, Apache Solr™ 9.0.0 available
+    <a class="headerlink" href="#apache-solrtm-900-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.0.0.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 9.0.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<p>This is a major-version release with breaking changes. The highlights below is not the full list. Please consult the "Solr Upgrade Notes" when planning an upgrade:</p>
+<p><a href="https://solr.apache.org/guide/solr/9_0/upgrade-notes/solr-upgrade-notes.html">https://solr.apache.org/guide/solr/9_0/upgrade-notes/solr-upgrade-notes.html</a></p>
+<h2 id="solr-900-release-highlights">Solr 9.0.0 Release Highlights:</h2>
+<ul>
+<li>Minimum Java version supported: Java 11</li>
+<li>Powered by Lucene 9.0, with numerous small and large improvements, such as smaller index footprint.</li>
+</ul>
+<h3 id="querying-and-indexing">Querying and Indexing</h3>
+<ul>
+<li>Dense Vector "Neural" Search through DenseVectorField fieldType and K-Nearest-Neighbor (KNN) Query Parser.</li>
+<li>Admin UI support for SQL Querying.</li>
+<li>New snowball stemmers: Hindi, Indonesian, Nepali, Serbian, Tamil, and Yiddish.</li>
+<li>New NorwegianNormalizationFilter.</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Certificate Authentication Plugin lets you authenticate with x509 client certificates.</li>
+<li>Upgrade to Zookeeper 3.7, allowing for TLS protected ZK communication.</li>
+<li>All request handlers support security permissions for authorization.</li>
+<li>Solr now runs with the Java security manager enabled by default.</li>
+<li>Solr embedded zookeeper only binds to localhost by default.</li>
+<li>A lot of dependency updates make Solr much more secure.</li>
+</ul>
+<h3 id="stability-and-scalability">Stability and Scalability</h3>
+<ul>
+<li>Rate limiting provides a way to throttle update and search requests based on usage metrics.</li>
+<li>Task management interface allows declaring tasks as cancellable and trackable.</li>
+<li>Ability to specify node roles in Solr. This release supports 'Overseer' and 'Data' roles.</li>
+<li>Support for distributed processing of cluster state updates and collection API calls without relying on the Overseer.</li>
+</ul>
+<h3 id="build-and-docker">Build and Docker</h3>
+<ul>
+<li>Solr is now built and released independently of Apache Lucene (separate Apache projects).</li>
+<li>Build system switched to Gradle from Ant + Ivy.</li>
+<li>Docker image creation is now a part of the Apache Solr Github repo.</li>
+<li>Docker image documentation is now a part of the reference guide.</li>
+<li>Official Docker image upgraded to use JDK17 (by Eclipse Temurin) and ability to create a local image that is functionally identical to the official one.</li>
+</ul>
+<h3 id="deprecations-and-removals">Deprecations and Removals</h3>
+<ul>
+<li>The Data Import Handler (DIH) is an independent project now; it is no longer a part of Solr.</li>
+<li>No more support for clusterstate.json and MIGRATESTATE API has been removed. If your collections use clusterstate.json, please refer to the Upgrade Notes.</li>
+<li>Auto scaling framework has been removed. Please refer to the new Replica Placement Plugins for alternate options.</li>
+<li>LegacyBM25SimilarityFactory has been removed.</li>
+<li>VelocityResponseWriter is an independent project now; it is no longer a part of Solr. This encompasses all previously included /browse and wt=velocity examples.</li>
+<li>Legacy SolrCache implementations (LRUCache, LFUCache, FastLRUCache) have been removed. Users should modify their existing configurations to use CaffeineCache instead.</li>
+<li>Cross Data Center Replication has been removed.</li>
+<li>SolrJ clients like HttpSolrClient and LBHttpSolrClient that lacked HTTP2 support have been deprecated. The old CloudSolrClient has been renamed as CloudLegacySolrClient and deprecated.</li>
+<li>SimpleFSDirectoryFactory is removed in favor of NIOFSDirectoryFactory.</li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li>Contrib modules are now just "modules". You can easily enable module(s) through environment variable SOLR_MODULES.</li>
+<li>Features lifted out as separate modules are: HDFS, Hadoop-Auth, SQL, Scripting, and JWT-Auth.</li>
+<li>The "dist" folder in the release is gone. Module jars are now inside respective module's lib/ folder.</li>
+<li>SolrJ class CloudSolrClient now supports HTTP2. It has a new Builder. See CloudLegacySolrClient for the 8.x version of this class</li>
+<li>Jetty Request log is now enabled by default, i.e. logging every request.</li>
+</ul>
+<p>Please read CHANGES.txt for a full list of new features, changes and bugfixes:</p>
+<p><a href="https://solr.apache.org/9_0_0/changes/Changes.html">https://solr.apache.org/9_0_0/changes/Changes.html</a></p>
+  <h2 id="cve-2021-44548-apache-solr-information-disclosure-vulnerability-through-dataimporthandler">18 December 2021, CVE-2021-44548: Apache Solr information disclosure vulnerability through DataImportHandler
+    <a class="headerlink" href="#cve-2021-44548-apache-solr-information-disclosure-vulnerability-through-dataimporthandler" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Moderate</p>
+<p><strong>Versions Affected:</strong><br>
+All versions prior to 8.11.1. Affected platforms: Windows.</p>
+<p><strong>Description:</strong><br>
+An Improper Input Validation vulnerability in DataImportHandler of Apache Solr allows an attacker to provide a Windows UNC path resulting in an SMB network call being made from the Solr host to another host on the network. If the attacker has wider access to the network, this may lead to SMB attacks, which may result in:</p>
+<ul>
+<li>The exfiltration of sensitive data such as OS user hashes (NTLM/LM hashes),</li>
+<li>In case of misconfigured systems, SMB Relay Attacks which can lead to user impersonation on SMB Shares or, in a worse-case scenario, Remote Code Execution</li>
+</ul>
+<p>This issue affects all Apache Solr versions prior to 8.11.1. This issue only affects Windows.</p>
+<p><strong>Mitigation:</strong><br>
+Upgrade to Solr 8.11.1, and/or ensure only trusted clients can make requests to Solr's DataImport handler.</p>
+<p><strong>Credit:</strong><br>
+Apache Solr would like to thank LaiHan of Nsfocus security team for reporting the issue</p>
+<p><strong>References:</strong><br>
+Jira issue <a href="https://issues.apache.org/jira/browse/SOLR-15826">SOLR-15826</a></p>
+  <h2 id="apache-solrtm-8111-available">16 December 2021, Apache Solr™ 8.11.1 available
+    <a class="headerlink" href="#apache-solrtm-8111-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Lucene PMC is pleased to announce the release of Apache Solr 8.11.1.</p>
+<p>Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.</p>
+<p>Solr 8.11.1 is available for immediate download at:</p>
+<p><a href="https://lucene.apache.org/solr/downloads.html">https://lucene.apache.org/solr/downloads.html</a></p>
+<h3 id="solr-8111-release-highlights">Solr 8.11.1 Release Highlights:</h3>
+<p>Security</p>
+<ul>
+<li>Updates bundled log4j2 dependencies to address CVE-2021-44228 (SOLR-15843)</li>
+<li>Upgrade jaegertracing to 1.6.0 and libthrift to 0.14.1 to address CVE-2020-13949 (SOLR-15324)</li>
+</ul>
+<p>Bugfixes</p>
+<ul>
+<li>Fixes to the new Admin UI Security and Schema Designer screens (SOLR-15825, SOLR-15774 and SOLR-15813)</li>
+<li>Fix regression in 8.11.0 for the Admin UI Files screen and Velocity (SOLR-15804)</li>
+<li>Admin endpoints for Zookeeper now by default protected by zk_read permission (SOLR-15768)</li>
+<li>Better default security.json uploaded by bin/solr tool (SOLR-15828)</li>
+<li>Switching a PRS collection from true -&gt; false -&gt; true resulted in INACTIVE replicas (SOLR-15794)</li>
+<li>Fix REPLACENODE to not use source node when choosing a target node (SOLR-15795)</li>
+<li>Fix NPE in pivot facets, add non-Analyzed query method in FieldType (SOLR-8319)</li>
+<li>Upgrade Velocity from to v2.3 and Velocity Tools to v3.1 (SOLR-15844)</li>
+<li>..and more</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html">https://solr.apache.org/guide/8_11/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/docs/8_11_1/changes/Changes.html">https://solr.apache.org/docs/8_11_1/changes/Changes.html</a></p>
+  <h2 id="apache-solr-affected-by-apache-log4j-cve-2021-44228">10 December 2021, Apache Solr affected by Apache Log4J CVE-2021-44228
     <a class="headerlink" href="#apache-solr-affected-by-apache-log4j-cve-2021-44228" title="Permanent link">¶</a>
   </h2>
   <p><strong>Severity:</strong>
 Critical</p>
 <p><strong>Versions Affected:</strong>
-7.0.0 to 7.7.3
-8.0.0 to 8.11.0</p>
+7.4.0 to 7.7.3, 8.0.0 to 8.11.0</p>
 <p><strong>Description:</strong>
 Apache Solr releases prior to 8.11.1 were using a bundled version of the Apache Log4J library vulnerable to RCE. For full impact and additional detail consult the Log4J security page.</p>
-<p>Apache Solr releases prior to 7.0 (i.e. all Solr 5 and Solr 6 releases) use log4j 1.2.17 which may be vulnerable for installations using non-default logging configurations. To determine you if you are vulnerable please consult the Log4J security page.</p>
-<p>The Prometheus Exporter Contrib is similarly separately affected.</p>
+<p>Apache Solr releases prior to 7.4 (i.e. Solr 5, Solr 6, and Solr 7 through 7.3) use Log4J 1.2.17 which may be vulnerable for installations using non-default logging configurations that include the JMS Appender, see <a href="https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126">https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126</a> for discussion.</p>
+<p>Solr's Prometheus Exporter uses Log4J as well but it does not log user input or data, so we don't see a risk there.</p>
+<p>Solr is <em>not</em> vulnerable to the followup <strong>CVE-2021-45046</strong> and <strong>CVE-2021-45105</strong>.  A listing of these and other CVEs with some justifications are listed in Solr's wiki: <a href="https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity#SolrSecurity-SolrandVulnerabilityScanningTools">https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity#SolrSecurity-SolrandVulnerabilityScanningTools</a></p>
 <p><strong>Mitigation:</strong>
 Any of the following are enough to prevent this vulnerability for Solr servers:</p>
 <ul>
-<li>Upgrade to <code>Solr 8.11.1</code> or greater (when available), which will include an updated version of the log4j2 dependency.</li>
-<li>Manually update the version of log4j2 on your runtime classpath and restart your Solr application.</li>
+<li>Upgrade to <code>Solr 8.11.1</code> or greater (when available), which will include an updated version (<code>&gt;= 2.16.0</code>) of the Log4J dependency.</li>
+<li>If you are using Solr's official docker image, it has already been mitigated in all versions listed as supported on Docker Hub: <a href="https://hub.docker.com/_/solr">https://hub.docker.com/_/solr</a>.  You may need to re-pull the image.</li>
+<li>Manually update the version of Log4J on your runtime classpath and restart your Solr application.</li>
 <li>(Linux/MacOS) Edit your <code>solr.in.sh</code> file to include:
   <code>SOLR_OPTS="$SOLR_OPTS -Dlog4j2.formatMsgNoLookups=true"</code></li>
 <li>(Windows) Edit your <code>solr.in.cmd</code> file to include:
   <code>set SOLR_OPTS=%SOLR_OPTS% -Dlog4j2.formatMsgNoLookups=true</code></li>
 <li>Follow any of the other mitgations listed at <a href="https://logging.apache.org/log4j/2.x/security.html">https://logging.apache.org/log4j/2.x/security.html</a></li>
 </ul>
-<p>The vulnerability in the Prometheus Exporter Contrib can be mitigated by any of the following:</p>
-<ul>
-<li>Upgrade to <code>Solr 8.11.1</code> or greater (when available), which will include an updated version of the log4j2 dependency.</li>
-<li>Manually update the version of log4j2 on your runtime classpath and restart your Solr application.</li>
-<li>Edit your <code>solr-exporter</code> script to include:
-  <code>JAVA_OPTS="$JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true"</code></li>
-<li>Follow any of the other mitgations listed at <a href="https://logging.apache.org/log4j/2.x/security.html">https://logging.apache.org/log4j/2.x/security.html</a></li>
-</ul>
+<p>The Log4J security page refers to setting <code>log4j2.formatMsgNoLookups=true</code> as a "discredited" mitigation.  In reality, it depends.
+We've looked at the root cause and audited the code paths that lead to the vulnerability, and we feel confident in this mitigation being sufficient for Solr.
+See <a href="https://lists.apache.org/thread/kgh63sncrsm2bls884pg87mnt8vqztmz">https://lists.apache.org/thread/kgh63sncrsm2bls884pg87mnt8vqztmz</a> for discussion.</p>
 <p><strong>References:</strong>
 <a href="https://logging.apache.org/log4j/2.x/security.html">https://logging.apache.org/log4j/2.x/security.html</a></p>
   <h2 id="apache-solrtm-8110-available">16 November 2021, Apache Solr™ 8.11.0 available
@@ -807,30 +1436,30 @@ Matei "Mal" Badanoiu</p>
   <h2 id="announce-811-and-820-users-check-enable_remote_jmx_opts-setting">14 August 2019, [ANNOUNCE] 8.1.1 and 8.2.0 users check ENABLE_REMOTE_JMX_OPTS setting
     <a class="headerlink" href="#announce-811-and-820-users-check-enable_remote_jmx_opts-setting" title="Permanent link">¶</a>
   </h2>
-  <div class="codehilite"><pre><span></span><code><span class="n">Severity</span><span class="o">:</span> <span class="n">Low</span>
+  <div class="codehilite"><pre><span></span><code><span class="n">Severity</span><span class="o">:</span><span class="w"> </span><span class="n">Low</span>
 
-<span class="n">Versions</span> <span class="n">Affected</span><span class="o">:</span>
-<span class="mf">8.1</span><span class="o">.</span><span class="mi">1</span> <span class="n">and</span> <span class="mf">8.2</span><span class="o">.</span><span class="mi">0</span> <span class="k">for</span> <span class="n">Linux</span>
+<span class="n">Versions</span><span class="w"> </span><span class="n">Affected</span><span class="o">:</span>
+<span class="mf">8.1</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="mf">8.2</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Linux</span>
 
 <span class="n">Description</span><span class="o">:</span>
-<span class="n">It</span> <span class="n">has</span> <span class="n">been</span> <span class="n">discovered</span> <span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="n">that</span> <span class="n">the</span> <span class="mf">8.1</span><span class="o">.</span><span class="mi">1</span> <span class="n">and</span> <span class="mf">8.2</span><span class="o">.</span><span class="mi">0</span> <span class="n">releases</span> <span class="n">contain</span> <span class="n">a</span> <span class="n">bad</span> <span class="k">default</span>
-<span class="n">setting</span> <span class="k">for</span> <span class="n">the</span> <span class="n">ENABLE_REMOTE_JMX_OPTS</span> <span class="n">setting</span> <span class="k">in</span> <span class="n">the</span> <span class="k">default</span> <span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span> <span class="n">file</span>
-<span class="n">shipping</span> <span class="k">with</span> <span class="n">Solr</span><span class="o">.</span>
+<span class="n">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">discovered</span><span class="w"> </span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="mf">8.1</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="mf">8.2</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="n">releases</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bad</span><span class="w"> </span><span class="k">default</span>
+<span class="n">setting</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ENABLE_REMOTE_JMX_OPTS</span><span class="w"> </span><span class="n">setting</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span><span class="w"> </span><span class="n">file</span>
+<span class="n">shipping</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">Solr</span><span class="o">.</span>
 
-<span class="n">Windows</span> <span class="n">users</span> <span class="n">and</span> <span class="n">users</span> <span class="k">with</span> <span class="n">custom</span> <span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span> <span class="n">files</span> <span class="n">are</span> <span class="n">not</span> <span class="n">affected</span><span class="o">.</span>
+<span class="n">Windows</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">custom</span><span class="w"> </span><span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">affected</span><span class="o">.</span>
 
-<span class="n">If</span> <span class="n">you</span> <span class="n">are</span> <span class="n">using</span> <span class="n">the</span> <span class="k">default</span> <span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span> <span class="n">file</span> <span class="n">from</span> <span class="n">the</span> <span class="n">affected</span> <span class="n">releases</span><span class="o">,</span> <span class="n">then</span>
-<span class="n">JMX</span> <span class="n">monitoring</span> <span class="n">will</span> <span class="n">be</span> <span class="n">enabled</span> <span class="n">and</span> <span class="n">exposed</span> <span class="n">on</span> <span class="n">JMX_PORT</span> <span class="o">(</span><span class="k">default</span> <span class="o">=</span> <span class="mi">18983</span><span class="o">),</span>
-<span class="n">without</span> <span class="n">any</span> <span class="n">authentication</span><span class="o">.</span> <span class="n">So</span> <span class="k">if</span> <span class="n">your</span> <span class="n">firewalls</span> <span class="n">allows</span> <span class="n">inbound</span> <span class="n">traffic</span> <span class="n">on</span>
-<span class="n">JMX_PORT</span><span class="o">,</span> <span class="n">then</span> <span class="n">anyone</span> <span class="k">with</span> <span class="n">network</span> <span class="n">access</span> <span class="n">to</span> <span class="n">your</span> <span class="n">Solr</span> <span class="n">nodes</span> <span class="n">will</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span>
-<span class="n">access</span> <span class="n">monitoring</span> <span class="n">data</span> <span class="n">exposed</span> <span class="n">over</span> <span class="n">JMX</span><span class="o">.</span>
+<span class="n">If</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="n">releases</span><span class="o">,</span><span class="w"> </span><span class="n">then</span>
+<span class="n">JMX</span><span class="w"> </span><span class="n">monitoring</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">exposed</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">JMX_PORT</span><span class="w"> </span><span class="o">(</span><span class="k">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18983</span><span class="o">),</span>
+<span class="n">without</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">authentication</span><span class="o">.</span><span class="w"> </span><span class="n">So</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">firewalls</span><span class="w"> </span><span class="n">allows</span><span class="w"> </span><span class="n">inbound</span><span class="w"> </span><span class="n">traffic</span><span class="w"> </span><span class="n">on</span>
+<span class="n">JMX_PORT</span><span class="o">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">anyone</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">network</span><span class="w"> </span><span class="n">access</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">Solr</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">able</span><span class="w"> </span><span class="n">to</span>
+<span class="n">access</span><span class="w"> </span><span class="n">monitoring</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">exposed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">JMX</span><span class="o">.</span>
 
 <span class="n">Mitigation</span><span class="o">:</span>
-<span class="n">Edit</span> <span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span><span class="o">,</span> <span class="kd">set</span> <span class="n">ENABLE_REMOTE_JMX_OPTS</span><span class="o">=</span><span class="kc">false</span> <span class="n">and</span> <span class="n">restart</span> <span class="n">Solr</span><span class="o">.</span>
-<span class="n">Alternatively</span> <span class="n">wait</span> <span class="k">for</span> <span class="n">the</span> <span class="n">future</span> <span class="mf">8.3</span><span class="o">.</span><span class="mi">0</span> <span class="n">release</span> <span class="n">and</span> <span class="n">upgrade</span><span class="o">.</span>
+<span class="n">Edit</span><span class="w"> </span><span class="n">solr</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">sh</span><span class="o">,</span><span class="w"> </span><span class="kd">set</span><span class="w"> </span><span class="n">ENABLE_REMOTE_JMX_OPTS</span><span class="o">=</span><span class="kc">false</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">Solr</span><span class="o">.</span>
+<span class="n">Alternatively</span><span class="w"> </span><span class="n">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="mf">8.3</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="n">release</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">upgrade</span><span class="o">.</span>
 
 <span class="n">References</span><span class="o">:</span>
-<span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="n">https</span><span class="o">://</span><span class="n">issues</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">org</span><span class="sr">/jira/browse/</span><span class="n">SOLR</span><span class="o">-</span><span class="mi">13647</span>
+<span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">issues</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">org</span><span class="sr">/jira/browse/</span><span class="n">SOLR</span><span class="o">-</span><span class="mi">13647</span>
 </code></pre></div>
   <h2 id="cve-2019-0193-apache-solr-remote-code-execution-via-dataimporthandler">31 July 2019, CVE-2019-0193: Apache Solr, Remote Code Execution via DataImportHandler
     <a class="headerlink" href="#cve-2019-0193-apache-solr-remote-code-execution-via-dataimporthandler" title="Permanent link">¶</a>
@@ -3703,8 +4332,8 @@ file included with the release for a full list of details.</p>
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2021 The Apache Software Foundation, Licensed under the
-    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="/privacy.html">Privacy Policy</a><br/>
+  <p>Copyright © 2024 The Apache Software Foundation, Licensed under the
+    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
     Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
     Please see the <a href="https://www.apache.org/foundation/marks/">Apache Trademark Policy</a> for more information.

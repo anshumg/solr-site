@@ -127,6 +127,132 @@
   <h1 id="solr-operator-news">Solr Operator<sup>™</sup> News<a class="headerlink" href="#solr-operator-news" title="Permanent link">¶</a></h1>
   <p>You may also read these news as an <a href="/feeds/solr/operator/news.atom.xml">ATOM feed</a>.</p>
 
+  <h2 id="apache-solr-operatortm-v081-available">12 April 2024, Apache Solr Operator™ v0.8.1 available
+    <a class="headerlink" href="#apache-solr-operatortm-v081-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Apache Solr PMC is pleased to announce the release of the Apache Solr Operator v0.8.1.</p>
+<p>The Apache Solr Operator is a safe and easy way of managing a Solr ecosystem in Kubernetes.</p>
+<p>This release contains numerous bug fixes, optimizations, and improvements, some of which are highlighted below. The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/operator/artifacts.html">https://solr.apache.org/operator/artifacts.html</a></p>
+<h3 id="solr-operator-v081-release-highlights">Solr Operator v0.8.1 Release Highlights:</h3>
+<ul>
+<li>Miscellaneous bugfixes and hardening for the "managed scaling" feature adding in v0.8.0.</li>
+<li>Init-containers now avoid writing to "/tmp" and other root FS locations, to better support "read-only" root filesystems</li>
+<li>SolrPrometheusExporter no longer fails liveness probes when the SolrCloud is too large</li>
+</ul>
+<p>A summary of important changes is published in the documentation at:</p>
+<p><a href="https://apache.github.io/solr-operator/docs/upgrade-notes.html">https://apache.github.io/solr-operator/docs/upgrade-notes.html</a></p>
+<p>For the most exhaustive list, see the change log on ArtifactHub or view the git history in the solr-operator repo.</p>
+<p><a href="https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog">https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog</a></p>
+<p><a href="https://github.com/apache/solr-operator/releases/tag/v0.8.1">https://github.com/apache/solr-operator/releases/tag/v0.8.1</a></p>
+  <h2 id="apache-solr-operatortm-v080-available">20 October 2023, Apache Solr Operator™ v0.8.0 available
+    <a class="headerlink" href="#apache-solr-operatortm-v080-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Apache Solr PMC is pleased to announce the release of the Apache Solr Operator v0.8.0.</p>
+<p>The Apache Solr Operator is a safe and easy way of managing a Solr ecosystem in Kubernetes.</p>
+<p>This release contains numerous bug fixes, optimizations, and improvements, some of which are highlighted below. The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/operator/artifacts.html">https://solr.apache.org/operator/artifacts.html</a></p>
+<h3 id="solr-operator-v080-release-highlights">Solr Operator v0.8.0 Release Highlights:</h3>
+<ul>
+<li>The minimum supported version of Solr has been set to Solr 8.11</li>
+<li>The minimum Kubernetes version supported is now v1.22</li>
+<li>Managed scale up and scale down are now supported for SolrClouds.<ul>
+<li>By default, when scaling down a SolrCloud, replicas will be migrated off Pods before they are deleted.</li>
+<li>By default, when scaling up a SolrCloud, replicas will be balanced across all Pods after the SolrCloud has been scaled up. (Only supported for Solr 9.3+)</li>
+</ul>
+</li>
+<li>SSL bugs with Solr 9 have been fixed, and v0.8.0 will successfully support SSL for Solr 8.11 and 9.4+</li>
+<li>Solr 8.11 features are now supported by default, such as maxBooleanClauses, metrics disabling, health endpoint for readinessCheck</li>
+<li>Keystore/Truststore passwords can be explicitly set in the SolrCloud CRD for mountedDir SSL. This enables the use of the CertManager CSI Driver with Solr.</li>
+<li>Rolling Updates for SolrClouds using ephemeral storage are now safer and replicas are balanced at the end of the operation to ensure optimal resource utilization.<ul>
+<li>Replica balancing is only supported when Solr 9.3+ is used.</li>
+</ul>
+</li>
+</ul>
+<p>A summary of important changes is published in the documentation at:</p>
+<p><a href="https://apache.github.io/solr-operator/docs/upgrade-notes.html">https://apache.github.io/solr-operator/docs/upgrade-notes.html</a></p>
+<p>For the most exhaustive list, see the change log on ArtifactHub or view the git history in the solr-operator repo.</p>
+<p><a href="https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog">https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog</a></p>
+<p><a href="https://github.com/apache/solr-operator/releases/tag/v0.8.0">https://github.com/apache/solr-operator/releases/tag/v0.8.0</a></p>
+  <h2 id="apache-solr-operatortm-v071-available">21 July 2023, Apache Solr Operator™ v0.7.1 available
+    <a class="headerlink" href="#apache-solr-operatortm-v071-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Apache Solr PMC is pleased to announce the release of the Apache Solr Operator v0.7.1.</p>
+<p>The Apache Solr Operator is a safe and easy way of managing a Solr ecosystem in Kubernetes.</p>
+<p>This release contains numerous bug fixes, optimizations, and improvements, some of which are highlighted below. The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/operator/artifacts.html">https://solr.apache.org/operator/artifacts.html</a></p>
+<h3 id="solr-operator-v071-release-highlights">Solr Operator v0.7.1 Release Highlights:</h3>
+<ul>
+<li>The Kubernetes API client has been upgraded to fix a bug found when running on Kubernetes v1.27</li>
+</ul>
+<p>A summary of important changes is published in the documentation at:</p>
+<p><a href="https://apache.github.io/solr-operator/docs/upgrade-notes.html">https://apache.github.io/solr-operator/docs/upgrade-notes.html</a></p>
+<p>For the most exhaustive list, see the change log on ArtifactHub or view the git history in the solr-operator repo.</p>
+<p><a href="https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog">https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog</a></p>
+<p><a href="https://github.com/apache/solr-operator/releases/tag/v0.7.1">https://github.com/apache/solr-operator/releases/tag/v0.7.1</a></p>
+  <h2 id="apache-solr-operatortm-v070-available">24 April 2023, Apache Solr Operator™ v0.7.0 available
+    <a class="headerlink" href="#apache-solr-operatortm-v070-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Apache Solr PMC is pleased to announce the release of the Apache Solr Operator v0.7.0.</p>
+<p>The Apache Solr Operator is a safe and easy way of managing a Solr ecosystem in Kubernetes.</p>
+<p>This release contains numerous bug fixes, optimizations, and improvements, some of which are highlighted below. The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/operator/artifacts.html">https://solr.apache.org/operator/artifacts.html</a></p>
+<h3 id="solr-operator-v070-release-highlights">Solr Operator v0.7.0 Release Highlights:</h3>
+<ul>
+<li>The minimum Kubernetes version supported is now v1.21.</li>
+<li>The required Zookeeper Operator version has been upgraded to v0.2.15.</li>
+<li>Clusterwide PodDisruptionBudgets are now created for SolrClouds by default.</li>
+<li>During a rolling restart/update, SolrCloud pods are now taken out of the common service endpoint before they are decommissioned. This should improve request reliability during rolling restarts.</li>
+<li>Many missing Provided Zookeeper options have been added.</li>
+<li>Using volume backupRepositories now initialize faster on pod creation and work with custom user/fsGroup.</li>
+<li>Default SolrCloud and SolrPrometheusExporter Pod probes have been improved.</li>
+<li>Bug fixed in non-recurring backups.</li>
+<li>Bug fixed with custom persistent data volume names.</li>
+</ul>
+<p>A summary of important changes is published in the documentation at:</p>
+<p><a href="https://apache.github.io/solr-operator/docs/upgrade-notes.html">https://apache.github.io/solr-operator/docs/upgrade-notes.html</a></p>
+<p>For the most exhaustive list, see the change log on ArtifactHub or view the git history in the solr-operator repo.</p>
+<p><a href="https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog">https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog</a></p>
+<p><a href="https://github.com/apache/solr-operator/releases/tag/v0.7.0">https://github.com/apache/solr-operator/releases/tag/v0.7.0</a></p>
+  <h2 id="apache-solr-operatortm-v060-available">14 August 2022, Apache Solr Operator™ v0.6.0 available
+    <a class="headerlink" href="#apache-solr-operatortm-v060-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Apache Solr PMC is pleased to announce the release of the Apache Solr Operator v0.6.0.</p>
+<p>The Apache Solr Operator is a safe and easy way of managing a Solr ecosystem in Kubernetes.</p>
+<p>This release contains numerous bug fixes, optimizations, and improvements, some of which are highlighted below. The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/operator/artifacts.html">https://solr.apache.org/operator/artifacts.html</a></p>
+<h3 id="solr-operator-v060-release-highlights">Solr Operator v0.6.0 Release Highlights:</h3>
+<ul>
+<li>Users are now able to specify resource constraints for all init-containers.</li>
+<li>The default Solr image version used in newly created solrcloud's has been updated from 8.9 to 8.11</li>
+<li>solrcloud now has a 'solrZkOpts' field, allowing users to specify any system properties needed to connect to their ZooKeeper cluster.</li>
+<li>Users running in GKE can now omit the 'gcsCredentialSecret' field from the GCS backup repositories, and fallback on "Workload Identity" and other "credential-less" authentication mechanisms offered by Google Cloud.</li>
+</ul>
+<p>For an exhaustive list of updates, see the change log on ArtifactHub or view the git history in the solr-operator repo.</p>
+<p><a href="https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog">https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog</a></p>
+<p><a href="https://github.com/apache/solr-operator/releases/tag/v0.6.0">https://github.com/apache/solr-operator/releases/tag/v0.6.0</a></p>
+  <h2 id="apache-solr-operatortm-v051-available">21 March 2022, Apache Solr Operator™ v0.5.1 available
+    <a class="headerlink" href="#apache-solr-operatortm-v051-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Apache Solr PMC is pleased to announce the release of the Apache Solr Operator v0.5.1.</p>
+<p>The Apache Solr Operator is a safe and easy way of managing a Solr ecosystem in Kubernetes.</p>
+<p>This release contains numerous bug fixes, optimizations, and improvements, some of which are highlighted below. The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/operator/artifacts.html">https://solr.apache.org/operator/artifacts.html</a></p>
+<h3 id="solr-operator-v051-release-highlights">Solr Operator v0.5.1 Release Highlights:</h3>
+<ul>
+<li>Copy from the draft release notes</li>
+<li>Upgrade GoLang to 1.17</li>
+<li>Fix security vulnerabilities introduced by dependencies, notably github.com/gogo/protobuf and golang.org/x/crypto</li>
+<li>Resource checking for pods across all generated resources has been fixed, will not overwrite equivalent resources with different units</li>
+<li>Necessary step for GKE Autopilot and the Vertical Pod Autoscaler</li>
+<li>Ability to run sidecars of the Solr Operator that use the root user, when installing via the Helm Chart</li>
+<li>The zk.external option in the solr helm chart is now functional</li>
+</ul>
+<p>A summary of important changes is published in the documentation at:</p>
+<p><a href="https://apache.github.io/solr-operator/docs/upgrade-notes.html">https://apache.github.io/solr-operator/docs/upgrade-notes.html</a></p>
+<p>For the most exhaustive list, see the change log on ArtifactHub or view the git history in the solr-operator repo.</p>
+<p><a href="https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog">https://artifacthub.io/packages/helm/apache-solr/solr-operator?modal=changelog</a></p>
+<p><a href="https://github.com/apache/solr-operator/releases/tag/v0.5.1">https://github.com/apache/solr-operator/releases/tag/v0.5.1</a></p>
   <h2 id="apache-solr-operatortm-v050-available">16 November 2021, Apache Solr Operator™ v0.5.0 available
     <a class="headerlink" href="#apache-solr-operatortm-v050-available" title="Permanent link">¶</a>
   </h2>
@@ -298,8 +424,8 @@ Make sure to run the new <code>make prepare</code> command before submitting a P
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2021 The Apache Software Foundation, Licensed under the
-    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="/privacy.html">Privacy Policy</a><br/>
+  <p>Copyright © 2024 The Apache Software Foundation, Licensed under the
+    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
     Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
     Please see the <a href="https://www.apache.org/foundation/marks/">Apache Trademark Policy</a> for more information.

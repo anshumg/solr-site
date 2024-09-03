@@ -1,5 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Solr - solr/news</title><link href="/" rel="alternate"></link><link href="/feeds/solr/news.atom.xml" rel="self"></link><id>/</id><updated>2021-11-16T00:00:00+00:00</updated><subtitle></subtitle><subtitle></subtitle><entry><title>Apache Solr™ 8.11.0 available</title><link href="/apache-solrtm-8110-available.html" rel="alternate"></link><published>2021-11-16T00:00:00+00:00</published><updated>2021-11-16T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-11-16:/apache-solrtm-8110-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 8.11.0.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Solr - solr/news</title><link href="/" rel="alternate"></link><link href="/feeds/solr/news.atom.xml" rel="self"></link><id>/</id><updated>2024-05-29T00:00:00+00:00</updated><entry><title>Apache Solr™ 9.6.1 available</title><link href="/apache-solrtm-961-available.html" rel="alternate"></link><published>2024-05-29T00:00:00+00:00</published><updated>2024-05-29T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-05-29:/apache-solrtm-961-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.6.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.6.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.6.1 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-961-release-highlights"&gt;Solr 9.6.1 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Core loading at startup is no longer capped at 60 seconds&lt;/li&gt;
+&lt;li&gt;Replicas are ensured to be marked as down when a Solr node is started&lt;/li&gt;
+&lt;li&gt;'Illegal character in query' exception in the new HttpJdkSolrClient has been fixed&lt;/li&gt;
+&lt;li&gt;Performance regression for aliases in SolrJ has been fixed via partially reverting a recent change&lt;/li&gt;
+&lt;li&gt;Fixed debugging of Rerank Queries when reRankScale is used&lt;/li&gt;
+&lt;li&gt;System file separator is now used in CachingDirectoryFactory, instead of '/', fixing a regression on Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_6_1/changes/Changes.html"&gt;https://solr.apache.org/9_6_1/changes/Changes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to all contributors!&lt;/p&gt;
+&lt;p&gt;hossman, Houston Putman, Jan Høydahl, Andy Webb, Christine Poerschke, Aparna Suresh, David Smiley, Vincent Primault&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.6.0 available</title><link href="/apache-solrtm-960-available.html" rel="alternate"></link><published>2024-04-27T00:00:00+00:00</published><updated>2024-04-27T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-04-27:/apache-solrtm-960-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.6.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.6.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.6.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-960-release-highlights"&gt;Solr 9.6.0 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Solrj now offers a lightweight client based on java.net.http.HttpClient: HttpJdkSolrClient&lt;/li&gt;
+&lt;li&gt;SolrJ now offers an improved async request API&lt;/li&gt;
+&lt;li&gt;Inactive shards (from splits) can now be cleaned up periodically&lt;/li&gt;
+&lt;li&gt;Distributed (sharded) IDF can be disabled via request parameter&lt;/li&gt;
+&lt;li&gt;Query timeouts (limits) may now be based on either CPU time as well as wall clock&lt;/li&gt;
+&lt;li&gt;Upgraded Lucene to 9.10.0 &lt;/li&gt;
+&lt;li&gt;bin/solr post now supports --dry-run mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_6/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_6_0/changes/Changes.html"&gt;https://solr.apache.org/9_6_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to all contributors! &lt;/p&gt;
+&lt;p&gt;hossman, David Smiley, Michael Gibney, Paul McArthur, Jan Høydahl, James Dyer, Eric Pugh, Andrey Bozhko, Andrzej Bialecki, Rahul Goswami, Bruno Roustant, Jason Gerlowski, Sanjay Dutt, Vincent Primault, Christine Poerschke, Gus Heck, Shawn Heisey, Vincenzo D'Amore, Yohann Callea, Julien Pilourdault, Wei Wang, Mikhail Khludnev, Antoine Bursaux, Rishi Sankar, Pierre Salagnac, Aparna Suresh, Alessandro Benedetti, Mathieu Marie, Przemyslaw Ciezkowski&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.5.0 available</title><link href="/apache-solrtm-950-available.html" rel="alternate"></link><published>2024-02-12T00:00:00+00:00</published><updated>2024-02-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-02-12:/apache-solrtm-950-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.5.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.5.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.5.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-950-release-highlights"&gt;Solr 9.5.0 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Solr now supports "node-level" Memory and CPU circuit breakers, that serve as a default inherited by all cores on that node.&lt;/li&gt;
+&lt;li&gt;Collection and Replica Properties may now be used as property substitution variables in configuration files (e.g. solrconfig.xml).&lt;/li&gt;
+&lt;li&gt;Solr now auto-reloads updated keystore and truststore files when TLS is enabled.&lt;/li&gt;
+&lt;li&gt;Tracing support has received a number of quality-of-life improvements, including improved tracking of distributed collection commands and increased coverage for internal requests made with the Apache and Jetty HTTP clients.&lt;/li&gt;
+&lt;li&gt;Solr now offers the &lt;code&gt;&amp;lt;clusterSingleton&amp;gt;&lt;/code&gt;  solr.xml tag as a means of configuring node-level plugins in an "immutable infrastructure"-friendly way.  This offers an alternative to using the &lt;code&gt;/cluster/plugins&lt;/code&gt;  API for managing plugins in "live" clusters.&lt;/li&gt;
+&lt;li&gt;Starting with 9.5.0, Solr releases now produce an OpenAPI specification covering many of their v2 APIs. Consumers may use this spec with an array of OpenAPI-compatible tooling to generate documentation, clients in various programming languages, etc.  See https://www.openapis.org/what-is-openapi for more details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_5/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_5/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_5_0/changes/Changes.html"&gt;https://solr.apache.org/9_5_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 8.11.3 available</title><link href="/apache-solrtm-8113-available.html" rel="alternate"></link><published>2024-02-08T00:00:00+00:00</published><updated>2024-02-08T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-02-08:/apache-solrtm-8113-available.html</id><summary type="html">&lt;p&gt;The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.3.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.3.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 8.11.3 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lucene.apache.org/solr/downloads.html"&gt;https://lucene.apache.org/solr/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-8113-release-highlights"&gt;Solr 8.11.3 Release Highlights:&lt;/h3&gt;
+&lt;h4 id="security"&gt;Security&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Converted enableRemoteStreaming and enableStreamBody solrconfig options into system properties and env vars.&lt;/li&gt;
+&lt;li&gt;Restrict certain file types from being uploaded to or downloaded from Config Sets&lt;/li&gt;
+&lt;li&gt;ZK Credentials and ACLs are no longer sent to all ZK Servers when using Streaming Expressions. They will only be used when sent to the default ZK Host.&lt;/li&gt;
+&lt;li&gt;Schema Designer now correctly manages trust of the ConfigSets it is managing.&lt;/li&gt;
+&lt;li&gt;More sysProps are redacted in the UI by default.&lt;/li&gt;
+&lt;li&gt;Upgrades of various client libraries, including Jetty, Tika, Netty and Calcite.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="bugfixes"&gt;Bugfixes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;TLOGs on TLOG replicas no longer grow continuously.&lt;/li&gt;
+&lt;li&gt;Various fixes for clusters using PRS.&lt;/li&gt;
+&lt;li&gt;Collection RENAME api no longer creates broken alias.&lt;/li&gt;
+&lt;li&gt;Using Schema/Config API no longer breaks the File-Upload of Config Set File.&lt;/li&gt;
+&lt;li&gt;Fixed NPE in FieldLengthFeature with non-stored/missing fields.&lt;/li&gt;
+&lt;li&gt;HEAD request for managed resource no longer returns 500 Server Error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="features"&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS STS support has been added for the s3-repository module.&lt;/li&gt;
+&lt;li&gt;Node roles and dedicated query coordinator nodes have been added.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/8_11/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/docs/8_11_3/changes/Changes.html"&gt;https://solr.apache.org/docs/8_11_3/changes/Changes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Solr 8.11.3 also includes bugfixes in the corresponding Apache Lucene release:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lucene.apache.org/core/8_11_3/changes/Changes.html"&gt;https://lucene.apache.org/core/8_11_3/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.4.1 available</title><link href="/apache-solrtm-941-available.html" rel="alternate"></link><published>2024-01-18T00:00:00+00:00</published><updated>2024-01-18T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-01-18:/apache-solrtm-941-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.4.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.4.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.4.1 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-941-release-highlights"&gt;Solr 9.4.1 Release Highlights:&lt;/h3&gt;
+&lt;p&gt;A big regression to the JSON Query API in 9.4 is primarily what prompted this release.  Additionally, some security oriented improvements/fixes have been added, and many transitive dependencies have been upgraded.&lt;/p&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_4_1/changes/Changes.html"&gt;https://solr.apache.org/9_4_1/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.4.0 available</title><link href="/apache-solrtm-940-available.html" rel="alternate"></link><published>2023-10-15T00:00:00+00:00</published><updated>2023-10-15T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2023-10-15:/apache-solrtm-940-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.4.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.4.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.4.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-940-release-highlights"&gt;Solr 9.4.0 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Lucene version used by Solr has been upgraded to 9.8 – see its release notes.&lt;/li&gt;
+&lt;li&gt;The Jetty version has been updated to 10.0.17 to address CVE-2023-44487&lt;/li&gt;
+&lt;li&gt;Added support for node-level caches&lt;/li&gt;
+&lt;li&gt;Circuit Breakers available for Update Requests&lt;/li&gt;
+&lt;li&gt;A new Circuit breaker for percentage of CPU utilization is added. The former "CPU" circuit breaker is now more correctly named LoadAverageCircuitBreaker as it trips on system load average which is not a percentage.&lt;/li&gt;
+&lt;li&gt;Solr now includes an always-on trace id generator. This will inject trace id headers for every Solr request, propagating the client supplied value or generating a new id as needed and replaces the existing &lt;code&gt;rid&lt;/code&gt; mechanism.&lt;/li&gt;
+&lt;li&gt;Solr now limits the number of concurrent expensive core operations (such as "backup", "restore", and "split") that are submitted asynchronously by running them in a dedicated thread pool.&lt;/li&gt;
+&lt;li&gt;Added support of OAuth 2.0/OIDC 'code with PKCE' flow&lt;/li&gt;
+&lt;li&gt;Multiple bug fixes for TLS and mTLS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_4/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_4_0/changes/Changes.html"&gt;https://solr.apache.org/9_4_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.3.0 available</title><link href="/apache-solrtm-930-available.html" rel="alternate"></link><published>2023-07-21T00:00:00+00:00</published><updated>2023-07-21T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2023-07-21:/apache-solrtm-930-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.3.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.3.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.3.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-930-release-highlights"&gt;Solr 9.3.0 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Lucene version used by Solr has been upgraded to 9.7.&lt;/li&gt;
+&lt;li&gt;Solr releases now have a slim variant, both for the binary release and the docker image.&lt;ul&gt;
+&lt;li&gt;The Slim variant is the same as the normal variant, except that it does not include Solr modules or the Prometheus exporter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vector Search&lt;ul&gt;
+&lt;li&gt;Added support for byte vector encoding in DenseVectorField and KnnQParser&lt;/li&gt;
+&lt;li&gt;High dimensional vectors are now supported in Solr&lt;/li&gt;
+&lt;li&gt;Solr can now take advantage of SIMD optimizations for Vector calculations, when run with Java 20 or 21.&lt;/li&gt;
+&lt;li&gt;A new "vectorSimilarity" function query has been added to calculate similarity scores for DenseVectorFields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solr now provides an &lt;a href="https://solr.apache.org/guide/solr/9_3/deployment-guide/shard-management.html#installsharddata"&gt;"Install Shard" API&lt;/a&gt; to allow users who have built (per-shard) indices offline to import them into SolrCloud shards.&lt;/li&gt;
+&lt;li&gt;Solr’s experimental "v2" API has seen a number of improvements in the 9.3 release.&lt;ul&gt;
+&lt;li&gt;It is now approaching parity with the functionality offered by Solr’s v1 API.&lt;/li&gt;
+&lt;li&gt;The v2 API as a whole is being redesigned to be more REST-ful and intuitive&lt;br/&gt;
+  See the Changelog and upgrade notes for information on which v2 APIs have backward-incompatible changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;New APIs for MigrateReplicas and BalanceReplicas. These work out-of-the-box with the built-in PlacementPlugins.&lt;ul&gt;
+&lt;li&gt;The AffinityPlacementPlugin now supports co-location of shards between collections, using the "withCollectionShards" parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Join Queries may handle equally sharded collections on both sides.&lt;ul&gt;
+&lt;li&gt;Collections shards should be collocated via AffinityPlacementPlugin.withCollectionShards&lt;/li&gt;
+&lt;li&gt;This operation doesn't support SplitShard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unknown cores are no longer deleted by default when Solr starts. Use "solr.deleteUnknownCores=true" to use the previous behavior.&lt;/li&gt;
+&lt;li&gt;Warning: Solr cannot be used with Java 20 on MacOS with the Java Security Manager.&lt;br/&gt;
+  Please use the environment variable SOLR_SECURITY_MANAGER_ENABLED=false when running with Java 20 on MacOS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_3/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_3/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_3_0/changes/Changes.html"&gt;https://solr.apache.org/9_3_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.2.1 available</title><link href="/apache-solrtm-921-available.html" rel="alternate"></link><published>2023-05-01T00:00:00+00:00</published><updated>2023-05-01T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2023-05-01:/apache-solrtm-921-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.2.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.2.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.2.1 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-921-release-highlights"&gt;Solr 9.2.1 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix Classloading Exception for inter-node requests when using SSL and HTTP2&lt;/li&gt;
+&lt;li&gt;Use the right cluster property for displaying if TLS is enabled&lt;/li&gt;
+&lt;li&gt;Fix NPE in SystemInfoHandler for inter-node requests that would cause the Nodes page not to load&lt;/li&gt;
+&lt;li&gt;Fixing bin/solr's '-noprompt' option to work for examples&lt;/li&gt;
+&lt;li&gt;Allow custom configuration of Jetty's SecureRequestCustomizer&lt;/li&gt;
+&lt;li&gt;Fix KerberosPlugin module classloading when using the hadoop-auth module&lt;/li&gt;
+&lt;li&gt;Fixing SOLR_DATA_HOME to be honored outside of verbose mode&lt;/li&gt;
+&lt;li&gt;Use the correct instance of ReponseParser for Http2SolrClient.processErrorsAndResponse&lt;/li&gt;
+&lt;li&gt;Fix Java version detection when &lt;code&gt;_JAVA_OPTIONS&lt;/code&gt; is set`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_2_1/changes/Changes.html"&gt;https://solr.apache.org/9_2_1/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.2.0 available</title><link href="/apache-solrtm-920-available.html" rel="alternate"></link><published>2023-03-24T00:00:00+00:00</published><updated>2023-03-24T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2023-03-24:/apache-solrtm-920-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.2.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.2.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.2.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-920-release-highlights"&gt;Solr 9.2.0 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Solr has upgraded to use Jetty 10 instead of Jetty 9.&lt;/li&gt;
+&lt;li&gt;Solr now includes an opentracing module, with support for OTEL tracing in OTLP  format using gRPC.&lt;ul&gt;
+&lt;li&gt;This module is meant to replace the jaegertracer-configurator module, which has been deprecated. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The base operating system of the Solr Docker image has been upgraded to Ubuntu 22 (Jammy).&lt;/li&gt;
+&lt;li&gt;Streaming Expressions have been moved out of Solrj core into its own module called solrj-streaming.&lt;/li&gt;
+&lt;li&gt;SolrJ Solr clients now use a builder/setter pattern to enable easier setup.&lt;/li&gt;
+&lt;li&gt;Solr ConfigSet management has been optimized to improve the startup time of nodes with multiple replicas.&lt;/li&gt;
+&lt;li&gt;SolrJ can again be used with the default Java truststore.&lt;/li&gt;
+&lt;li&gt;The "Films" example has been updated to demonstrate Dense Vector search.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_2/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_2_0/changes/Changes.html"&gt;https://solr.apache.org/9_2_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.1.1 available</title><link href="/apache-solrtm-911-available.html" rel="alternate"></link><published>2023-01-25T00:00:00+00:00</published><updated>2023-01-25T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2023-01-25:/apache-solrtm-911-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.1.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.1.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.1.1 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-911-release-highlights"&gt;Solr 9.1.1 Release Highlights:&lt;/h3&gt;
+&lt;p&gt;Bugfixes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SOLR-16589: Fixed issue where large fields with large=true could be truncated when using unicode values&lt;/li&gt;
+&lt;li&gt;SOLR-16585: Fixed NPE when paginating MatchAllDocs with non-zero start offset, like &lt;code&gt;q=*:*&amp;amp;start=10&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SOLR-16165: Fixed rare deadlock in SlotAcc static initialization&lt;/li&gt;
+&lt;li&gt;SOLR-16622: Fixed issue where replicas could fail to register as active after node restart&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SOLR-16443: Upgrade Jackson bom to 2.13.4.20221013&lt;/li&gt;
+&lt;li&gt;SOLR-16568: Upgrade woodstox-core to 6.4.0&lt;/li&gt;
+&lt;li&gt;SOLR-16598: Upgrade Protobuf to 3.21.12&lt;/li&gt;
+&lt;li&gt;SOLR-16567: Fixed problem with filtering and KNN search, especially when using post-filters&lt;/li&gt;
+&lt;li&gt;SOLR-16588: Fixed problem with default knn algorithm&lt;/li&gt;
+&lt;li&gt;SOLR-16480: ConfigSets now have an overridable allow-list for filetypes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_1_1/changes/Changes.html"&gt;https://solr.apache.org/9_1_1/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.1.0 available</title><link href="/apache-solrtm-910-available.html" rel="alternate"></link><published>2022-11-17T00:00:00+00:00</published><updated>2022-11-17T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-11-17:/apache-solrtm-910-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.1.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.1.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.1.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-910-release-highlights"&gt;Solr 9.1.0 Release Highlights:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dedicated query coordinator nodes in a Solr cluster&lt;/li&gt;
+&lt;li&gt;Improvements to admin UI: managing paramsets in queries, managing field
+   types, replica types while collection creation, etc.&lt;/li&gt;
+&lt;li&gt;Support for rolling up core level metrics to be node level metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_1/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_1_0/changes/Changes.html"&gt;https://solr.apache.org/9_1_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Java 17 bug affecting Solr</title><link href="/java-17-bug-affecting-solr.html" rel="alternate"></link><published>2022-10-21T00:00:00+00:00</published><updated>2022-10-21T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-10-21:/java-17-bug-affecting-solr.html</id><summary type="html">&lt;p&gt;Several users running Solr in production on OpenJDK 17 have experienced JVM crashes due to a known bug in the JDK. Read more about the bug in &lt;a href="https://issues.apache.org/jira/browse/SOLR-16463"&gt;SOLR-16463&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Known mitigations are to either downgrade to JDK 11 or to start Solr with a Java startup flag that avoids the failure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Several users running Solr in production on OpenJDK 17 have experienced JVM crashes due to a known bug in the JDK. Read more about the bug in &lt;a href="https://issues.apache.org/jira/browse/SOLR-16463"&gt;SOLR-16463&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Known mitigations are to either downgrade to JDK 11 or to start Solr with a Java startup flag that avoids the failure condition. Here is how to manually apply the flag:&lt;/p&gt;
+&lt;p&gt;Edit your &lt;code&gt;solr.in.sh&lt;/code&gt; or &lt;code&gt;solr.in.cmd&lt;/code&gt; file to set the &lt;code&gt;SOLR_OPTS&lt;/code&gt; environment variable as follows:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Linux:&lt;/em&gt; &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;SOLR_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-XX:CompileCommand&lt;span class="o"&gt;=&lt;/span&gt;exclude,com.github.benmanes.caffeine.cache.BoundedLocalCache::put
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Windows:&lt;/em&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;SET&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;SOLR_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-XX:CompileCommand&lt;span class="o"&gt;=&lt;/span&gt;exclude,com.github.benmanes.caffeine.cache.BoundedLocalCache::put
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Alternatively, you can inject the same flag with the &lt;code&gt;-a&lt;/code&gt; argument, e.g:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;bin/solr&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-XX:CompileCommand=exclude,com.github.benmanes.caffeine.cache.BoundedLocalCache::put&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you run Solr 9 with the official Docker image, we have already pushed an updated Docker image to Docker Hub that will inject the flag for you.
+Just pull the image again to get it.
+The Docker image uses the &lt;code&gt;-a&lt;/code&gt; option to set this java flag when running Solr, so if you are using the 
+&lt;code&gt;-a&lt;/code&gt; option you will need to provide the JVM flag mentioned above in addition to the other flags you are setting.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Solr 8 Docker image changes to Eclipse Temurin JDK</title><link href="/solr-8-docker-image-changes-to-eclipse-temurin-jdk.html" rel="alternate"></link><published>2022-10-20T00:00:00+00:00</published><updated>2022-10-20T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-10-20:/solr-8-docker-image-changes-to-eclipse-temurin-jdk.html</id><summary type="html">&lt;p&gt;The official docker image for Solr 8.11 has been running on &lt;a href="https://hub.docker.com/_/openjdk"&gt;Oracle OpenJDK 11 JRE&lt;/a&gt;. However, due to Oracle's new release policies, they now no longer provide support for JDK11. Since Solr 8.11 is still being supported by the Apache Solr project, we needed to switch to another …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The official docker image for Solr 8.11 has been running on &lt;a href="https://hub.docker.com/_/openjdk"&gt;Oracle OpenJDK 11 JRE&lt;/a&gt;. However, due to Oracle's new release policies, they now no longer provide support for JDK11. Since Solr 8.11 is still being supported by the Apache Solr project, we needed to switch to another OpenJDK vendor with JDK11 support. We chose &lt;a href="https://hub.docker.com/_/eclipse-temurin"&gt;Eclipse Temurin&lt;/a&gt; from the Adoptium project. This is the same vendor as we use for our Solr 9 image, and their &lt;a href="https://adoptium.net/support/"&gt;JDK11 support lasts until October 2024&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Users should be aware that on your next &lt;code&gt;docker pull solr:8.11.2&lt;/code&gt; you will be upgraded. For most users there will be no issues, as it is mainly a new distribution of the same upstream OpenJDK version. However, if you use our image as base image and rely on specific tools to be present, you may need to adapt. While &lt;code&gt;openjdk:11-jre&lt;/code&gt; uses &lt;code&gt;Debian GNU/Linux 11 (bullseye)&lt;/code&gt;, the &lt;code&gt;eclipse-temurin:11-jre-focal&lt;/code&gt; image uses &lt;code&gt;Ubuntu 20.04.5 LTS (Focal Fossa)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Furthermore, there is now no difference between the &lt;code&gt;solr:11-jre&lt;/code&gt; and &lt;code&gt;solr:11-jre-slim&lt;/code&gt; images, because our new vendor only offers one variant which is fairly slim already.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Solr Docker images now pin the Linux release</title><link href="/solr-docker-images-now-pin-the-linux-release.html" rel="alternate"></link><published>2022-10-20T00:00:00+00:00</published><updated>2022-10-20T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-10-20:/solr-docker-images-now-pin-the-linux-release.html</id><summary type="html">&lt;p&gt;Solr 9 was released on May 12th, using the &lt;code&gt;eclipse-temurin:17-jre&lt;/code&gt; base image. Thus, we are pinned to Java 17 and Solr's
+Docker image will thus always use an updated Java 17 version. If you pull the docker image from time to time that is.&lt;/p&gt;
+&lt;p&gt;However, the base image tag …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Solr 9 was released on May 12th, using the &lt;code&gt;eclipse-temurin:17-jre&lt;/code&gt; base image. Thus, we are pinned to Java 17 and Solr's
+Docker image will thus always use an updated Java 17 version. If you pull the docker image from time to time that is.&lt;/p&gt;
+&lt;p&gt;However, the base image tag &lt;code&gt;17-jre&lt;/code&gt; did not give us pinning to a specific Ubuntu Linux major release. 
+At the time of &lt;a href="http://localhost:8000/news.html#apache-solrtm-900-available"&gt;Solr 9 release&lt;/a&gt; on May 12th
+it would pull Ubuntu 20.04 (Focal Fossa), but at the end of May, it was &lt;a href="https://github.com/docker-library/official-images/commit/6d689db4846a3eb4c2ebd0e5d06139c650ef3bbb"&gt;auto upgraded&lt;/a&gt; to the brand new Ubuntu
+22.04 (Jammy Jellyfish). This was not our desire, and we have learnt that due to this, our image is no longer compatible
+with Docker client versions before 20.10.16. Having a "floating" linux release like this can also break the image in 
+other subtle ways, as well as breaking downstream images using us as a base image.&lt;/p&gt;
+&lt;p&gt;We therefore decided to start pinning not only Java release, but also Linux release in our official Docker images.
+This means that Solr 9.0 is once again based on Ubuntu 20.04 Focal, i.e. a downgrade.&lt;/p&gt;
+&lt;p&gt;Note that our images will still receive important Linux bug fixes from time to time, but you won't get them unless you
+re-pull the image. When we upgrade to Ubuntu 22.04 in the future, it will be a deliberate decision and not by accident.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 8.11.2 available</title><link href="/apache-solrtm-8112-available.html" rel="alternate"></link><published>2022-06-17T00:00:00+00:00</published><updated>2022-06-17T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-06-17:/apache-solrtm-8112-available.html</id><summary type="html">&lt;p&gt;The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.2.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.2.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 8.11.2 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-8112-release-highlights"&gt;Solr 8.11.2 Release Highlights:&lt;/h3&gt;
+&lt;p&gt;Security&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SOLR-15871: Update Log4J to 2.17.1&lt;/li&gt;
+&lt;li&gt;SOLR-15961: Fix bug in PKIAuthenticationPlugin that can cause a request to fail with 401 Unauthorized instead of re-fetching expired remote keys from other nodes.&lt;/li&gt;
+&lt;li&gt;SOLR-14569: Configuring a shardHandlerFactory on the /select requestHandler results in HTTP 401 when searching on alias in secured Solr.&lt;/li&gt;
+&lt;li&gt;SOLR-16022: Enforce special character requirements on passwords with length less than 15&lt;/li&gt;
+&lt;li&gt;SOLR-16075: ShowFileHandler path parameter is now validated to be relative to instance conf dir in standalone mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bugfixes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SOLR-15849: Fix the connection reset problem caused by the incorrect use of 4LW with \n when monitoring zooKeeper status&lt;/li&gt;
+&lt;li&gt;SOLR-16199: Improve query syntax construction for SQL LIKE clause with phrases and wildcards&lt;/li&gt;
+&lt;li&gt;SOLR-16143: SolrConfig can miss updates from ZooKeeper when deleting and recreating file items&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/8_11/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/docs/8_11_2/changes/Changes.html"&gt;https://solr.apache.org/docs/8_11_2/changes/Changes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Solr 8.11.2 also includes bugfixes in the corresponding Apache Lucene release:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lucene.apache.org/core/8_11_2/changes/Changes.html"&gt;https://lucene.apache.org/core/8_11_2/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 9.0.0 available</title><link href="/apache-solrtm-900-available.html" rel="alternate"></link><published>2022-05-12T00:00:00+00:00</published><updated>2022-05-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-05-12:/apache-solrtm-900-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.0.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 9.0.0.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Solr project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 9.0.0 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a major-version release with breaking changes. The highlights below is not the full list. Please consult the "Solr Upgrade Notes" when planning an upgrade:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/solr/9_0/upgrade-notes/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/solr/9_0/upgrade-notes/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="solr-900-release-highlights"&gt;Solr 9.0.0 Release Highlights:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Minimum Java version supported: Java 11&lt;/li&gt;
+&lt;li&gt;Powered by Lucene 9.0, with numerous small and large improvements, such as smaller index footprint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="querying-and-indexing"&gt;Querying and Indexing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dense Vector "Neural" Search through DenseVectorField fieldType and K-Nearest-Neighbor (KNN) Query Parser.&lt;/li&gt;
+&lt;li&gt;Admin UI support for SQL Querying.&lt;/li&gt;
+&lt;li&gt;New snowball stemmers: Hindi, Indonesian, Nepali, Serbian, Tamil, and Yiddish.&lt;/li&gt;
+&lt;li&gt;New NorwegianNormalizationFilter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="security"&gt;Security&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Certificate Authentication Plugin lets you authenticate with x509 client certificates.&lt;/li&gt;
+&lt;li&gt;Upgrade to Zookeeper 3.7, allowing for TLS protected ZK communication.&lt;/li&gt;
+&lt;li&gt;All request handlers support security permissions for authorization.&lt;/li&gt;
+&lt;li&gt;Solr now runs with the Java security manager enabled by default.&lt;/li&gt;
+&lt;li&gt;Solr embedded zookeeper only binds to localhost by default.&lt;/li&gt;
+&lt;li&gt;A lot of dependency updates make Solr much more secure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="stability-and-scalability"&gt;Stability and Scalability&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Rate limiting provides a way to throttle update and search requests based on usage metrics.&lt;/li&gt;
+&lt;li&gt;Task management interface allows declaring tasks as cancellable and trackable.&lt;/li&gt;
+&lt;li&gt;Ability to specify node roles in Solr. This release supports 'Overseer' and 'Data' roles.&lt;/li&gt;
+&lt;li&gt;Support for distributed processing of cluster state updates and collection API calls without relying on the Overseer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="build-and-docker"&gt;Build and Docker&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Solr is now built and released independently of Apache Lucene (separate Apache projects).&lt;/li&gt;
+&lt;li&gt;Build system switched to Gradle from Ant + Ivy.&lt;/li&gt;
+&lt;li&gt;Docker image creation is now a part of the Apache Solr Github repo.&lt;/li&gt;
+&lt;li&gt;Docker image documentation is now a part of the reference guide.&lt;/li&gt;
+&lt;li&gt;Official Docker image upgraded to use JDK17 (by Eclipse Temurin) and ability to create a local image that is functionally identical to the official one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="deprecations-and-removals"&gt;Deprecations and Removals&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Data Import Handler (DIH) is an independent project now; it is no longer a part of Solr.&lt;/li&gt;
+&lt;li&gt;No more support for clusterstate.json and MIGRATESTATE API has been removed. If your collections use clusterstate.json, please refer to the Upgrade Notes.&lt;/li&gt;
+&lt;li&gt;Auto scaling framework has been removed. Please refer to the new Replica Placement Plugins for alternate options.&lt;/li&gt;
+&lt;li&gt;LegacyBM25SimilarityFactory has been removed.&lt;/li&gt;
+&lt;li&gt;VelocityResponseWriter is an independent project now; it is no longer a part of Solr. This encompasses all previously included /browse and wt=velocity examples.&lt;/li&gt;
+&lt;li&gt;Legacy SolrCache implementations (LRUCache, LFUCache, FastLRUCache) have been removed. Users should modify their existing configurations to use CaffeineCache instead.&lt;/li&gt;
+&lt;li&gt;Cross Data Center Replication has been removed.&lt;/li&gt;
+&lt;li&gt;SolrJ clients like HttpSolrClient and LBHttpSolrClient that lacked HTTP2 support have been deprecated. The old CloudSolrClient has been renamed as CloudLegacySolrClient and deprecated.&lt;/li&gt;
+&lt;li&gt;SimpleFSDirectoryFactory is removed in favor of NIOFSDirectoryFactory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="other"&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Contrib modules are now just "modules". You can easily enable module(s) through environment variable SOLR_MODULES.&lt;/li&gt;
+&lt;li&gt;Features lifted out as separate modules are: HDFS, Hadoop-Auth, SQL, Scripting, and JWT-Auth.&lt;/li&gt;
+&lt;li&gt;The "dist" folder in the release is gone. Module jars are now inside respective module's lib/ folder.&lt;/li&gt;
+&lt;li&gt;SolrJ class CloudSolrClient now supports HTTP2. It has a new Builder. See CloudLegacySolrClient for the 8.x version of this class&lt;/li&gt;
+&lt;li&gt;Jetty Request log is now enabled by default, i.e. logging every request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of new features, changes and bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/9_0_0/changes/Changes.html"&gt;https://solr.apache.org/9_0_0/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 8.11.1 available</title><link href="/apache-solrtm-8111-available.html" rel="alternate"></link><published>2021-12-16T00:00:00+00:00</published><updated>2021-12-16T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-12-16:/apache-solrtm-8111-available.html</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 8.11.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 8.11.1.&lt;/p&gt;
+&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
+&lt;p&gt;Solr 8.11.1 is available for immediate download at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lucene.apache.org/solr/downloads.html"&gt;https://lucene.apache.org/solr/downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="solr-8111-release-highlights"&gt;Solr 8.11.1 Release Highlights:&lt;/h3&gt;
+&lt;p&gt;Security&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Updates bundled log4j2 dependencies to address CVE-2021-44228 (SOLR-15843)&lt;/li&gt;
+&lt;li&gt;Upgrade jaegertracing to 1.6.0 and libthrift to 0.14.1 to address CVE-2020-13949 (SOLR-15324)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bugfixes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixes to the new Admin UI Security and Schema Designer screens (SOLR-15825, SOLR-15774 and SOLR-15813)&lt;/li&gt;
+&lt;li&gt;Fix regression in 8.11.0 for the Admin UI Files screen and Velocity (SOLR-15804)&lt;/li&gt;
+&lt;li&gt;Admin endpoints for Zookeeper now by default protected by zk_read permission (SOLR-15768)&lt;/li&gt;
+&lt;li&gt;Better default security.json uploaded by bin/solr tool (SOLR-15828)&lt;/li&gt;
+&lt;li&gt;Switching a PRS collection from true -&amp;gt; false -&amp;gt; true resulted in INACTIVE replicas (SOLR-15794)&lt;/li&gt;
+&lt;li&gt;Fix REPLACENODE to not use source node when choosing a target node (SOLR-15795)&lt;/li&gt;
+&lt;li&gt;Fix NPE in pivot facets, add non-Analyzed query method in FieldType (SOLR-8319)&lt;/li&gt;
+&lt;li&gt;Upgrade Velocity from to v2.3 and Velocity Tools to v3.1 (SOLR-15844)&lt;/li&gt;
+&lt;li&gt;..and more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html"&gt;https://solr.apache.org/guide/8_11/solr-upgrade-notes.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please read CHANGES.txt for a full list of bugfixes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solr.apache.org/docs/8_11_1/changes/Changes.html"&gt;https://solr.apache.org/docs/8_11_1/changes/Changes.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr™ 8.11.0 available</title><link href="/apache-solrtm-8110-available.html" rel="alternate"></link><published>2021-11-16T00:00:00+00:00</published><updated>2021-11-16T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-11-16:/apache-solrtm-8110-available.html</id><summary type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 8.11.0.&lt;/p&gt;
 &lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Solr PMC is pleased to announce the release of Apache Solr 8.11.0.&lt;/p&gt;
 &lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, rich document handling, and geospatial search. Solr is highly scalable, providing fault tolerant distributed search and indexing, and powers the search and navigation features of many of the world's largest internet sites.&lt;/p&gt;
 &lt;p&gt;Solr 8.11.0 is available for immediate download at:&lt;/p&gt;
@@ -2293,419 +2686,4 @@ data values which allows an attacker to execute javascript by executing a query
 that will be stored and displayed via the 'fieldvaluecache' object.&lt;/p&gt;
 &lt;p&gt;See the &lt;a href="/docs/4_10_3/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
 file included with the release for a full list of details, and Happy
-Holidays!&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.10.2 Available</title><link href="/" rel="alternate"></link><published>2014-10-31T00:00:00+00:00</published><updated>2014-10-31T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-10-31:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.10.2&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.10.2&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search. Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.10.2 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solr 4.10.2 includes 10 bug fixes,
-as well as Lucene 4.10.2 and its 2 bug fixes.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_10_2/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details, and Happy
-Halloween!&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.10.1 Available</title><link href="/" rel="alternate"></link><published>2014-09-29T00:00:00+00:00</published><updated>2014-09-29T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-09-29:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.10.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.10.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search. Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.10.1 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solr 4.10.1 includes 6 bug fixes,
-as well as Lucene 4.10.1 and its 7 bug fixes.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_10_1/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.9.1 Available</title><link href="/" rel="alternate"></link><published>2014-09-22T00:00:00+00:00</published><updated>2014-09-22T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-09-22:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.9.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.9.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search. Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.9.1 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solr 4.9.1 includes 2 bug fixes,
-as well as Lucene 4.9.1 and its 7 bug fixes.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_9_1/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr Ref Guide for 4.10 Available</title><link href="/" rel="alternate"></link><published>2014-09-07T00:00:00+00:00</published><updated>2014-09-07T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-09-07:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version of the
-Solr Reference Guide for Solr 4.10.&lt;/p&gt;
-&lt;p&gt;The 511 page PDF serves as the definitive user's manual for Solr 4.10. It
-can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org/dyn …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version of the
-Solr Reference Guide for Solr 4.10.&lt;/p&gt;
-&lt;p&gt;The 511 page PDF serves as the definitive user's manual for Solr 4.10. It
-can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org/dyn/closer.lua/lucene/solr/ref-guide/&lt;/a&gt;.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.10.0 Available</title><link href="/" rel="alternate"></link><published>2014-09-03T00:00:00+00:00</published><updated>2014-09-03T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-09-03:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.10.0&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.10.0&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search.  Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.10.0 is available for immediate download at:
-  &lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_10_0/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;
-&lt;p&gt;Solr 4.10.0 Release Highlights:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;This release upgrades Solr Cell's (contrib/extraction) dependency
-  on Apache POI to mitigate
-  &lt;a href="#18-august-2014-recommendation-to-update-apache-poi-in-apache-solr-480-481-and-490-installations"&gt;2 security vulnerabilities&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Scripts for starting, stopping, and running Solr examples&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Distributed query support for facet.pivot&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Interval Faceting for Doc Values fields&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;New "terms" QParser for efficiently filtering documents by a list of values&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content><category term="solr/news"></category></entry><entry><title>Recommendation to update Apache POI in Apache Solr 4.8.0, 4.8.1, and 4.9.0 installations</title><link href="/" rel="alternate"></link><published>2014-08-18T00:00:00+00:00</published><updated>2014-08-18T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-08-18:/</id><summary type="html">&lt;p&gt;Apache Solr versions 4.8.0, 4.8.1, 4.9.0 bundle Apache POI 3.10-beta2 with its binary release tarball.
-This version (and all previous ones) of Apache POI are vulnerable to the following issues:&lt;/p&gt;
-&lt;h3 id="cve-2014-3529-xml-external-entity-xxe-problem-in-apache-pois-openxml-parser"&gt;CVE-2014-3529: XML External Entity (XXE) problem in Apache POI's OpenXML parser&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Information disclosure …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Apache Solr versions 4.8.0, 4.8.1, 4.9.0 bundle Apache POI 3.10-beta2 with its binary release tarball.
-This version (and all previous ones) of Apache POI are vulnerable to the following issues:&lt;/p&gt;
-&lt;h3 id="cve-2014-3529-xml-external-entity-xxe-problem-in-apache-pois-openxml-parser"&gt;CVE-2014-3529: XML External Entity (XXE) problem in Apache POI's OpenXML parser&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Information disclosure:&lt;/em&gt; Apache POI uses Java's XML components to parse OpenXML files produced by Microsoft Office products (DOCX, XLSX, PPTX,...).
-Applications that accept such files from end-users are vulnerable to XML External Entity (XXE) attacks, which allows remote attackers to bypass
-security restrictions and read arbitrary files via a crafted OpenXML document that provides an XML external entity declaration in conjunction
-with an entity reference.&lt;/p&gt;
-&lt;h3 id="cve-2014-3574-xml-entity-expansion-xee-problem-in-apache-pois-openxml-parser"&gt;CVE-2014-3574: XML Entity Expansion (XEE) problem in Apache POI's OpenXML parser&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Denial of service:&lt;/em&gt; Apache POI uses Java's XML components and Apache Xmlbeans to parse OpenXML files produced by Microsoft Office products
-(DOCX, XLSX, PPTX,...). Applications that accept such files from end-users are vulnerable to XML Entity Expansion (XEE) attacks ("XML bombs"),
-which allows remote hackers to consume large amounts of CPU resources.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The Apache POI PMC released a bugfix version (3.10.1) today.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Solr users are affected by these issues, if they enable the "Apache Solr Content Extraction Library (Solr Cell)"
-contrib module from the folder "contrib/extraction" of the release tarball.&lt;/p&gt;
-&lt;p&gt;Users of Apache Solr are strongly advised to keep the module disabled if they don't use it.
-Alternatively, users of Apache Solr 4.8.0, 4.8.1, or 4.9.0 can update the affected libraries by
-replacing the vulnerable JAR files in the distribution folder. Users of previous versions have
-to update their Solr release first, patching older versions is impossible.&lt;/p&gt;
-&lt;h3 id="to-replace-the-vulnerable-jar-files-follow-these-steps"&gt;To replace the vulnerable JAR files follow these steps:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Download the &lt;a href="http://poi.apache.org/download.html#POI-3.10.1"&gt;Apache POI 3.10.1&lt;/a&gt; binary release.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Unzip the archive.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Delete the following files in your "solr-4.X.X/contrib/extraction/lib" folder:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;poi-3.10-beta2.jar&lt;/li&gt;
-&lt;li&gt;poi-ooxml-3.10-beta2.jar&lt;/li&gt;
-&lt;li&gt;poi-ooxml-schemas-3.10-beta2.jar&lt;/li&gt;
-&lt;li&gt;poi-scratchpad-3.10-beta2.jar&lt;/li&gt;
-&lt;li&gt;xmlbeans-2.3.0.jar&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Copy the following files from the base folder of the Apache POI distribution to the "solr-4.X.X/contrib/extraction/lib" folder:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;poi-3.10.1-20140818.jar&lt;/li&gt;
-&lt;li&gt;poi-ooxml-3.10.1-20140818.jar&lt;/li&gt;
-&lt;li&gt;poi-ooxml-schemas-3.10.1-20140818.jar&lt;/li&gt;
-&lt;li&gt;poi-scratchpad-3.10.1-20140818.jar&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Copy "xmlbeans-2.6.0.jar" from POI's "ooxml-lib/" folder to the "solr-4.X.X/contrib/extraction/lib" folder.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Verify that the "solr-4.X.X/contrib/extraction/lib" no longer contains any files with version number "3.10-beta2".&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Verify that the folder contains one xmlbeans JAR file with version 2.6.0.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you just want to disable extraction of Microsoft Office documents, delete the files above and don't replace them.
-"Solr Cell" will automatically detect this and disable Microsoft Office document extraction.&lt;/p&gt;
-&lt;p&gt;Coming versions of Apache Solr will have the updated libraries bundled.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr Ref Guide for 4.9 Available</title><link href="/" rel="alternate"></link><published>2014-06-30T00:00:00+00:00</published><updated>2014-06-30T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-06-30:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version
-of the Solr Reference Guide for Solr 4.9.&lt;/p&gt;
-&lt;p&gt;The 408 page PDF serves as the definitive user's manual for Solr 4.9.
-It can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org/dyn …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version
-of the Solr Reference Guide for Solr 4.9.&lt;/p&gt;
-&lt;p&gt;The 408 page PDF serves as the definitive user's manual for Solr 4.9.
-It can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org/dyn/closer.lua/lucene/solr/ref-guide/&lt;/a&gt;.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.9.0 Available</title><link href="/" rel="alternate"></link><published>2014-06-25T00:00:00+00:00</published><updated>2014-06-25T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-06-25:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.9.0&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.9.0&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search.  Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.9.0 is available for immediate download at:
-  &lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_9_0/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;
-&lt;p&gt;Solr 4.9.0 Release Highlights:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Numerous optimizations for doc values search-time performance&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Allow a client application to request the minium achieved replication
-  factor for an update request (single or batch) by sending an optional
-  parameter "min_rf".&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Query re-ranking support with the new ReRankingQParserPlugin.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A new [child ...] DocTransformer for optionally including Block-Join
-  decendent documents inline in the results of a search.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A new (default) Lucene49NormsFormat to better compress certain cases
-  such as very short fields.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.8.1 Available</title><link href="/" rel="alternate"></link><published>2014-05-20T00:00:00+00:00</published><updated>2014-05-20T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-05-20:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.8.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.8.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search. Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.8.1 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solr 4.8.1 includes 10 bug fixes,
-as well as Lucene 4.8.1 and its bug fixes.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_8_1/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr Ref Guide for 4.8 Available</title><link href="/" rel="alternate"></link><published>2014-05-02T00:00:00+00:00</published><updated>2014-05-02T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-05-02:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version
-of the Solr Reference Guide available for Solr 4.8.&lt;/p&gt;
-&lt;p&gt;The 396 page PDF serves as the definitive user's manual for Solr 4.8.
-It can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version
-of the Solr Reference Guide available for Solr 4.8.&lt;/p&gt;
-&lt;p&gt;The 396 page PDF serves as the definitive user's manual for Solr 4.8.
-It can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org/dyn/closer.lua/lucene/solr/ref-guide/&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.8.0 Available</title><link href="/" rel="alternate"></link><published>2014-04-28T00:00:00+00:00</published><updated>2014-04-28T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-04-28:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.8.0&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.8.0&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search.  Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.8.0 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_8_0/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;
-&lt;h3 id="solr-480-release-highlights"&gt;Solr 4.8.0 Release Highlights:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Apache Solr now requires Java 7 or greater (recommended is
-  Oracle Java 7 or OpenJDK 7, minimum update 55; earlier versions
-  have known JVM bugs affecting Solr).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Apache Solr is fully compatible with Java 8.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code class="inline"&gt;&amp;lt;fields&amp;gt;&lt;/code&gt; and &lt;code class="inline"&gt;&amp;lt;types&amp;gt;&lt;/code&gt; tags have been deprecated from schema.xml.
-  There is no longer any reason to keep them in the schema file,
-  they may be safely removed. This allows intermixing of &lt;code class="inline"&gt;&amp;lt;fieldType&amp;gt;&lt;/code&gt;,
-  &lt;code class="inline"&gt;&amp;lt;field&amp;gt;&lt;/code&gt; and &lt;code class="inline"&gt;&amp;lt;copyField&amp;gt;&lt;/code&gt; definitions if desired.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The new {!complexphrase} query parser supports wildcards, ORs etc.
-  inside Phrase Queries.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;New Collections API CLUSTERSTATUS action reports the status of
-  collections, shards, and replicas, and also lists collection
-  aliases and cluster properties.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Added managed synonym and stopword filter factories, which enable
-  synonym and stopword lists to be dynamically managed via REST API.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;JSON updates now support nested child documents, enabling {!child}
-  and {!parent} block join queries.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Added ExpandComponent to expand results collapsed by the
-  CollapsingQParserPlugin, as well as the parent/child relationship
-  of nested child documents.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Long-running Collections API tasks can now be executed
-  asynchronously; the new REQUESTSTATUS action provides status.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Added a hl.qparser parameter to allow you to define a query parser
-  for hl.q highlight queries.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In Solr single-node mode, cores can now be created using named
-  configsets.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;New DocExpirationUpdateProcessorFactory supports computing an
-  expiration date for documents from the "TTL" expression, as well as
-  automatically deleting expired documents on a periodic basis.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Solr 4.8.0 also includes many other new features as well as numerous
-optimizations and bugfixes of the corresponding
-&lt;a href="/core/4_8_0/"&gt;Apache Lucene&lt;/a&gt; release.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.7.2 Available</title><link href="/" rel="alternate"></link><published>2014-04-15T00:00:00+00:00</published><updated>2014-04-15T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-04-15:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.7.2&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.7.2&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search. Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.7.2 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solr 4.7.2 includes 2 bug fixes,
-as well as Lucene 4.7.2 and its bug fixes.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_7_2/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.7.1 Available</title><link href="/" rel="alternate"></link><published>2014-04-02T00:00:00+00:00</published><updated>2014-04-02T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-04-02:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.7.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of Apache Solr 4.7.1&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search. Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.7.1 is available for immediate download at:
-&lt;a href="https://solr.apache.org/downloads.html"&gt;https://solr.apache.org/downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solr 4.7.1 includes 28 bug fixes and one new configuration setting,
-as well as Lucene 4.7.1 and its bug fixes.&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_7_1/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.8 will require Java 7</title><link href="/" rel="alternate"></link><published>2014-03-12T00:00:00+00:00</published><updated>2014-03-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-03-12:/</id><summary type="html">&lt;p&gt;The Apache Solr committers decided with a large majority on the vote to require &lt;strong&gt;Java 7&lt;/strong&gt; for the next minor release of Apache Solr (version 4.8)!&lt;/p&gt;
-&lt;p&gt;The next release will also contain some improvements for Java 7:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Better file handling (especially on Windows) in the directory implementations. Files can …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;The Apache Solr committers decided with a large majority on the vote to require &lt;strong&gt;Java 7&lt;/strong&gt; for the next minor release of Apache Solr (version 4.8)!&lt;/p&gt;
-&lt;p&gt;The next release will also contain some improvements for Java 7:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Better file handling (especially on Windows) in the directory implementations. Files can now be deleted on windows, although the index is still open - like it was always possible on Unix environments (delete on last close semantics).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Speed improvements in sorting comparators: Sorting now uses Java 7's own comparators for integer and long sorts, which are highly optimized by the Hotspot VM.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you want to stay up-to-date with Lucene and Solr, you should upgrade your infrastructure to Java 7.
-Please be aware that you must use at least use Java 7u1.
-The recommended version at the moment is Java 7u25. Later versions like 7u40, 7u45,... have a bug causing index corrumption.
-Ideally use the Java 7u60 prerelease, which has fixed this bug. Once 7u60 is out, this will be the recommended version.
-In addition, there is no more Oracle/BEA JRockit available for Java 7, use the official Oracle Java 7.
-JRockit was never working correctly with Lucene/Solr (causing index corrumption), so this should not be an issue.
-Please also review our list of JVM bugs: &lt;a href="http://wiki.apache.org/lucene-java/JavaBugs"&gt;http://wiki.apache.org/lucene-java/JavaBugs&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;EDIT (as of 15 April 2014):&lt;/em&gt; The recently released Java 7u55 fixes the above bug causing index corrumption.
-This version is now the recommended version for running Apache Solr.&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr Ref Guide for 4.7 Available</title><link href="/" rel="alternate"></link><published>2014-03-05T00:00:00+00:00</published><updated>2014-03-05T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-03-05:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version of the Solr Reference Guide available for Solr 4.7.&lt;/p&gt;
-&lt;p&gt;The 395 page PDF serves as the definitive user's manual for Solr 4.7. It can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce that there is a new version of the Solr Reference Guide available for Solr 4.7.&lt;/p&gt;
-&lt;p&gt;The 395 page PDF serves as the definitive user's manual for Solr 4.7. It can be downloaded from the Apache mirror network:
-&lt;a href="https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/"&gt;https://www.apache.org/dyn/closer.lua/lucene/solr/ref-guide/&lt;/a&gt;&lt;/p&gt;</content><category term="solr/news"></category></entry><entry><title>Apache Solr 4.7.0 Available</title><link href="/" rel="alternate"></link><published>2014-02-26T00:00:00+00:00</published><updated>2014-02-26T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2014-02-26:/</id><summary type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of
-Apache Solr 4.7&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Lucene PMC is pleased to announce the release of
-Apache Solr 4.7&lt;/p&gt;
-&lt;p&gt;Solr is the popular, blazing fast, open source NoSQL search platform
-from the Apache Lucene project. Its major features include powerful
-full-text search, hit highlighting, faceted search, dynamic
-clustering, database integration, rich document (e.g., Word, PDF)
-handling, and geospatial search.  Solr is highly scalable, providing
-fault tolerant distributed search and indexing, and powers the search
-and navigation features of many of the world's largest internet sites.&lt;/p&gt;
-&lt;p&gt;Solr 4.7 is available for immediate download at:
-&lt;a href="https://solr.apache.org/mirrors-solr-latest-redir.html"&gt;https://solr.apache.org/mirrors-solr-latest-redir.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;See the &lt;a href="/docs/4_7_0/changes/Changes.html"&gt;CHANGES.txt&lt;/a&gt;
-file included with the release for a full list of details.&lt;/p&gt;
-&lt;h3 id="solr-47-release-highlights"&gt;Solr 4.7 Release Highlights:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;A new migrate collection API to split all documents with a route key
-  into another collection.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Added support for tri-level compositeId routing.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admin UI - Added a new Files conf directory browser/file viewer.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add a QParserPlugin for Lucene's SimpleQueryParser.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Suggest improvements: a new SuggestComponent that fully utilizes the
-  Lucene suggester module; queries can now use multiple suggesters;
-  Lucene's FreeTextSuggester and BlendedInfixSuggester are now supported.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;New cursorMark request param for efficient deep paging of sorted
-  result sets. See &lt;a href="http://s.apache.org/cursorpagination"&gt;http://s.apache.org/cursorpagination&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add a Solr contrib that allows for building Solr indexes via Hadoop's
-  MapReduce.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Spatial4j 0.4. Various new options are now exposed
-  automatically for an RPT field type.  See Spatial4j CHANGES &amp;amp; javadocs.
-  &lt;a href="https://github.com/spatial4j/spatial4j/blob/master/CHANGES.md"&gt;https://github.com/spatial4j/spatial4j/blob/master/CHANGES.md&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SSL support for SolrCloud.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Solr 4.7 also includes many other new features as well as numerous
- optimizations and bugfixes.&lt;/p&gt;</content><category term="solr/news"></category></entry></feed>
+Holidays!&lt;/p&gt;</content><category term="solr/news"></category></entry></feed>

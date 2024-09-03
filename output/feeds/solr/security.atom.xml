@@ -1,38 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Solr - solr/security</title><link href="/" rel="alternate"></link><link href="/feeds/solr/security.atom.xml" rel="self"></link><id>/</id><updated>2021-12-12T00:00:00+00:00</updated><subtitle></subtitle><subtitle></subtitle><entry><title>Apache Solr affected by Apache Log4J CVE-2021-44228</title><link href="/apache-solr-affected-by-apache-log4j-cve-2021-44228.html" rel="alternate"></link><published>2021-12-12T00:00:00+00:00</published><updated>2021-12-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-12-12:/apache-solr-affected-by-apache-log4j-cve-2021-44228.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Apache Solr - solr/security</title><link href="/" rel="alternate"></link><link href="/feeds/solr/security.atom.xml" rel="self"></link><id>/</id><updated>2024-04-12T00:00:00+00:00</updated><entry><title>CVE-2024-31391: Solr-Operator liveness and readiness probes may leak basic auth credentials</title><link href="/cve-2024-31391-solr-operator-liveness-and-readiness-probes-may-leak-basic-auth-credentials.html" rel="alternate"></link><published>2024-04-12T00:00:00+00:00</published><updated>2024-04-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-04-12:/cve-2024-31391-solr-operator-liveness-and-readiness-probes-may-leak-basic-auth-credentials.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+Solr Operator 0.3.0 to 0.8.0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
+Insertion of Sensitive Information into Log File vulnerability in the Apache Solr Operator.&lt;/p&gt;
+&lt;p&gt;The Solr sked to bootstrap Solr security, the operator will enable basic authentication and create several accounts for accessing Solr: including the "solr …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+Solr Operator 0.3.0 to 0.8.0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
+Insertion of Sensitive Information into Log File vulnerability in the Apache Solr Operator.&lt;/p&gt;
+&lt;p&gt;The Solr sked to bootstrap Solr security, the operator will enable basic authentication and create several accounts for accessing Solr: including the "solr" and "admin" accounts for use by end-users, and a "k8s-oper" account which the operator uses for its own requests to Solr.
+One common source of these operator requests is healthchecks: liveness, readiness, and startup probes are all used to determine Solr's health and ability to receive traffic.
+By default, the operator configures the Solr APIs used for these probes to be exempt from authentication, but users may specifically request that authentication be required on probe endpoints as well.
+Whenever one of these probes would fail, if authentication was in use, the Solr Operator would create a Kubernetes "event" containing the username and password of the "k8s-oper" account.&lt;/p&gt;
+&lt;p&gt;Within the affected version range, this vulnerability affects any solrcloud resource which (1) bootstrapped security through use of the &lt;code&gt;.solrOptions.security.authenticationType=basic&lt;/code&gt; option, and (2) required authentication be used on probes by setting &lt;code&gt;.solrOptions.security.probesRequireAuth=true&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;
+Users are recommended to upgrade to Solr Operator version 0.8.1, which fixes this issue by ensuring that probes no longer print the credentials used for Solr requests.  Users may also mitigate the vulnerability by disabling authentication on their healthcheck probes using the setting &lt;code&gt;.solrOptions.security.probesRequireAuth=false&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-17216"&gt;SOLR-17216&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2024-31391"&gt;CVE-2024-31391&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2023-50291: Apache Solr can leak certain passwords due to System Property redaction logic inconsistencies</title><link href="/cve-2023-50291-apache-solr-can-leak-certain-passwords-due-to-system-property-redaction-logic-inconsistencies.html" rel="alternate"></link><published>2024-02-08T00:00:00+00:00</published><updated>2024-02-08T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-02-08:/cve-2023-50291-apache-solr-can-leak-certain-passwords-due-to-system-property-redaction-logic-inconsistencies.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.3.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Insufficiently Protected Credentials vulnerability in Apache Solr.&lt;/p&gt;
+&lt;p&gt;This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.3 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.3.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Insufficiently Protected Credentials vulnerability in Apache Solr.&lt;/p&gt;
+&lt;p&gt;This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.3.0.
+One of the two endpoints that publishes the Solr process' Java system properties, /admin/info/properties, was only setup to hide system properties that had "password" contained in the name.
+There are a number of sensitive system properties, such as "basicauth" and "aws.secretKey" do not contain "password", thus their values were published via the "/admin/info/properties" endpoint.
+This endpoint populates the list of System Properties on the home screen of the Solr Admin page, making the exposed credentials visible in the UI.&lt;/p&gt;
+&lt;p&gt;This /admin/info/properties endpoint is protected under the "config-read" permission.
+Therefore, Solr Clouds with Authorization enabled will only be vulnerable through logged-in users that have the "config-read" permission.
+Users are recommended to upgrade to version 9.3.0 or 8.11.3, which fixes the issue.
+A single option now controls hiding Java system property for all endpoints, "-Dsolr.hiddenSysProps".
+By default all known sensitive properties are hidden (including "-Dbasicauth"), as well as any property with a name containing "secret" or "password".&lt;/p&gt;
+&lt;p&gt;Users who cannot upgrade can also use the following Java system property to fix the issue:&lt;br&gt;
+&lt;code&gt;-Dsolr.redaction.system.pattern=".*(password|secret|basicauth).*"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 8.11.3, 9.3.0 or later, which has consistent systemProperty redaction logic.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;
+Michael Taggart (reporter)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-16809"&gt;SOLR-16809&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50291"&gt;CVE-2023-50291&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2023-50292: Apache Solr Schema Designer blindly "trusts" all configsets, possibly leading to RCE by unauthenticated users</title><link href="/cve-2023-50292-apache-solr-schema-designer-blindly-trusts-all-configsets-possibly-leading-to-rce-by-unauthenticated-users.html" rel="alternate"></link><published>2024-02-08T00:00:00+00:00</published><updated>2024-02-08T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-02-08:/cve-2023-50292-apache-solr-schema-designer-blindly-trusts-all-configsets-possibly-leading-to-rce-by-unauthenticated-users.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.3.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Incorrect Permission Assignment for Critical Resource, Improper Control of Dynamically-Managed Code Resources vulnerability in Apache Solr.&lt;/p&gt;
+&lt;p&gt;This issue affects Apache Solr: from 8.10.0 through 8 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.3.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Incorrect Permission Assignment for Critical Resource, Improper Control of Dynamically-Managed Code Resources vulnerability in Apache Solr.&lt;/p&gt;
+&lt;p&gt;This issue affects Apache Solr: from 8.10.0 through 8.11.2, from 9.0.0 before 9.3.0.&lt;/p&gt;
+&lt;p&gt;The Schema Designer was introduced to allow users to more easily configure and test new Schemas and configSets.
+However, when the feature was created, the "trust" (authentication) of these configSets was not considered.
+External library loading is only available to configSets that are "trusted" (created by authenticated users), thus non-authenticated users are unable to perform Remote Code Execution.
+Since the Schema Designer loaded configSets without taking their "trust" into account, configSets that were created by unauthenticated users were allowed to load external libraries when used in the Schema Designer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 8.11.3, 9.3.0 or later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;
+Skay (reporter)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-16777"&gt;SOLR-16777&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50292"&gt;CVE-2023-50292&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2023-50298: Apache Solr can expose ZooKeeper credentials via Streaming Expressions</title><link href="/cve-2023-50298-apache-solr-can-expose-zookeeper-credentials-via-streaming-expressions.html" rel="alternate"></link><published>2024-02-08T00:00:00+00:00</published><updated>2024-02-08T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-02-08:/cve-2023-50298-apache-solr-can-expose-zookeeper-credentials-via-streaming-expressions.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Low&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.4.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Solr.This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Low&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.4.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Solr.This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.4.1.&lt;/p&gt;
+&lt;p&gt;Solr Streaming Expressions allows users to extract data from other Solr Clouds, using a "zkHost" parameter.
+When original SolrCloud is setup to use ZooKeeper credentials and ACLs, they will be sent to whatever "zkHost" the user provides.
+An attacker could setup a server to mock ZooKeeper, that accepts ZooKeeper requests with credentials and ACLs and extracts the sensitive information,
+then send a streaming expression using the mock server's address in "zkHost".
+Streaming Expressions are exposed via the "/streaming" handler, with "read" permissions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 8.11.3 or 9.4.1, which fix the issue.
+From these versions on, only zkHost values that have the same server address (regardless of chroot), will use the given ZooKeeper credentials and ACLs when connecting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;
+Qing Xu (reporter)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-17098"&gt;SOLR-17098&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50298"&gt;CVE-2023-50298&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2023-50386: Apache Solr: Backup/Restore APIs allow for deployment of executables in malicious ConfigSets</title><link href="/cve-2023-50386-apache-solr-backuprestore-apis-allow-for-deployment-of-executables-in-malicious-configsets.html" rel="alternate"></link><published>2024-02-08T00:00:00+00:00</published><updated>2024-02-08T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-02-08:/cve-2023-50386-apache-solr-backuprestore-apis-allow-for-deployment-of-executables-in-malicious-configsets.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.4.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Improper Control of Dynamically-Managed Code Resources, Unrestricted Upload of File with Dangerous Type, Inclusion of Functionality from Untrusted Control Sphere vulnerability in Apache Solr.This issue affects …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Solr 6.0.0 through 8.11.2&lt;/li&gt;
+&lt;li&gt;Apache Solr 9.0.0 before 9.4.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Improper Control of Dynamically-Managed Code Resources, Unrestricted Upload of File with Dangerous Type, Inclusion of Functionality from Untrusted Control Sphere vulnerability in Apache Solr.This issue affects Apache Solr: from 6.0.0 through 8.11.2, from 9.0.0 before 9.4.1.&lt;/p&gt;
+&lt;p&gt;In the affected versions, Solr ConfigSets accepted Java jar and class files to be uploaded through the ConfigSets API.
+When backing up Solr Collections, these configSet files would be saved to disk when using the LocalFileSystemRepository (the default for backups).
+If the backup was saved to a directory that Solr uses in its ClassPath/ClassLoaders, then the jar and class files would be available to use with any ConfigSet, trusted or untrusted.&lt;/p&gt;
+&lt;p&gt;When Solr is run in a secure way (Authorization enabled), as is strongly suggested, this vulnerability is limited to extending the Backup permissions with the ability to add libraries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 8.11.3 or 9.4.1, which fix the issue.
+In these versions, the following protections have been added:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users are no longer able to upload files to a configSet that could be executed via a Java ClassLoader.&lt;/li&gt;
+&lt;li&gt;The Backup API restricts saving backups to directories that are used in the ClassLoader.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;
+L3yx (reporter)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-16949"&gt;SOLR-16949&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50386"&gt;CVE-2023-50386&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2023-50290: Apache Solr allows read access to host environment variables</title><link href="/cve-2023-50290-apache-solr-allows-read-access-to-host-environment-variables.html" rel="alternate"></link><published>2024-01-12T00:00:00+00:00</published><updated>2024-01-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2024-01-12:/cve-2023-50290-apache-solr-allows-read-access-to-host-environment-variables.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Important&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+Solr 9.0 to 9.2.1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Solr.
+The Solr Metrics API publishes all unprotected environment variables available to each Apache Solr instance.
+Users are able to specify which environment variables to hide, however …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Important&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+Solr 9.0 to 9.2.1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Solr.
+The Solr Metrics API publishes all unprotected environment variables available to each Apache Solr instance.
+Users are able to specify which environment variables to hide, however, the default list is designed to work for known secret Java system properties.
+Environment variables cannot be strictly defined in Solr, like Java system properties can be, and may be set for the entire host, unlike Java system properties which are set per-Java-process.&lt;/p&gt;
+&lt;p&gt;The Solr Metrics API is protected by the "metrics-read" permission.
+Therefore, Solr Clouds with Authorization setup will only be vulnerable via users with the "metrics-read" permission.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Users are recommended to upgrade to version 9.3.0 or later, in which environment variables are not published via the Metrics API.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-16808"&gt;SOLR-15233&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2023-50290"&gt;CVE-2023-50290&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>Apache Solr is vulnerable to CVE-2022-39135 via /sql handler</title><link href="/apache-solr-is-vulnerable-to-cve-2022-39135-via-sql-handler.html" rel="alternate"></link><published>2022-11-20T00:00:00+00:00</published><updated>2022-11-20T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2022-11-20:/apache-solr-is-vulnerable-to-cve-2022-39135-via-sql-handler.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+Solr 6.5 to 8.11.2
+Solr 9.0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Apache Calcite has a vulnerability, CVE-2022-39135, that is exploitable in Apache Solr in SolrCloud mode.  If an untrusted user can supply SQL queries to Solr’s “/sql” handler (even indirectly via proxies / other apps), then the user …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+Solr 6.5 to 8.11.2
+Solr 9.0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+Apache Calcite has a vulnerability, CVE-2022-39135, that is exploitable in Apache Solr in SolrCloud mode.  If an untrusted user can supply SQL queries to Solr’s “/sql” handler (even indirectly via proxies / other apps), then the user could perform an XML External Entity (XXE) attack.  This might have been exposed by some deployers of Solr in order for internal analysts to use JDBC based tooling, but would have unlikely been granted to wider audiences.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Impact:&lt;/strong&gt;&lt;br&gt;
+An XXE attack may lead to the disclosure of confidential data, denial of service, server side request forgery (SSRF), port scanning from the Solr node, and other system impacts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Most Solr installations don’t make use of the SQL functionality.  For such users, the standard Solr security advice of using a firewall should be adequate.  Nonetheless, the functionality can be disabled.  As of Solr 9, it has been modularized and thus became opt-in, so nothing is needed for Solr 9 users that don’t use it.  Users &lt;em&gt;not&lt;/em&gt; using SolrCloud can’t use the functionality at all.  For other users that wish to disable it, you must register a request handler that masks the underlying functionality in solrconfig.xml like so:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  &amp;lt;requestHandler name=&amp;quot;/sql&amp;quot; class=&amp;quot;solr.NotFoundRequestHandler&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Users needing this SQL functionality are forced to upgrade to Solr 9.1.  If Solr 8.11.3 is released, then it will be an option as well.  Simply replacing Calcite and other JAR files may mostly work but could fail depending on the particulars of the query.  Users interested in this or in patching their own versions of Solr should examine SOLR-16421 for a source patch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;&lt;br&gt;
+Andreas Hubold at CoreMedia GmbH&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+JIRA - &lt;a href="https://issues.apache.org/jira/browse/SOLR-16421"&gt;SOLR-16421&lt;/a&gt;&lt;br&gt;
+CVE - &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2022-39135"&gt;CVE-2022-39135&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2021-44548: Apache Solr information disclosure vulnerability through DataImportHandler</title><link href="/cve-2021-44548-apache-solr-information-disclosure-vulnerability-through-dataimporthandler.html" rel="alternate"></link><published>2021-12-18T00:00:00+00:00</published><updated>2021-12-18T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-12-18:/cve-2021-44548-apache-solr-information-disclosure-vulnerability-through-dataimporthandler.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+All versions prior to 8.11.1. Affected platforms: Windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+An Improper Input Validation vulnerability in DataImportHandler of Apache Solr allows an attacker to provide a Windows UNC path resulting in an SMB network call being made from the Solr host to another host on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;&lt;br&gt;
+Moderate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;&lt;br&gt;
+All versions prior to 8.11.1. Affected platforms: Windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br&gt;
+An Improper Input Validation vulnerability in DataImportHandler of Apache Solr allows an attacker to provide a Windows UNC path resulting in an SMB network call being made from the Solr host to another host on the network. If the attacker has wider access to the network, this may lead to SMB attacks, which may result in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The exfiltration of sensitive data such as OS user hashes (NTLM/LM hashes),&lt;/li&gt;
+&lt;li&gt;In case of misconfigured systems, SMB Relay Attacks which can lead to user impersonation on SMB Shares or, in a worse-case scenario, Remote Code Execution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This issue affects all Apache Solr versions prior to 8.11.1. This issue only affects Windows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;&lt;br&gt;
+Upgrade to Solr 8.11.1, and/or ensure only trusted clients can make requests to Solr's DataImport handler.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credit:&lt;/strong&gt;&lt;br&gt;
+Apache Solr would like to thank LaiHan of Nsfocus security team for reporting the issue&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;br&gt;
+Jira issue &lt;a href="https://issues.apache.org/jira/browse/SOLR-15826"&gt;SOLR-15826&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>Apache Solr affected by Apache Log4J CVE-2021-44228</title><link href="/apache-solr-affected-by-apache-log4j-cve-2021-44228.html" rel="alternate"></link><published>2021-12-10T00:00:00+00:00</published><updated>2021-12-10T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-12-10:/apache-solr-affected-by-apache-log4j-cve-2021-44228.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;
 Critical&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;
-7.0.0 to 7.7.3
-8.0.0 to 8.11.0&lt;/p&gt;
+7.4.0 to 7.7.3, 8.0.0 to 8.11.0&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 Apache Solr releases prior to 8.11.1 were using a bundled version of the Apache Log4J library vulnerable to RCE. For full impact and additional detail consult the Log4J security …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;
 Critical&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Versions Affected:&lt;/strong&gt;
-7.0.0 to 7.7.3
-8.0.0 to 8.11.0&lt;/p&gt;
+7.4.0 to 7.7.3, 8.0.0 to 8.11.0&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt;
 Apache Solr releases prior to 8.11.1 were using a bundled version of the Apache Log4J library vulnerable to RCE. For full impact and additional detail consult the Log4J security page.&lt;/p&gt;
-&lt;p&gt;Apache Solr releases prior to 7.0 (i.e. all Solr 5 and Solr 6 releases) use log4j 1.2.17 which may be vulnerable for installations using non-default logging configurations. To determine you if you are vulnerable please consult the Log4J security page.&lt;/p&gt;
-&lt;p&gt;The Prometheus Exporter Contrib is similarly separately affected.&lt;/p&gt;
+&lt;p&gt;Apache Solr releases prior to 7.4 (i.e. Solr 5, Solr 6, and Solr 7 through 7.3) use Log4J 1.2.17 which may be vulnerable for installations using non-default logging configurations that include the JMS Appender, see &lt;a href="https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126"&gt;https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126&lt;/a&gt; for discussion.&lt;/p&gt;
+&lt;p&gt;Solr's Prometheus Exporter uses Log4J as well but it does not log user input or data, so we don't see a risk there.&lt;/p&gt;
+&lt;p&gt;Solr is &lt;em&gt;not&lt;/em&gt; vulnerable to the followup &lt;strong&gt;CVE-2021-45046&lt;/strong&gt; and &lt;strong&gt;CVE-2021-45105&lt;/strong&gt;.  A listing of these and other CVEs with some justifications are listed in Solr's wiki: &lt;a href="https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity#SolrSecurity-SolrandVulnerabilityScanningTools"&gt;https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity#SolrSecurity-SolrandVulnerabilityScanningTools&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mitigation:&lt;/strong&gt;
 Any of the following are enough to prevent this vulnerability for Solr servers:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Upgrade to &lt;code&gt;Solr 8.11.1&lt;/code&gt; or greater (when available), which will include an updated version of the log4j2 dependency.&lt;/li&gt;
-&lt;li&gt;Manually update the version of log4j2 on your runtime classpath and restart your Solr application.&lt;/li&gt;
+&lt;li&gt;Upgrade to &lt;code&gt;Solr 8.11.1&lt;/code&gt; or greater (when available), which will include an updated version (&lt;code&gt;&amp;gt;= 2.16.0&lt;/code&gt;) of the Log4J dependency.&lt;/li&gt;
+&lt;li&gt;If you are using Solr's official docker image, it has already been mitigated in all versions listed as supported on Docker Hub: &lt;a href="https://hub.docker.com/_/solr"&gt;https://hub.docker.com/_/solr&lt;/a&gt;.  You may need to re-pull the image.&lt;/li&gt;
+&lt;li&gt;Manually update the version of Log4J on your runtime classpath and restart your Solr application.&lt;/li&gt;
 &lt;li&gt;(Linux/MacOS) Edit your &lt;code&gt;solr.in.sh&lt;/code&gt; file to include:
   &lt;code&gt;SOLR_OPTS="$SOLR_OPTS -Dlog4j2.formatMsgNoLookups=true"&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;(Windows) Edit your &lt;code&gt;solr.in.cmd&lt;/code&gt; file to include:
   &lt;code&gt;set SOLR_OPTS=%SOLR_OPTS% -Dlog4j2.formatMsgNoLookups=true&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Follow any of the other mitgations listed at &lt;a href="https://logging.apache.org/log4j/2.x/security.html"&gt;https://logging.apache.org/log4j/2.x/security.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The vulnerability in the Prometheus Exporter Contrib can be mitigated by any of the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Upgrade to &lt;code&gt;Solr 8.11.1&lt;/code&gt; or greater (when available), which will include an updated version of the log4j2 dependency.&lt;/li&gt;
-&lt;li&gt;Manually update the version of log4j2 on your runtime classpath and restart your Solr application.&lt;/li&gt;
-&lt;li&gt;Edit your &lt;code&gt;solr-exporter&lt;/code&gt; script to include:
-  &lt;code&gt;JAVA_OPTS="$JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true"&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Follow any of the other mitgations listed at &lt;a href="https://logging.apache.org/log4j/2.x/security.html"&gt;https://logging.apache.org/log4j/2.x/security.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The Log4J security page refers to setting &lt;code&gt;log4j2.formatMsgNoLookups=true&lt;/code&gt; as a "discredited" mitigation.  In reality, it depends.
+We've looked at the root cause and audited the code paths that lead to the vulnerability, and we feel confident in this mitigation being sufficient for Solr.
+See &lt;a href="https://lists.apache.org/thread/kgh63sncrsm2bls884pg87mnt8vqztmz"&gt;https://lists.apache.org/thread/kgh63sncrsm2bls884pg87mnt8vqztmz&lt;/a&gt; for discussion.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;
 &lt;a href="https://logging.apache.org/log4j/2.x/security.html"&gt;https://logging.apache.org/log4j/2.x/security.html&lt;/a&gt;&lt;/p&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2021-27905: SSRF vulnerability with the Replication handler</title><link href="/cve-2021-27905-ssrf-vulnerability-with-the-replication-handler.html" rel="alternate"></link><published>2021-04-12T00:00:00+00:00</published><updated>2021-04-12T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2021-04-12:/cve-2021-27905-ssrf-vulnerability-with-the-replication-handler.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt;
 High&lt;/p&gt;
@@ -279,40 +484,40 @@ Matei "Mal" Badanoiu&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://issues.apache.org/jira/browse/SOLR-13750"&gt;https://issues.apache.org/jira/browse/SOLR-13750&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity"&gt;https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="solr/security"></category></entry><entry><title>[ANNOUNCE] 8.1.1 and 8.2.0 users check ENABLE_REMOTE_JMX_OPTS setting</title><link href="/announce-811-and-820-users-check-enable_remote_jmx_opts-setting.html" rel="alternate"></link><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2019-08-14:/announce-811-and-820-users-check-enable_remote_jmx_opts-setting.html</id><summary type="html">&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Severity&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Low&lt;/span&gt;
+&lt;/ul&gt;</content><category term="solr/security"></category></entry><entry><title>[ANNOUNCE] 8.1.1 and 8.2.0 users check ENABLE_REMOTE_JMX_OPTS setting</title><link href="/announce-811-and-820-users-check-enable_remote_jmx_opts-setting.html" rel="alternate"></link><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2019-08-14:/announce-811-and-820-users-check-enable_remote_jmx_opts-setting.html</id><summary type="html">&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Severity&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Low&lt;/span&gt;
 
-&lt;span class="n"&gt;Versions&lt;/span&gt; &lt;span class="n"&gt;Affected&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;Linux&lt;/span&gt;
-
-&lt;span class="n"&gt;Description&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="n"&gt;It&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;been&lt;/span&gt; &lt;span class="n"&gt;discovered&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;releases&lt;/span&gt; &lt;span class="n"&gt;contain&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;bad&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt;
-&lt;span class="n"&gt;setting&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;ENABLE_REMOTE_JMX_OPTS&lt;/span&gt; &lt;span class="n"&gt;setting&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;
-&lt;span class="n"&gt;shipping&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-
-&lt;span class="n"&gt;Windows&lt;/span&gt; &lt;span class="n"&gt;users …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Severity&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Low&lt;/span&gt;
-
-&lt;span class="n"&gt;Versions&lt;/span&gt; &lt;span class="n"&gt;Affected&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;Linux&lt;/span&gt;
+&lt;span class="n"&gt;Versions&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Affected&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;
 
 &lt;span class="n"&gt;Description&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="n"&gt;It&lt;/span&gt; &lt;span class="n"&gt;has&lt;/span&gt; &lt;span class="n"&gt;been&lt;/span&gt; &lt;span class="n"&gt;discovered&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;releases&lt;/span&gt; &lt;span class="n"&gt;contain&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;bad&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt;
-&lt;span class="n"&gt;setting&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;ENABLE_REMOTE_JMX_OPTS&lt;/span&gt; &lt;span class="n"&gt;setting&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;
-&lt;span class="n"&gt;shipping&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;been&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;discovered&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;contain&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bad&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;
+&lt;span class="n"&gt;setting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ENABLE_REMOTE_JMX_OPTS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;setting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;
+&lt;span class="n"&gt;shipping&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 
-&lt;span class="n"&gt;Windows&lt;/span&gt; &lt;span class="n"&gt;users&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;users&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;custom&lt;/span&gt; &lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;affected&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Windows&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;users …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Severity&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Low&lt;/span&gt;
 
-&lt;span class="n"&gt;If&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;affected&lt;/span&gt; &lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt;
-&lt;span class="n"&gt;JMX&lt;/span&gt; &lt;span class="n"&gt;monitoring&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;enabled&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;exposed&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;JMX_PORT&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;18983&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
-&lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;authentication&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;So&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;firewalls&lt;/span&gt; &lt;span class="n"&gt;allows&lt;/span&gt; &lt;span class="n"&gt;inbound&lt;/span&gt; &lt;span class="n"&gt;traffic&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;
-&lt;span class="n"&gt;JMX_PORT&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;anyone&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;network&lt;/span&gt; &lt;span class="n"&gt;access&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Solr&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;able&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt;
-&lt;span class="n"&gt;access&lt;/span&gt; &lt;span class="n"&gt;monitoring&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="n"&gt;exposed&lt;/span&gt; &lt;span class="n"&gt;over&lt;/span&gt; &lt;span class="n"&gt;JMX&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Versions&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Affected&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;
+
+&lt;span class="n"&gt;Description&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;been&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;discovered&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;contain&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bad&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;
+&lt;span class="n"&gt;setting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ENABLE_REMOTE_JMX_OPTS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;setting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;
+&lt;span class="n"&gt;shipping&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;Windows&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;custom&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;affected&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;If&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;affected&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;then&lt;/span&gt;
+&lt;span class="n"&gt;JMX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;monitoring&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exposed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;JMX_PORT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;18983&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+&lt;span class="n"&gt;without&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;any&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;authentication&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;So&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;firewalls&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;allows&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;inbound&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;traffic&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;
+&lt;span class="n"&gt;JMX_PORT&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;then&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;anyone&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;able&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;
+&lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;monitoring&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exposed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;over&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;JMX&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 
 &lt;span class="n"&gt;Mitigation&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="n"&gt;Edit&lt;/span&gt; &lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;set&lt;/span&gt; &lt;span class="n"&gt;ENABLE_REMOTE_JMX_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt; &lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;Alternatively&lt;/span&gt; &lt;span class="n"&gt;wait&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;future&lt;/span&gt; &lt;span class="mf"&gt;8.3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Edit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sh&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ENABLE_REMOTE_JMX_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;restart&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Solr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Alternatively&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;wait&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;future&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;8.3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 
 &lt;span class="n"&gt;References&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;issues&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;apache&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="sr"&gt;/jira/browse/&lt;/span&gt;&lt;span class="n"&gt;SOLR&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13647&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;issues&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;apache&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="sr"&gt;/jira/browse/&lt;/span&gt;&lt;span class="n"&gt;SOLR&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;13647&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="solr/security"></category></entry><entry><title>CVE-2019-0193: Apache Solr, Remote Code Execution via DataImportHandler</title><link href="/cve-2019-0193-apache-solr-remote-code-execution-via-dataimporthandler.html" rel="alternate"></link><published>2019-07-31T00:00:00+00:00</published><updated>2019-07-31T00:00:00+00:00</updated><author><name>Solr Developers</name></author><id>tag:None,2019-07-31:/cve-2019-0193-apache-solr-remote-code-execution-via-dataimporthandler.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Severity:&lt;/strong&gt; High&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Vendor:&lt;/strong&gt;&lt;br&gt;
 The Apache Software Foundation&lt;/p&gt;
