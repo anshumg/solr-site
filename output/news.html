@@ -20,24 +20,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,500' rel='stylesheet' type='text/css'>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=4dd59757" />
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=4dd59757"/>
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=4dd59757"/>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
-<link rel="stylesheet" href="/theme/css/base.css?v=4dd59757" />
+<link rel="stylesheet" href="/theme/css/google-fonts-raleway.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/google-fonts-kalam.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/font-awesome.min.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=7983f64e"/>
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=7983f64e"/>
+<link rel="stylesheet" href="/theme/css/base.css?v=7983f64e" />
 <meta name="Distribution" content="Global"/>
 <meta name="Robots" content="index,follow"/>
 
 <script src="/theme/javascript/lib/jquery-2.1.1.min.js"></script>
-<script src="/theme/javascript/lib/foundation/modernizr.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/angularjs/angular.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/foundation/foundation.min.js?v=4dd59757"></script>
-<script src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"/></script>
-<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/main.js?v=4dd59757"></script>
+<script src="/theme/javascript/lib/foundation/modernizr.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/angularjs/angular.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/foundation/foundation.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/main.js?v=7983f64e"></script>
 <script src="https://www.apachecon.com/event-images/snippet.js"></script>    <title>Solr News - Apache Solr</title>
 
     <meta name="keywords"
@@ -47,8 +46,8 @@
      <meta property="og:url" content="https://solr.apache.org/news.html"/>
      <meta property="og:title" content="Solr News"/>
      <meta property="og:description" content="You may also read these news as an ATOM feed."/>
-     <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=4dd59757"/>
-     <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=4dd59757"/>
+     <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=7983f64e"/>
+     <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=7983f64e"/>
 
    <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon">
@@ -135,6 +134,131 @@
   <h1 id="solr-news">Solr<sup>™</sup> News<a class="headerlink" href="#solr-news" title="Permanent link">¶</a></h1>
   <p>You may also read these news as an <a href="/feeds/solr/news.atom.xml">ATOM feed</a>.</p>
 
+  <h2 id="apache-solrtm-980-available">23 January 2025, Apache Solr™ 9.8.0 available
+    <a class="headerlink" href="#apache-solrtm-980-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.8.0.</p>
+<p>Solr is the blazing-fast, open source, multi-modal search platform built on Apache Lucene. It powers full-text, vector, analytics, and geospatial search at many of the world's largest organizations. Other major features include Kubernetes and docker integration, streaming, highlighting, faceting, and spellchecking.</p>
+<p>Solr 9.8.0 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-980-release-highlights">Solr 9.8.0 Release Highlights:</h3>
+<ul>
+<li>The Solr Cross-DC Project has graduated from the sandbox repository into the Solr project as a supported capability.</li>
+<li>Requests can specify the 'memAllowed' parameter to halt requests that have exceeded this amount of memory (similar to timeAllowed but for memory).</li>
+<li>New knn_text_to_vector query parser that encodes query text into a vector (AKA "embedding") via external LLM services.</li>
+<li>New ParallelHttpShardHandlerFactory for reducing distributed-search latency in collections with many shards. This is not used by default.</li>
+<li>Cluster properties can now be listed or read individually using new v2 APIs ("GET /api/cluster/properties" and "GET /api/cluster/properties/propName")</li>
+<li>SolrJ CloudSolrClient now performs reasonably when configured with Solr URLs, which is increasingly going to be preferred over ZK URLs.  Some big performance improvements occurred this release.</li>
+<li>Shard splits now support indexes with nested documents.</li>
+<li>"<lib/>" tags in solrconfig.xml are now quietly ignored by default unless explicitly enabled with the <code>SOLR_CONFIG_LIB_ENABLED=true</code> environment variable (or corresponding sysprop)</li>
+<li>multiThreaded=true no longer risks rejected exceptions under load.  But you may need to increase the thread pool to more fully utilize a machine than previously.</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://github.com/apache/solr/blob/main/solr/solr-ref-guide/modules/upgrade-notes/pages/major-changes-in-solr-9.adoc#solr-98">https://github.com/apache/solr/blob/main/solr/solr-ref-guide/modules/upgrade-notes/pages/major-changes-in-solr-9.adoc#solr-98</a></p>
+<p>Please read CHANGES.txt for a full list of new features, changes and bug-fixes:</p>
+<p><a href="https://solr.apache.org/9_8_0/changes/Changes.html">https://solr.apache.org/9_8_0/changes/Changes.html</a></p>
+  <h2 id="solr-8-reaches-end-of-life">25 October 2024, Solr 8 reaches End-Of-Life
+    <a class="headerlink" href="#solr-8-reaches-end-of-life" title="Permanent link">¶</a>
+  </h2>
+  <p>With Lucene 10 having been released, and therefore Lucene 8 reaching EOL, the Apache Lucene and Solr PMCs are no longer able to provide new releases for Solr 8.
+Solr 8.11.4 will be the last release of Solr 8.</p>
+<p>Users are strongly recommended to upgrade to Solr 9, and prepare for the soon-to-be-released Solr 10.</p>
+  <h2 id="cve-2024-45216-apache-solr-authentication-bypass-possible-using-a-fake-url-path-ending">14 October 2024, CVE-2024-45216: Apache Solr: Authentication bypass possible using a fake URL Path ending
+    <a class="headerlink" href="#cve-2024-45216-apache-solr-authentication-bypass-possible-using-a-fake-url-path-ending" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Critical</p>
+<p><strong>Versions Affected:</strong></p>
+<ul>
+<li>Apache Solr 5.3.0 before 8.11.4</li>
+<li>Apache Solr 9.0.0 before 9.7.0</li>
+</ul>
+<p><strong>Description:</strong><br>
+Improper Authentication vulnerability in Apache Solr.</p>
+<p>Solr instances using the PKIAuthenticationPlugin, which is enabled by default when Solr Authentication is used, are vulnerable to Authentication bypass.
+A fake ending at the end of any Solr API URL path, will allow requests to skip Authentication while maintaining the API contract with the original URL Path.
+This fake ending looks like an unprotected API path, however it is stripped off internally after authentication but before API routing.</p>
+<p><strong>Mitigation:</strong><br>
+Users are recommended to upgrade to version 9.7.0, or 8.11.4, which fix the issue.</p>
+<p><strong>Credit:</strong>
+Liu Huajin (reporter)</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-17417">SOLR-17417</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45216">CVE-2024-45216</a></p>
+  <h2 id="cve-2024-45217-apache-solr-configsets-created-during-a-backup-restore-command-are-trusted-implicitly">14 October 2024, CVE-2024-45217: Apache Solr: ConfigSets created during a backup restore command are trusted implicitly
+    <a class="headerlink" href="#cve-2024-45217-apache-solr-configsets-created-during-a-backup-restore-command-are-trusted-implicitly" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity:</strong><br>
+Moderate</p>
+<p><strong>Versions Affected:</strong></p>
+<ul>
+<li>Apache Solr 6.6.0 before 8.11.4</li>
+<li>Apache Solr 9.0.0 before 9.7.0</li>
+</ul>
+<p><strong>Description:</strong>  </p>
+<p>Insecure Default Initialization of Resource vulnerability in Apache Solr.</p>
+<p>New ConfigSets that are created via a Restore command, which copy a configSet from the backup and give it a new name, are created without setting the "trusted" metadata.
+ConfigSets that do not contain the flag are trusted implicitly if the metadata is missing, therefore this leads to "trusted" ConfigSets that may not have been created with an Authenticated request.
+"trusted" ConfigSets are able to load custom code into classloaders, therefore the flag is supposed to only be set when the request that uploads the ConfigSet is Authenticated &amp; Authorized.</p>
+<p><strong>Mitigation:</strong><br>
+This issue affects Apache Solr: from 6.6.0 before 8.11.4, from 9.0.0 before 9.7.0. This issue does not affect Solr instances that are secured via Authentication/Authorization.</p>
+<p>Users are primarily recommended to use Authentication and Authorization when running Solr. However, upgrading to version 9.7.0, or 8.11.4 will mitigate this issue otherwise.</p>
+<p><strong>Credit:</strong>
+Liu Huajin (reporter)</p>
+<p><strong>References:</strong><br>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-17418">SOLR-17418</a><br>
+CVE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45217">CVE-2024-45217</a></p>
+  <h2 id="apache-solrtm-8114-available">24 September 2024, Apache Solr™ 8.11.4 available
+    <a class="headerlink" href="#apache-solrtm-8114-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Lucene and Solr PMCs are pleased to announce the release of Apache Solr 8.11.4.</p>
+<p>Solr is the blazing-fast, open source, multi-modal search platform built on Apache Lucene. It powers full-text, analytics, and geospatial search at many of the world's largest organizations. Other major features include Kubernetes and docker integration, streaming, highlighting, faceting, and spellchecking.</p>
+<p>Solr 8.11.4 is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-8114-release-highlights">Solr 8.11.4 Release Highlights:</h3>
+<ul>
+<li>ConfigSets created during a backup restore command are no longer trusted implicitly</li>
+<li>Removed the ability to bypass authentication using a fake URL path ending</li>
+<li>The jetty-transport-classes-epoll jar has been added to the server lib directory</li>
+</ul>
+<p>Please refer to the Upgrade Notes in the Solr Ref Guide for information on upgrading from previous Solr versions:</p>
+<p><a href="https://solr.apache.org/guide/8_11/solr-upgrade-notes.html">https://solr.apache.org/guide/8_11/solr-upgrade-notes.html</a></p>
+<p>Please read CHANGES.txt for a full list of bugfixes:</p>
+<p><a href="https://solr.apache.org/docs/8_11_4/changes/Changes.html">https://solr.apache.org/docs/8_11_4/changes/Changes.html</a></p>
+<p>Solr 8.11.4 also includes bugfixes in the corresponding Apache Lucene release:</p>
+<p><a href="https://lucene.apache.org/core/8_11_4/changes/Changes.html">https://lucene.apache.org/core/8_11_4/changes/Changes.html</a></p>
+  <h2 id="apache-solrtm-970-available">9 September 2024, Apache Solr™ 9.7.0 available
+    <a class="headerlink" href="#apache-solrtm-970-available" title="Permanent link">¶</a>
+  </h2>
+  <p>The Solr PMC is pleased to announce the release of Apache Solr 9.7.0.</p>
+<p>Solr is the blazing-fast, open source, multi-modal search platform built on Apache Lucene. It powers full-text, vector, analytics, and geospatial search at many of the world's largest organizations. Other major features include Kubernetes and docker integration, streaming, highlighting, faceting, and spellchecking.</p>
+<p>The release is available for immediate download at:</p>
+<p><a href="https://solr.apache.org/downloads.html">https://solr.apache.org/downloads.html</a></p>
+<h3 id="solr-970-release-highlights">Solr 9.7.0 Release Highlights</h3>
+<ul>
+<li>DocValues enabled by default - Most fields/fieldTypes that support docValues will have them enabled by default in the latest schema version 1.7. This does not affect users who upgrade to this Solr version without updating their schema version.</li>
+<li>New "vectorSimilarity" QParser for matching documents based on a minimum vector similarity threshold</li>
+<li>Prometheus formatted metrics can now be exposed directly by Solr via ‘wt=prometheus’. There were improvements to the Prometheus Exporter as well.</li>
+<li>Limits / guard-rails for short prefix queries and for too many fields.</li>
+<li>Authentication improvements for the "MultiAuth" plugin.  And the Subquery transformer now support basic auth.</li>
+<li>Solr CLI adopts "kebab" formatting for long options.  For example "-solrURL" becomes "--solr-url".  Previous style commands continue to be supported in 9x and will be removed in 10x.</li>
+<li>Solr CLI now supports all the ZooKeeper related operations that required the use of "zkcli.sh" including linkconfig, cluster, and updateacls commands.</li>
+</ul>
+<p>Performance improvements:</p>
+<ul>
+<li>Opt-in multithreaded search execution- Users can enable concurrent segment searching for reduced latency</li>
+<li>Apache Lucene upgraded to 9.11.1 introducing tremendous performance improvements when using Java 21 for vector search among other things.</li>
+<li>On Linux and Mac platforms with Java 21, MMapDirectory will now also use POSIX madvise for better paging and read-ahead of index files.</li>
+<li>Reduced heap usage especially for high-core-count, high-field-count, high-thread-count cases for stored fields.</li>
+<li>Async backup/restore and other operations scale to 100+ shards via tweaks to core asyncId caching.</li>
+</ul>
+<p>There were more changes and details to read; that was just an editorialized summary.</p>
+<p>Read CHANGES.txt for a detailed list of changes:</p>
+<p><a href="https://solr.apache.org/docs/9_7_0/changes/Changes.html">https://solr.apache.org/docs/9_7_0/changes/Changes.html</a></p>
+<p>When upgrading, always read the upgrade notes:</p>
+<p><a href="https://github.com/apache/solr/blob/main/solr/solr-ref-guide/modules/upgrade-notes/pages/major-changes-in-solr-9.adoc#solr-97">https://github.com/apache/solr/blob/main/solr/solr-ref-guide/modules/upgrade-notes/pages/major-changes-in-solr-9.adoc#solr-97</a></p>
+<p>Thanks to all contributors:</p>
+<p>David Smiley, Eric Pugh, Jason Gerlowski, hossman, Houston Putman, Pierre Salagnac, Christine Poerschke, Christos Malliaridis, Michael Gibney, Sanjay Dutt, Yohann Callea, janhoy, Liu Huajin, Andrey Bozhko, Lamine Idjeraoui, Ishan Chattopadhyaya, Mark Miller, noble, Gus Heck, Matthew Biscocho, Alexey Serba, Rafał Harabień, Eivind Bergstøl, Calvin Smith, Tomás Fernández Löbbe, @charlygrappa, Alastair Porter, ellaeln, Patson Luk, Vinayak Hegde, Kevin Risden, Rudy Seitz, @hgdharold, Bostoi, Torsten Bøgh Köster, Hakan Özler, Andy Webb, Stephen Woods, Anshum Gupta</p>
   <h2 id="apache-solrtm-961-available">29 May 2024, Apache Solr™ 9.6.1 available
     <a class="headerlink" href="#apache-solrtm-961-available" title="Permanent link">¶</a>
   </h2>
@@ -4332,7 +4456,7 @@ file included with the release for a full list of details.</p>
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2024 The Apache Software Foundation, Licensed under the
+  <p>Copyright © 2025 The Apache Software Foundation, Licensed under the
     <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
     Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
@@ -4343,6 +4467,7 @@ file included with the release for a full list of details.</p>
 <script>
   $(document).foundation();
 </script>
+<!-- TODO: This script is commented out because we do not use slick slider.
 <script>
   $(document).ready(function(){
     $('.slider').slick({
@@ -4385,5 +4510,7 @@ file included with the release for a full list of details.</p>
       nextArrow: '<i class="fa fa-angle-right fa-2x slider-next"></i>'
     });
   });
-</script>  </body>
+</script>
+-->
+  </body>
 </html>
