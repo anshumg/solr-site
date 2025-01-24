@@ -20,24 +20,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,500' rel='stylesheet' type='text/css'>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=4dd59757" />
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=4dd59757"/>
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=4dd59757"/>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
-<link rel="stylesheet" href="/theme/css/base.css?v=4dd59757" />
+<link rel="stylesheet" href="/theme/css/google-fonts-raleway.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/google-fonts-kalam.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/font-awesome.min.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=7983f64e"/>
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=7983f64e"/>
+<link rel="stylesheet" href="/theme/css/base.css?v=7983f64e" />
 <meta name="Distribution" content="Global"/>
 <meta name="Robots" content="index,follow"/>
 
 <script src="/theme/javascript/lib/jquery-2.1.1.min.js"></script>
-<script src="/theme/javascript/lib/foundation/modernizr.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/angularjs/angular.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/foundation/foundation.min.js?v=4dd59757"></script>
-<script src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"/></script>
-<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/main.js?v=4dd59757"></script>
+<script src="/theme/javascript/lib/foundation/modernizr.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/angularjs/angular.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/foundation/foundation.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/main.js?v=7983f64e"></script>
 <script src="https://www.apachecon.com/event-images/snippet.js"></script>    <title>Editing this Website - Apache Solr</title>
 
     <meta name="keywords"
@@ -47,8 +46,8 @@
      <meta property="og:url" content="https://solr.apache.org/editing-website.html"/>
      <meta property="og:title" content="Editing this Website"/>
      <meta property="og:description" content="Editing this Website This website is hosted in its own git repository solr-site (see Github and Gitbox). The content of the main..."/>
-     <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=4dd59757"/>
-     <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=4dd59757"/>
+     <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=7983f64e"/>
+     <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=7983f64e"/>
 
    <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon">
@@ -67,6 +66,9 @@
 
       <div class="top-bar-section">
         <ul class="navigation right">
+          <li>
+            <a href="/blog.html">Blog</a>
+          </li>
           <li>
             <a href="/news.html">News</a>
           </li>
@@ -123,15 +125,15 @@
 <li>Fork this repository in <a href="https://github.com/apache/solr-site">GitHub</a></li>
 <li>
 <p>Clone your fork to your computer</p>
-<div class="codehilite"><pre><span></span><code><span class="err">git clone https://github.com/&lt;your-github-id&gt;/lucene-site</span>
-<span class="err">cd lucene-site</span>
-<span class="err">git pull</span>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/&lt;your-github-id&gt;/lucene-site
+cd lucene-site
+git pull
 </code></pre></div>
 
 </li>
 <li>
 <p>Create a new branch for your edits</p>
-<div class="codehilite"><pre><span></span><code><span class="err">git checkout -b my-typo-fix</span>
+<div class="codehilite"><pre><span></span><code>git checkout -b my-typo-fix
 </code></pre></div>
 
 </li>
@@ -140,9 +142,9 @@
 </li>
 <li>
 <p>When done, push your changes to your branch (in your fork)</p>
-<div class="codehilite"><pre><span></span><code><span class="err">git add .</span>
-<span class="err">git commit -m &quot;Fixing a typo on the resources page&quot;</span>
-<span class="err">git push origin</span>
+<div class="codehilite"><pre><span></span><code>git add .
+git commit -m &quot;Fixing a typo on the resources page&quot;
+git push origin
 </code></pre></div>
 
 </li>
@@ -223,8 +225,8 @@
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2021 The Apache Software Foundation, Licensed under the
-    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="/privacy.html">Privacy Policy</a><br/>
+  <p>Copyright © 2025 The Apache Software Foundation, Licensed under the
+    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
     Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
     Please see the <a href="https://www.apache.org/foundation/marks/">Apache Trademark Policy</a> for more information.
@@ -234,6 +236,7 @@
 <script>
   $(document).foundation();
 </script>
+<!-- TODO: This script is commented out because we do not use slick slider.
 <script>
   $(document).ready(function(){
     $('.slider').slick({
@@ -276,5 +279,7 @@
       nextArrow: '<i class="fa fa-angle-right fa-2x slider-next"></i>'
     });
   });
-</script>  </body>
+</script>
+-->
+  </body>
 </html>

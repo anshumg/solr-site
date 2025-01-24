@@ -20,24 +20,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,500' rel='stylesheet' type='text/css'>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=4dd59757" />
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=4dd59757"/>
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=4dd59757"/>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
-<link rel="stylesheet" href="/theme/css/operator.css?v=4dd59757" />
+<link rel="stylesheet" href="/theme/css/google-fonts-raleway.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/google-fonts-kalam.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/font-awesome.min.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=7983f64e"/>
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=7983f64e"/>
+<link rel="stylesheet" href="/theme/css/operator.css?v=7983f64e" />
 <meta name="Distribution" content="Global"/>
 <meta name="Robots" content="index,follow"/>
 
 <script src="/theme/javascript/lib/jquery-2.1.1.min.js"></script>
-<script src="/theme/javascript/lib/foundation/modernizr.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/angularjs/angular.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/lib/foundation/foundation.min.js?v=4dd59757"></script>
-<script src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"/></script>
-<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=4dd59757"></script>
-<script src="/theme/javascript/main.js?v=4dd59757"></script>
+<script src="/theme/javascript/lib/foundation/modernizr.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/angularjs/angular.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/foundation/foundation.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=7983f64e"></script>
+<script src="/theme/javascript/main.js?v=7983f64e"></script>
 <script src="https://www.apachecon.com/event-images/snippet.js"></script>    <title>Resources - Apache Solr Operator</title>
 
     <meta name="keywords"
@@ -48,8 +47,8 @@
     <meta property="og:url" content="https://solr.apache.org/operator/resources.html"/>
     <meta property="og:title" content="Resources"/>
     <meta property="og:description" content="All resources are currently found in the Solr Operator repository, but will eventually be moved to the website. Tutorials Solr..."/>
-    <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=4dd59757"/>
-    <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=4dd59757"/>
+    <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=7983f64e"/>
+    <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=7983f64e"/>
 
    <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon">
@@ -132,9 +131,11 @@
 <h2 id="tutorials">Tutorials</h2>
 <ul>
 <li><a href="https://apache.github.io/solr-operator/docs/local_tutorial">Solr Operator Quick Start</a><br>
-  This is a basic tutorial designed for users new to Kubernetes and the Solr Opertor</li>
+  This is a basic tutorial designed for users new to Kubernetes and the Solr Operator</li>
 <li><a href="/operator/articles/explore-v030-gke.html">Exploring the Apache Solr Operator v0.3.0 on GKE</a><br>
   This is an advanced tutorial for users ready to use the Solr Operator for Solr Clouds running in a production environment.</li>
+<li><a href="https://sematext.com/blog/solr-operator-autoscaling-tutorial/">Guide to Autoscaling Solr on Kubernetes</a><br>
+  This is a tutorial designed to help users to setup a basic implementation of Autoscaling using the <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">HorizontalPodAutoscaler</a>.</li>
 </ul>
 <p>Users who have completed the tutorial are encouraged to review the <a href="#documentation">other documentation available</a>.</p>
 <hr>
@@ -158,20 +159,21 @@
 
 <p>Additional documentation, including upgrade notes, can be found in the <a href="https://github.com/apache/solr-operator#solr-operator">Solr Operator's README</a>.</p>
 <hr>
-<h2 id="presentations">Presentations</h2>
-<p>If you have a Solr Operator presentation that you would like to see listed here, please <a href="/editing-website.html">edit this website and submit a Pull Request</a>.</p>
-<h2 id="videos">Videos</h2>
-<p>If you have a Solr Operator video that you would like to see listed here, please <a href="/editing-website.html">edit this website and submit a Pull Request</a>.</p>
+<h2 id="presentations-and-videos">Presentations and Videos</h2>
 <!-- TODO: WOULD BE NICE TO HAVE A SLIDER OR RANDOMLY PICKED VIDEO HERE -->
 
+<h3 class="offset" id="youtube">YouTube</h3>
+
+<p><a href="https://youtu.be/MD6NXTrA3xo?si=_ALWWzxKgBWqiCjX">Introducing the Solr Operator - Activate 2019</a></p>
+<p><a href="https://youtu.be/zl22KyzWqtM?si=OdQKJYY6EnpQufXw">Demystifying the Solr Operator - Berlin Buzzwords 2021</a></p>
+<p><a href="https://youtu.be/tr4XYE2r0dE?si=PZfUPMLHkDkFw_Ow">Using Solr unconventionally to serve 26bn+ documents - Berlin Buzzwords 2022</a></p>
+<p><a href="https://youtu.be/HfHa4Q4YaTU?si=cCiadyOmjlo86sVF">Rethinking Autoscaling for Apache Solr using Kubernetes - Berlin Buzzwords 2023</a></p>
 <h3 class="offset" id="youtube">Conferences with Solr talks</h3>
 
 <p><a href="https://www.activate-conf.com/more-events">Videos from Past Activate / Lucene/Solr revolution events</a></p>
 <p><a href="https://www.youtube.com/c/PlainSchwarzUG/playlists?view=50&amp;sort=dd&amp;shelf_id=1">Videos from past Berlin Buzzwords events</a></p>
-<h3 class="offset" id="youtube">YouTube</h3>
-
-<p><a href="https://www.youtube.com/watch?v=MD6NXTrA3xo&amp;t=719s">Introducing the Solr Operator - Activate 2019</a></p>
-<p><a href="https://www.youtube.com/results?search_query=solr+operator">Search YouTube for Solr</a></p>  </div>
+<p><a href="https://www.youtube.com/results?search_query=solr+operator">Search YouTube for Solr</a></p>
+<p>If you have a Solr Operator video or presentationthat you would like to see listed here, please <a href="/editing-website.html">edit this website and submit a Pull Request</a>.</p>  </div>
 </div>
     <footer>
 <div class="row">
@@ -231,8 +233,8 @@
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2021 The Apache Software Foundation, Licensed under the
-    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="/privacy.html">Privacy Policy</a><br/>
+  <p>Copyright © 2025 The Apache Software Foundation, Licensed under the
+    <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
     Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
     Please see the <a href="https://www.apache.org/foundation/marks/">Apache Trademark Policy</a> for more information.
@@ -242,6 +244,7 @@
 <script>
   $(document).foundation();
 </script>
+<!-- TODO: This script is commented out because we do not use slick slider.
 <script>
   $(document).ready(function(){
     $('.slider').slick({
@@ -284,5 +287,7 @@
       nextArrow: '<i class="fa fa-angle-right fa-2x slider-next"></i>'
     });
   });
-</script>  </body>
+</script>
+-->
+  </body>
 </html>
