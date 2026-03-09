@@ -51,7 +51,23 @@
 
    <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon">
-<link rel="alternate" type="application/atom+xml" title="Solr security announce feed" href="/feeds/solr/security.atom.xml" />  </head>
+<link rel="alternate" type="application/atom+xml" title="Solr security announce feed" href="/feeds/solr/security.atom.xml" /><!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '76']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->  </head>
 
   <body class="page " x-ng-app-root="/solr" x-ng-app="page" x-ng-controller="page.controllers.main">
 <div class="contain-to-grid">
@@ -190,6 +206,31 @@ with you to see if we can provide this information in other variations or format
             <th>Announcement</th>
         </tr>
         <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22022">CVE-2026-22022</a></td>
+            <td>2026-01-20</td>
+            <td><a href="#cve-2026-22022-unauthorized-bypass-of-certain-predefined-permission-rules-in-the-rulebasedauthorizationplugin">Unauthorized bypass of certain "predefined permission" rules in the RuleBasedAuthorizationPlugin</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22444">CVE-2026-22444</a></td>
+            <td>2026-01-20</td>
+            <td><a href="#cve-2026-22444-insufficient-file-access-checking-in-standalone-core-creation-requests">Insufficient file-access checking in standalone core-creation requests</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66516">CVE-2025-66516</a></td>
+            <td>2025-12-09</td>
+            <td><a href="#cve-2025-66516-apache-solr-extraction-module-vulnerable-to-xxe-attacks-via-xfa-content-in-pdfs">Apache Solr extraction module vulnerable to XXE attacks via XFA content in PDFs</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-52012">CVE-2024-52012</a></td>
+            <td>2025-01-26</td>
+            <td><a href="#cve-2024-52012-apache-solr-configset-upload-on-windows-allows-arbitrary-path-write-access">Apache Solr: Configset upload on Windows allows arbitrary path write-access</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24814">CVE-2025-24814</a></td>
+            <td>2025-01-26</td>
+            <td><a href="#cve-2025-24814-apache-solr-core-creation-with-trusted-configset-can-use-arbitrary-untrusted-files">Apache Solr: Core-creation with "trusted" configset can use arbitrary untrusted files</a></td>
+        </tr>
+        <tr>
             <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45216">CVE-2024-45216</a></td>
             <td>2024-10-14</td>
             <td><a href="#cve-2024-45216-apache-solr-authentication-bypass-possible-using-a-fake-url-path-ending">Apache Solr: Authentication bypass possible using a fake URL Path ending</a></td>
@@ -239,33 +280,154 @@ with you to see if we can provide this information in other variations or format
             <td>2021-12-18</td>
             <td><a href="#cve-2021-44548-apache-solr-information-disclosure-vulnerability-through-dataimporthandler">Apache Solr information disclosure vulnerability through DataImportHandler</a></td>
         </tr>
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a></td>
-            <td>2021-12-10</td>
-            <td><a href="#apache-solr-affected-by-apache-log4j-cve-2021-44228">Apache Solr affected by Apache Log4J CVE-2021-44228</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-27905">CVE-2021-27905</a></td>
-            <td>2021-04-12</td>
-            <td><a href="#cve-2021-27905-ssrf-vulnerability-with-the-replication-handler">SSRF vulnerability with the Replication handler</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29262">CVE-2021-29262</a></td>
-            <td>2021-04-12</td>
-            <td><a href="#cve-2021-29262-misapplied-zookeeper-acls-can-result-in-leakage-of-configured-authentication-and-authorization-settings">Misapplied Zookeeper ACLs can result in leakage of configured authentication and authorization settings</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29943">CVE-2021-29943</a></td>
-            <td>2021-04-12</td>
-            <td><a href="#cve-2021-29943-apache-solr-unprivileged-users-may-be-able-to-perform-unauthorized-readwrite-to-collections">Apache Solr Unprivileged users may be able to perform unauthorized read/write to collections</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-13957">CVE-2020-13957</a></td>
-            <td>2020-10-12</td>
-            <td><a href="#cve-2020-13957-the-checks-added-to-unauthenticated-configset-uploads-in-apache-solr-can-be-circumvented">The checks added to unauthenticated configset uploads in Apache Solr can be circumvented</a></td>
-        </tr>
     </table>
 
+  <h2 id="cve-2026-22022-unauthorized-bypass-of-certain-predefined-permission-rules-in-the-rulebasedauthorizationplugin">2026-01-20, CVE-2026-22022: Unauthorized bypass of certain "predefined permission" rules in the RuleBasedAuthorizationPlugin
+    <a class="headerlink" href="#cve-2026-22022-unauthorized-bypass-of-certain-predefined-permission-rules-in-the-rulebasedauthorizationplugin" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity</strong>
+moderate</p>
+<p><strong>Description</strong>
+Deployments of Apache Solr 5.3.0 through 9.10.0 that rely on Solr's "Rule Based Authorization Plugin" are vulnerable to allowing unauthorized access to certain Solr APIs, due to insufficiently strict input validation in those components.  Only deployments that meet all of the following criteria are impacted by this vulnerability:</p>
+<ol>
+<li>Use of Solr's "RuleBasedAuthorizationPlugin"</li>
+<li>A RuleBasedAuthorizationPlugin config (see security.json) that specifies multiple "roles"</li>
+<li>A RuleBasedAuthorizationPlugin permission list (see security.json) that uses one or more of the following pre-defined permission rules: "config-read", "config-edit", "schema-read", "metrics-read", or "security-read".</li>
+<li>A RuleBasedAuthorizationPlugin permission list that doesn't define the "all" pre-defined permission</li>
+<li>A networking setup that allows clients to make unfiltered network requests to Solr. (i.e. user-submitted HTTP/HTTPS requests reach Solr as-is, unmodified or restricted by any intervening proxy or gateway)</li>
+</ol>
+<p><strong>Mitigation</strong></p>
+<p>Users can mitigate this vulnerability by ensuring that their RuleBasedAuthorizationPlugin configuration specifies the "all" pre-defined permission and associates the permission with an "admin" or other privileged role.  Users can also upgrade to a Solr version outside of the impacted range, such as the recently released Solr 9.10.1.</p>
+<p><strong>Credit</strong>
+monkeontheroof (reporter)</p>
+<p><strong>References</strong></p>
+<ul>
+<li>JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-18054">SOLR-18054</a></li>
+<li>CVE - <a href="https://www.cve.org/CVERecord?id=CVE-2026-22022">CVE-2026-22022</a></li>
+</ul>
+  <hr/>
+  <h2 id="cve-2026-22444-insufficient-file-access-checking-in-standalone-core-creation-requests">2026-01-20, CVE-2026-22444: Insufficient file-access checking in standalone core-creation requests
+    <a class="headerlink" href="#cve-2026-22444-insufficient-file-access-checking-in-standalone-core-creation-requests" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity</strong>
+moderate</p>
+<p><strong>Description</strong></p>
+<p>The "create core" API of Apache Solr 8.6 through 9.10.0 lacks sufficient input validation on some API parameters, which can cause Solr to check the existence of and attempt to read file-system paths that should be disallowed by Solr's "allowPaths" security setting.  These read-only accesses can allow users to create cores using unexpected configsets if any are accessible via the filesystem.  On Windows systems configured to allow UNC paths this can additionally cause disclosure of NTLM "user" hashes.</p>
+<p>Solr deployments are subject to this vulnerability if they meet the following criteria:</p>
+<ol>
+<li>Solr is running in its "standalone" mode.</li>
+<li>Solr's "allowPath" setting is being used to restrict file access to certain directories.</li>
+<li>Solr's "create core" API is exposed and accessible to untrusted users.  This can happen if Solr's RuleBasedAuthorizationPlugin is disabled, or if it is enabled but the "core-admin-edit" predefined permission (or an equivalent custom permission) is given to low-trust (i.e. non-admin) user roles.</li>
+</ol>
+<p><strong>Mitigation</strong></p>
+<p>Users can mitigate this by enabling Solr's RuleBasedAuthorizationPlugin (if disabled) and configuring a permission-list that prevents untrusted users from creating new Solr cores.  Users should also upgrade to Apache Solr 9.10.1 or greater, which contain fixes for this issue.</p>
+<p><strong>Credit</strong>
+Damon Toey (reporter)</p>
+<p><strong>References</strong></p>
+<ul>
+<li>JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-18058">SOLR-18058</a></li>
+<li>CVE - <a href="https://www.cve.org/CVERecord?id=CVE-2026-22444">CVE-2026-22444</a></li>
+</ul>
+  <hr/>
+  <h2 id="cve-2025-66516-apache-solr-extraction-module-vulnerable-to-xxe-attacks-via-xfa-content-in-pdfs">2025-12-09, CVE-2025-66516: Apache Solr extraction module vulnerable to XXE attacks via XFA content in PDFs
+    <a class="headerlink" href="#cve-2025-66516-apache-solr-extraction-module-vulnerable-to-xxe-attacks-via-xfa-content-in-pdfs" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity</strong></p>
+<p>High</p>
+<p><strong>Versions Affected</strong></p>
+<ul>
+<li>Apache Solr 6.2.0 through 9.10.0 (when using the extraction module)</li>
+</ul>
+<p><strong>Description</strong></p>
+<p>Solr's extraction module (SolrCell) uses Apache Tika to extract content from PDF files. A vulnerability in Tika allows attackers to submit specially crafted PDFs that can read files from the server.</p>
+<p><strong>Who is affected:</strong></p>
+<ul>
+<li>Solr instances using the extraction module with the 'local' backend (default)</li>
+<li>Systems that allow untrusted users to upload PDF files for indexing</li>
+</ul>
+<p><strong>Who is NOT affected:</strong></p>
+<ul>
+<li>Solr instances not using the extraction module</li>
+<li>Deployments using the TikaServer extraction backend in Solr 9.10</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li><strong>Solr 6.2-8.x</strong>: Attackers can read arbitrary system files (e.g., /etc/passwd, application secrets)</li>
+<li><strong>Solr 9.x</strong>: The Java Security Manager (enabled by default) limits file access to Solr's directories only, reducing impact. However, Solr configuration files and indexed data remain at risk.</li>
+<li>All versions: Possible denial of service and limited network requests</li>
+</ul>
+<p><strong>Mitigation</strong></p>
+<p>Disable XFA form parsing in PDFs by configuring a parseContext file.</p>
+<p><strong>Step 1:</strong> Create or edit <code>parseContext.xml</code> in your configset's <code>conf/</code> directory:</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+<span class="nt">&lt;entries&gt;</span>
+<span class="w">  </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;org.apache.tika.parser.pdf.PDFParserConfig&quot;</span><span class="w"> </span><span class="na">impl=</span><span class="s">&quot;org.apache.tika.parser.pdf.PDFParserConfig&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;extractAcroFormContent&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/entry&gt;</span>
+<span class="nt">&lt;/entries&gt;</span>
+</code></pre></div>
+
+<p><strong>Step 2:</strong> Reference this file in your extraction handler in <code>solrconfig.xml</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;requestHandler</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;/update/extract&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;org.apache.solr.handler.extraction.ExtractingRequestHandler&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;str</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;parseContext.config&quot;</span><span class="nt">&gt;</span>parseContext.xml<span class="nt">&lt;/str&gt;</span>
+<span class="nt">&lt;/requestHandler&gt;</span>
+</code></pre></div>
+
+<p><strong>Step 3:</strong> Reload your collection or restart Solr.</p>
+<p><strong>Note:</strong> Solr 9.10.1 and later (once available) will include this mitigation by default.</p>
+<p><strong>Credit</strong></p>
+<p>Apache Tika Security Team (vulnerability discovery)</p>
+<p><strong>References</strong></p>
+<ul>
+<li>CVE - <a href="https://www.cve.org/CVERecord?id=CVE-2025-66516">CVE-2025-66516</a> (supersedes CVE-2025-54988)</li>
+<li>CVE - <a href="https://www.cve.org/CVERecord?id=CVE-2025-54988">CVE-2025-54988</a> (initial report)</li>
+<li>NVD - <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66516">CVE-2025-66516 Analysis</a></li>
+<li>Apache Tika - <a href="https://lists.apache.org/thread/tdqvvx28f83o4px8xnoso1xmo5h0d0dl">CVE-2025-54988 Advisory</a></li>
+<li>SOLR-17888 - <a href="https://issues.apache.org/jira/browse/SOLR-17888">SOLR-17888</a>  </li>
+</ul>
+  <hr/>
+  <h2 id="cve-2024-52012-apache-solr-configset-upload-on-windows-allows-arbitrary-path-write-access">2025-01-26, CVE-2024-52012: Apache Solr: Configset upload on Windows allows arbitrary path write-access
+    <a class="headerlink" href="#cve-2024-52012-apache-solr-configset-upload-on-windows-allows-arbitrary-path-write-access" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity</strong>
+moderate</p>
+<p><strong>Versions Affected</strong></p>
+<ul>
+<li>Apache Solr 6.6 through 9.7.0</li>
+</ul>
+<p><strong>Description</strong></p>
+<p>Relative Path Traversal vulnerability in Apache Solr.</p>
+<p>Solr instances running on Windows are vulnerable to arbitrary filepath write-access, due to a lack of input-sanitation in the "configset upload" API.  Commonly known as a "zipslip", maliciously constructed ZIP files can use relative filepaths to write data to unanticipated parts of the filesystem.<br>
+This issue affects Apache Solr: from 6.6 through 9.7.0.</p>
+<p><strong>Mitigation</strong></p>
+<p>Users are recommended to upgrade to version 9.8.0, which fixes the issue.  Users unable to upgrade may also safely prevent the issue by using Solr's "Rule-Based Authentication Plugin" to restrict access to the configset upload API, so that it can only be accessed by a trusted set of administrators/users.</p>
+<p><strong>Credit</strong>
+rry (reporter)</p>
+<p><strong>References</strong>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-17543">SOLR-17543</a>
+CVE - <a href="https://www.cve.org/CVERecord?id=CVE-2024-52012">CVE-2024-52012</a></p>
+  <hr/>
+  <h2 id="cve-2025-24814-apache-solr-core-creation-with-trusted-configset-can-use-arbitrary-untrusted-files">2025-01-26, CVE-2025-24814: Apache Solr: Core-creation with "trusted" configset can use arbitrary untrusted files
+    <a class="headerlink" href="#cve-2025-24814-apache-solr-core-creation-with-trusted-configset-can-use-arbitrary-untrusted-files" title="Permanent link">¶</a>
+  </h2>
+  <p><strong>Severity</strong>
+moderate</p>
+<p><strong>Versions Affected</strong></p>
+<ul>
+<li>Apache Solr through 9.7</li>
+</ul>
+<p><strong>Description</strong></p>
+<p>Core creation allows users to replace "trusted" configset files with arbitrary configuration</p>
+<p>Solr instances that (1) use the "FileSystemConfigSetService" component (the default in "standalone" or "user-managed" mode), and (2) are running without authentication and authorization are vulnerable to a sort of privilege escalation wherein individual "trusted" configset files can be ignored in favor of potentially-untrusted replacements available elsewhere on the filesystem.  These replacement config files are treated as "trusted" and can use "<lib>" tags to add to Solr's classpath, which an attacker might use to load malicious code as a searchComponent or other plugin.</p>
+<p>This issue affects all Apache Solr versions up through Solr 9.7.</p>
+<p><strong>Mitigation</strong></p>
+<p>Users can protect against the vulnerability by enabling authentication and authorization on their Solr clusters or switching to SolrCloud (and away from "FileSystemConfigSetService").  Users are also recommended to upgrade to Solr 9.8.0, which mitigates this issue by disabling use of "<lib>" tags by default.</p>
+<p><strong>Credit</strong>
+pwn null (reporter)</p>
+<p><strong>References</strong>
+JIRA - <a href="https://issues.apache.org/jira/browse/SOLR-16781">SOLR-16781</a>
+CVE - <a href="https://www.cve.org/CVERecord?id=CVE-2025-24814">CVE-2025-24814</a></p>
+  <hr/>
   <h2 id="cve-2024-45216-apache-solr-authentication-bypass-possible-using-a-fake-url-path-ending">2024-10-14, CVE-2024-45216: Apache Solr: Authentication bypass possible using a fake URL Path ending
     <a class="headerlink" href="#cve-2024-45216-apache-solr-authentication-bypass-possible-using-a-fake-url-path-ending" title="Permanent link">¶</a>
   </h2>
@@ -507,130 +669,6 @@ Apache Solr would like to thank LaiHan of Nsfocus security team for reporting th
 <p><strong>References:</strong><br>
 Jira issue <a href="https://issues.apache.org/jira/browse/SOLR-15826">SOLR-15826</a></p>
   <hr/>
-  <h2 id="apache-solr-affected-by-apache-log4j-cve-2021-44228">2021-12-10, Apache Solr affected by Apache Log4J CVE-2021-44228
-    <a class="headerlink" href="#apache-solr-affected-by-apache-log4j-cve-2021-44228" title="Permanent link">¶</a>
-  </h2>
-  <p><strong>Severity:</strong>
-Critical</p>
-<p><strong>Versions Affected:</strong>
-7.4.0 to 7.7.3, 8.0.0 to 8.11.0</p>
-<p><strong>Description:</strong>
-Apache Solr releases prior to 8.11.1 were using a bundled version of the Apache Log4J library vulnerable to RCE. For full impact and additional detail consult the Log4J security page.</p>
-<p>Apache Solr releases prior to 7.4 (i.e. Solr 5, Solr 6, and Solr 7 through 7.3) use Log4J 1.2.17 which may be vulnerable for installations using non-default logging configurations that include the JMS Appender, see <a href="https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126">https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126</a> for discussion.</p>
-<p>Solr's Prometheus Exporter uses Log4J as well but it does not log user input or data, so we don't see a risk there.</p>
-<p>Solr is <em>not</em> vulnerable to the followup <strong>CVE-2021-45046</strong> and <strong>CVE-2021-45105</strong>.  A listing of these and other CVEs with some justifications are listed in Solr's wiki: <a href="https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity#SolrSecurity-SolrandVulnerabilityScanningTools">https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity#SolrSecurity-SolrandVulnerabilityScanningTools</a></p>
-<p><strong>Mitigation:</strong>
-Any of the following are enough to prevent this vulnerability for Solr servers:</p>
-<ul>
-<li>Upgrade to <code>Solr 8.11.1</code> or greater (when available), which will include an updated version (<code>&gt;= 2.16.0</code>) of the Log4J dependency.</li>
-<li>If you are using Solr's official docker image, it has already been mitigated in all versions listed as supported on Docker Hub: <a href="https://hub.docker.com/_/solr">https://hub.docker.com/_/solr</a>.  You may need to re-pull the image.</li>
-<li>Manually update the version of Log4J on your runtime classpath and restart your Solr application.</li>
-<li>(Linux/MacOS) Edit your <code>solr.in.sh</code> file to include:
-  <code>SOLR_OPTS="$SOLR_OPTS -Dlog4j2.formatMsgNoLookups=true"</code></li>
-<li>(Windows) Edit your <code>solr.in.cmd</code> file to include:
-  <code>set SOLR_OPTS=%SOLR_OPTS% -Dlog4j2.formatMsgNoLookups=true</code></li>
-<li>Follow any of the other mitgations listed at <a href="https://logging.apache.org/log4j/2.x/security.html">https://logging.apache.org/log4j/2.x/security.html</a></li>
-</ul>
-<p>The Log4J security page refers to setting <code>log4j2.formatMsgNoLookups=true</code> as a "discredited" mitigation.  In reality, it depends.
-We've looked at the root cause and audited the code paths that lead to the vulnerability, and we feel confident in this mitigation being sufficient for Solr.
-See <a href="https://lists.apache.org/thread/kgh63sncrsm2bls884pg87mnt8vqztmz">https://lists.apache.org/thread/kgh63sncrsm2bls884pg87mnt8vqztmz</a> for discussion.</p>
-<p><strong>References:</strong>
-<a href="https://logging.apache.org/log4j/2.x/security.html">https://logging.apache.org/log4j/2.x/security.html</a></p>
-  <hr/>
-  <h2 id="cve-2021-27905-ssrf-vulnerability-with-the-replication-handler">2021-04-12, CVE-2021-27905: SSRF vulnerability with the Replication handler
-    <a class="headerlink" href="#cve-2021-27905-ssrf-vulnerability-with-the-replication-handler" title="Permanent link">¶</a>
-  </h2>
-  <p><strong>Severity:</strong>
-High</p>
-<p><strong>Versions Affected:</strong>
-7.0.0 to 7.7.3
-8.0.0 to 8.8.1</p>
-<p><strong>Description:</strong>
-The ReplicationHandler (normally registered at "/replication" under a Solr core) has a "masterUrl" (also "leaderUrl" alias) parameter that is used to designate another ReplicationHandler on another Solr core to replicate index data into the local core.
-To prevent a SSRF vulnerability, Solr ought to check these parameters against a similar configuration it uses for the "shards" parameter.  Prior to this bug getting fixed, it did not.</p>
-<p><strong>Mitigation:</strong>
-Any of the following are enough to prevent this vulnerability:</p>
-<ul>
-<li>Upgrade to <code>Solr 8.8.2</code> or greater.</li>
-<li>If upgrading is not an option, consider applying the patch in <a href="https://issues.apache.org/jira/browse/SOLR-15217">SOLR-15217</a></li>
-<li>Ensure that any access to the replication handler is purely internal to Solr.  Typically, it's only accessed externally for diagnostic/informational purposes.</li>
-</ul>
-<p><strong>Credit:</strong>
-Reported by Caolinhong(Skay) from QI-ANXIN Cert (QI-ANXIN Technology Group Inc.)</p>
-<p><strong>References:</strong>
-<a href="https://issues.apache.org/jira/browse/SOLR-15217">SOLR-15217</a>: CVE-2021-27905: SSRF vulnerability with the Replication handler</p>
-  <hr/>
-  <h2 id="cve-2021-29262-misapplied-zookeeper-acls-can-result-in-leakage-of-configured-authentication-and-authorization-settings">2021-04-12, CVE-2021-29262: Misapplied Zookeeper ACLs can result in leakage of configured authentication and authorization settings
-    <a class="headerlink" href="#cve-2021-29262-misapplied-zookeeper-acls-can-result-in-leakage-of-configured-authentication-and-authorization-settings" title="Permanent link">¶</a>
-  </h2>
-  <p><strong>Severity:</strong>
-High</p>
-<p><strong>Versions Affected:</strong>
-7.0.0 to 7.7.3
-8.0.0 to 8.8.1</p>
-<p><strong>Description:</strong>
-When starting Apache Solr versions prior to 8.8.2, configured with the SaslZkACLProvider or VMParamsAllAndReadonlyDigestZkACLProvider and no existing security.json znode, if the optional read-only user is configured then Solr would not treat that node as a sensitive path and would allow it to be readable.
-Additionally, with any ZkACLProvider, if the security.json is already present, Solr will not automatically update the ACLs.</p>
-<p><strong>Mitigation:</strong>
-Any of the following are enough to prevent this vulnerability:</p>
-<ul>
-<li>Manually set appropriate ACLs on /security.json znode.</li>
-<li>Upgrade to <code>Solr 8.8.2</code> or greater.</li>
-<li>If upgrading is not an option, consider applying the patch in <a href="https://issues.apache.org/jira/browse/SOLR-15249">SOLR-15249</a></li>
-<li>Ensure that any access to zookeeper is only by trusted application.</li>
-</ul>
-<p><strong>Credit:</strong>
-Timothy Potter and Mike Drob, Apple Cloud Services</p>
-<p><strong>References:</strong>
-<a href="https://issues.apache.org/jira/browse/SOLR-15249">SOLR-15249</a>: CVE-2021-29262: Misapplied Zookeeper ACLs can result in leakage of configured authentication and authorization settings</p>
-  <hr/>
-  <h2 id="cve-2021-29943-apache-solr-unprivileged-users-may-be-able-to-perform-unauthorized-readwrite-to-collections">2021-04-12, CVE-2021-29943: Apache Solr Unprivileged users may be able to perform unauthorized read/write to collections
-    <a class="headerlink" href="#cve-2021-29943-apache-solr-unprivileged-users-may-be-able-to-perform-unauthorized-readwrite-to-collections" title="Permanent link">¶</a>
-  </h2>
-  <p><strong>Severity:</strong>
-High</p>
-<p><strong>Versions Affected:</strong>
-7.0.0 to 7.7.3
-8.0.0 to 8.8.1</p>
-<p><strong>Description:</strong>
-When using ConfigurableInternodeAuthHadoopPlugin for authentication, Apache Solr versions prior to 8.8.2 would forward/proxy distributed requests using server credentials instead of original client credentials. This would result in incorrect authorization resolution on the receiving hosts.</p>
-<p><strong>Mitigation:</strong>
-Any of the following are enough to prevent this vulnerability:</p>
-<ul>
-<li>Upgrade to <code>Solr 8.8.2</code> or greater.</li>
-<li>If upgrading is not an option, consider applying the patch in <a href="https://issues.apache.org/jira/browse/SOLR-15233">SOLR-15233</a></li>
-<li>Use a different authentication plugin, such as the KerberosPlugin or HadoopAuthPlugin</li>
-</ul>
-<p><strong>Credit:</strong>
-Geza Nagy</p>
-<p><strong>References:</strong>
-<a href="https://issues.apache.org/jira/browse/SOLR-15233">SOLR-15233</a>: CVE-2021-29943: Apache Solr Unprivileged users may be able to perform unauthorized read/write to collections </p>
-  <hr/>
-  <h2 id="cve-2020-13957-the-checks-added-to-unauthenticated-configset-uploads-in-apache-solr-can-be-circumvented">2020-10-12, CVE-2020-13957: The checks added to unauthenticated configset uploads in Apache Solr can be circumvented
-    <a class="headerlink" href="#cve-2020-13957-the-checks-added-to-unauthenticated-configset-uploads-in-apache-solr-can-be-circumvented" title="Permanent link">¶</a>
-  </h2>
-  <p><strong>Severity:</strong>
-High</p>
-<p><strong>Versions Affected:</strong>
-6.6.0 to 6.6.6
-7.0.0 to 7.7.3
-8.0.0 to 8.6.2</p>
-<p><strong>Description:</strong>
-Solr prevents some features considered dangerous (which could be used for remote code execution) to be configured in a ConfigSet that's uploaded via API without authentication/authorization. The checks in place to prevent such features can be circumvented by using a combination of UPLOAD/CREATE actions.</p>
-<p><strong>Mitigation:</strong>
-Any of the following are enough to prevent this vulnerability:</p>
-<ul>
-<li>Disable UPLOAD command in ConfigSets API if not used by setting the system property: <code>configset.upload.enabled</code> to <code>false</code> (<a href="https://solr.apache.org/guide/8_6/configsets-api.html">see docs</a>)</li>
-<li>Use Authentication/Authorization and make sure unknown requests aren't allowed (<a href="https://solr.apache.org/guide/8_6/authentication-and-authorization-plugins.html">see docs</a>)</li>
-<li>Upgrade to <code>Solr 8.6.3</code> or greater.</li>
-<li>If upgrading is not an option, consider applying the patch in <a href="https://issues.apache.org/jira/browse/SOLR-14663">SOLR-14663</a></li>
-<li>No Solr API, including the Admin UI, is designed to be exposed to non-trusted parties. Tune your firewall so that only trusted computers and people are allowed access</li>
-</ul>
-<p><strong>Credit:</strong>
-Tomás Fernández Löbbe, András Salamon</p>
-<p><strong>References:</strong>
-<a href="https://issues.apache.org/jira/browse/SOLR-14925">SOLR-14925</a>: CVE-2020-13957: The checks added to unauthenticated configset uploads can be circumvented</p>
-  <hr/>
   <h1 id="cve-reports-for-apache-solr-dependencies">CVE reports for Apache Solr dependencies</h1>
   <p>Below is a list of CVE vulnerabilities in Apache Solr dependencies, and the state of their applicability to Solr.</p>
   <p>We are currently experimenting with providing this information in a <a href="#vex">machine-readable VEX format</a> and encourage you to participate.</p>
@@ -641,6 +679,30 @@ Tomás Fernández Löbbe, András Salamon</p>
         <th>jars</th>
         <th>state</th>
         <th>detail</th>
+      </tr>
+      <tr>
+        <td>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2024-51504">CVE-2024-51504</a>        </td>
+        <td>
+          9.4.0–9.8.1
+        </td>
+        <td>
+            zookeeper-3.9.0.jar,             zookeeper-3.9.1.jar,             zookeeper-3.9.2.jar        </td>
+        <td>not affected</td>
+        <td>Solr production deployments are unlikely to be affected.
+Exploitation requires Solr to run in SolrCloud mode with the embedded (non-production) Zookeeper server.
+It also requires the Zookeeper Admin Server to be manually enabled in the configuration.</td>
+      </tr>
+      <tr>
+        <td>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2024-6763">CVE-2024-6763</a>        </td>
+        <td>
+          < 9.8
+        </td>
+        <td>
+            jetty-http-10.0.22.jar        </td>
+        <td>not affected</td>
+        <td>Solr does not use the Jetty "HttpURI" utility class necessary for the vulnerability.</td>
       </tr>
       <tr>
         <td>
@@ -1068,9 +1130,9 @@ Tomás Fernández Löbbe, András Salamon</p>
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2025 The Apache Software Foundation, Licensed under the
+  <p>Copyright © 2026 The Apache Software Foundation, Licensed under the
     <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
-    Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
+    Apache and the Apache logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
     Please see the <a href="https://www.apache.org/foundation/marks/">Apache Trademark Policy</a> for more information.
     All non-Apache logos are the trademarks of their respective owners.</p>
