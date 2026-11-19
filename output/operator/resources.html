@@ -20,23 +20,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<link rel="stylesheet" href="/theme/css/google-fonts-raleway.css?v=7983f64e" />
-<link rel="stylesheet" href="/theme/css/google-fonts-kalam.css?v=7983f64e" />
-<link rel="stylesheet" href="/theme/css/font-awesome.min.css?v=7983f64e" />
-<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=7983f64e" />
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=7983f64e"/>
-<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=7983f64e"/>
-<link rel="stylesheet" href="/theme/css/operator.css?v=7983f64e" />
+<link rel="stylesheet" href="/theme/css/google-fonts-raleway.css?v=501cdb3d" />
+<link rel="stylesheet" href="/theme/css/google-fonts-kalam.css?v=501cdb3d" />
+<link rel="stylesheet" href="/theme/css/font-awesome.min.css?v=501cdb3d" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/normalize.css?v=501cdb3d" />
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation.min.css?v=501cdb3d"/>
+<link rel="stylesheet" href="/theme/css/lib/foundation/foundation-icons.css?v=501cdb3d"/>
+<link rel="stylesheet" href="/theme/css/operator.css?v=501cdb3d" />
 <meta name="Distribution" content="Global"/>
 <meta name="Robots" content="index,follow"/>
 
 <script src="/theme/javascript/lib/jquery-2.1.1.min.js"></script>
-<script src="/theme/javascript/lib/foundation/modernizr.js?v=7983f64e"></script>
-<script src="/theme/javascript/lib/angularjs/angular.min.js?v=7983f64e"></script>
-<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=7983f64e"></script>
-<script src="/theme/javascript/lib/foundation/foundation.min.js?v=7983f64e"></script>
-<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=7983f64e"></script>
-<script src="/theme/javascript/main.js?v=7983f64e"></script>
+<script src="/theme/javascript/lib/foundation/modernizr.js?v=501cdb3d"></script>
+<script src="/theme/javascript/lib/angularjs/angular.min.js?v=501cdb3d"></script>
+<script src="/theme/javascript/lib/angularjs/angular-animate.min.js?v=501cdb3d"></script>
+<script src="/theme/javascript/lib/foundation/foundation.min.js?v=501cdb3d"></script>
+<script src="/theme/javascript/lib/jquery.smooth-scroll.min.js?v=501cdb3d"></script>
+<script src="/theme/javascript/main.js?v=501cdb3d"></script>
 <script src="https://www.apachecon.com/event-images/snippet.js"></script>    <title>Resources - Apache Solr Operator</title>
 
     <meta name="keywords"
@@ -46,13 +46,29 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://solr.apache.org/operator/resources.html"/>
     <meta property="og:title" content="Resources"/>
-    <meta property="og:description" content="All resources are currently found in the Solr Operator repository, but will eventually be moved to the website. Tutorials Solr..."/>
-    <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=7983f64e"/>
-    <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=7983f64e"/>
+    <meta property="og:description" content="Documentation¶ The Solr Operator documentation is published as part of the Apache Solr Reference Guide. Additional,..."/>
+    <meta property="og:image" content="https://solr.apache.org/theme/images/solr_og_image.png?v=501cdb3d"/>
+    <meta property="og:image:secure_url" content="https://solr.apache.org/theme/solr/solr_og_image.png?v=501cdb3d"/>
 
    <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon">
-  </head>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '76']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->  </head>
 
   <body class="page "  x-ng-app="page" x-ng-controller="page.controllers.main">
 <div class="contain-to-grid">
@@ -67,6 +83,9 @@
 
       <div class="top-bar-section">
         <ul class="navigation right">
+          <li>
+            <a href="https://solr.apache.org/guide/operator/latest/index.html">Docs</a>
+          </li>
           <li>
             <a href="/operator/news.html">News</a>
           </li>
@@ -127,10 +146,13 @@
   </div>
 </div>
   <div class="row">
-<p>All resources are currently found in the <a href="https://github.com/apache/solr-operator">Solr Operator repository</a>, but will eventually be moved to the website.</p>
-<h2 id="tutorials">Tutorials</h2>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>The Solr Operator documentation is published as part of the <b><a href="https://solr.apache.org/guide/operator/latest/index.html">Apache Solr Reference Guide</a></b>.</p>
+<p>Additional, developer-focused, documentation can be found in the <a href="https://github.com/apache/solr-operator#solr-operator">Solr Operator's README</a>.</p>
+<hr>
+<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://apache.github.io/solr-operator/docs/local_tutorial">Solr Operator Quick Start</a><br>
+<li><a href="https://solr.apache.org/guide/operator/latest/getting-started/local-tutorial.html">Solr Operator Quick Start</a><br>
   This is a basic tutorial designed for users new to Kubernetes and the Solr Operator</li>
 <li><a href="/operator/articles/explore-v030-gke.html">Exploring the Apache Solr Operator v0.3.0 on GKE</a><br>
   This is an advanced tutorial for users ready to use the Solr Operator for Solr Clouds running in a production environment.</li>
@@ -139,7 +161,7 @@
 </ul>
 <p>Users who have completed the tutorial are encouraged to review the <a href="#documentation">other documentation available</a>.</p>
 <hr>
-<h2 id="helm-charts">Helm Charts</h2>
+<h2 id="helm-charts">Helm Charts<a class="headerlink" href="#helm-charts" title="Permanent link">&para;</a></h2>
 <p>If you want to run Solr on Kubernetes, the easiest way to get started is via installing the Helm charts below.</p>
 <ul>
 <li><strong>Solr Operator</strong> - A management layer that runs independently in Kubernetes. Only deploy 1 per Kubernetes cluster or namespace.</li>
@@ -151,15 +173,7 @@
 </div>
 
 <hr>
-<h2 id="documentation">Documentation</h2>
-<h3 class="offset" id="the-apache-solr-reference-guide">The Apache Solr Reference Guide</h3>
-
-<p>Current documentation can be found in the <a href="https://apache.github.io/solr-operator/docs">repo's github pages</a>, soon it will be migrated to this site.</p>
-<h3 class="offset" id="additional-documentation">Additional Documentation</h3>
-
-<p>Additional documentation, including upgrade notes, can be found in the <a href="https://github.com/apache/solr-operator#solr-operator">Solr Operator's README</a>.</p>
-<hr>
-<h2 id="presentations-and-videos">Presentations and Videos</h2>
+<h2 id="presentations-and-videos">Presentations and Videos<a class="headerlink" href="#presentations-and-videos" title="Permanent link">&para;</a></h2>
 <!-- TODO: WOULD BE NICE TO HAVE A SLIDER OR RANDOMLY PICKED VIDEO HERE -->
 
 <h3 class="offset" id="youtube">YouTube</h3>
@@ -190,7 +204,7 @@
     <h4>Resources</h4>
     <ul>
       <li><a href="/operator/resources.html#tutorials">Tutorial</a></li>
-      <li><a href="/operator/resources.html#documentation">Docs</a></li>
+      <li><a href="https://solr.apache.org/guide/operator/latest/index.html">Docs</a></li>
       <li><a href="/operator/resources.html#presentations">Presentations</a></li>
       <li><a href="/operator/resources.html#videos">Videos</a></li>
       <li><a href="/logos-and-assets.html">Solr Logos and Assets</a></li>
@@ -233,9 +247,9 @@
 </div>
 <div class="row copyright">
 <div class="large-centered columns">
-  <p>Copyright © 2025 The Apache Software Foundation, Licensed under the
+  <p>Copyright © 2026 The Apache Software Foundation, Licensed under the
     <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy</a><br/>
-    Apache and the Apache feather logo are trademarks of The Apache Software Foundation. Apache Lucene,
+    Apache and the Apache logo are trademarks of The Apache Software Foundation. Apache Lucene,
     Apache Solr and their respective logos are trademarks of the Apache Software Foundation.
     Please see the <a href="https://www.apache.org/foundation/marks/">Apache Trademark Policy</a> for more information.
     All non-Apache logos are the trademarks of their respective owners.</p>
